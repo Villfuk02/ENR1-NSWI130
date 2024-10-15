@@ -1,0 +1,34 @@
+předměty, lístky daného předmětu
++1 k zapsaným studentům na lístku - připsat studentovi lístek/předmět jako zapsaný
+připsat studenta k lístku
+seřadit
+filtrovat podle názvu/fakulty
+tlačítko, ktoré presmeruje užívateľa na zoznam rozvrhových lístkov
+Získanie zoznamu lístkov z databázy
+Zoradenie a zobrazenie lístkov v chronologickom poradí
+Zaistenie správneho priradenia vyučujúceho k lístku
+Získanie zoznamu študentov pre daný lístok z databázy
+Zobrazenie zoznamu študentov zapísaných na daný lístok
+Zobraziť tlačítko "Zobraziť zapísané lístky"
+Zobraziť zoznam lístkov na učiteľovom dashboarde
+Zobraziť podrobnosti o študentoch po rozkliknutí lístka
+Umožniť učiteľovi prístup k informáciám o študentoch
+Načítať lístky z databázy
+Načítať študentov pre vybraný lístok
+Zobraziť na dashboarde tlačidlá "Zápis" a následné "Zapísané"
+Zobraziť na dashboarde zoznam zapísaných predmetov
+Zobraziť na dashboarde podrobnejšie informácie o predmete po rozkliknutí
+Umožniť študentovi zobrazenie zapísaných predmetov
+Umožniť študentovi vidieť informácie o predmete
+Načítať z databázy predmety zvolené študentom
+Načítať z databázy informácie o predmete
+Zobrazit na dashboardu tlačítko "Komunikace"
+Zobrazit na dashboardu seznam zapsaných předmětů
+U každého rozvrhového lístku zobrazit seznam studentů do něj zapsaných a jejich email
+Zobrazit u každého rozvrhového lístku tlačítko "Kontaktovat všechny zapsané"
+Zobrazit tlačítko "Kontaktovat všechny"
+Zobrazit kolonky pro předmět a obsah emailu a tlačítko "Odeslat"
+Umožnit učiteli vidět seznam všech jeho rozvrhových lístků
+Umožnit učiteli vidět email všech studentů k němu zapsaných
+Načíst z databáze emaily studentů
+Po vyplnění obsahu emailu a stisknutí tlačítka "Odeslat" se email rozešle všem adresovaným
