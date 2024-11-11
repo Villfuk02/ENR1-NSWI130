@@ -109,9 +109,9 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi containerami Data Handling a Zobrazenie
         enrollments.displayer -> enrollments.data_handling.modification_handler
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie dát v HTML pre zobrazenie"
-        enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Odosielanie dát na zobrazenie pre manažéra"
+        enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Odosielanie dát na zobrazenie pre manažéra"
 
-        #Vzťahy vo vnútri containeru Data HAndling
+        #Vzťahy vo vnútri containeru Data Handling
         enrollments.data_handling.modification_handler -> enrollments.data_handling.validator "Pošle zmeny validátoru"
         enrollments.data_handling.data_validation ->  enrollments.data_handling.data_preparation "Pošle zmeny k príprave na odoslanie"
         enrollments.data_handling.data_validation -> enrollments.data_handling.rules "Získa pravidlá, podľa ktorých vyhodnotí platnosť zmien"
@@ -121,6 +121,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.data_handling.data_validation -> enrollments.data_handling.rules "Získa pravidlá, podľ ktorých zistí, či sú načítané dáta správne"
         enrollments.data_handling.loader ->  enrollments.data_handling.data_validation "Pošle dáta na overenie správnosti"
         enrollments.data_handling.loader -> enrollments.data_handling.schedule_api "Požiadavka na nčítanie dát"
+        enrollments.data_handling.loader -> enrollments.data_handling.changes_api
 
         #Vzťahy medzi komponentami containeru Zápisy užívateľa
         enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.displaying_user_data_preparator "Načítání dat"
