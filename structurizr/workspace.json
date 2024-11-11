@@ -1,0 +1,230 @@
+{
+  "configuration" : { },
+  "description" : "Tento Workspace dokumentuje architekturu softwarového systému Zápisy",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedDate" : "2024-11-08T13:03:59Z",
+  "model" : {
+    "people" : [ {
+      "id" : "5",
+      "location" : "Unspecified",
+      "name" : "Manažer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "manager"
+      },
+      "relationships" : [ {
+        "description" : "Používá",
+        "destinationId" : "1",
+        "id" : "9",
+        "properties" : {
+          "structurizr.dsl.identifier" : "95f0e8d5-ce04-40eb-bc53-d2dd536bdbbc"
+        },
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "id" : "6",
+      "location" : "Unspecified",
+      "name" : "Student",
+      "properties" : {
+        "structurizr.dsl.identifier" : "student"
+      },
+      "relationships" : [ {
+        "description" : "Používá",
+        "destinationId" : "1",
+        "id" : "10",
+        "properties" : {
+          "structurizr.dsl.identifier" : "996763f2-daca-47f3-91ab-c63acde52e2e"
+        },
+        "sourceId" : "6",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "id" : "7",
+      "location" : "Unspecified",
+      "name" : "Učitel",
+      "properties" : {
+        "structurizr.dsl.identifier" : "teacher"
+      },
+      "relationships" : [ {
+        "description" : "Používá",
+        "destinationId" : "1",
+        "id" : "11",
+        "properties" : {
+          "structurizr.dsl.identifier" : "479bb802-6d90-4644-b9b4-dfbe1e8381e9"
+        },
+        "sourceId" : "7",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "id" : "8",
+      "location" : "Unspecified",
+      "name" : "Studijní oddělení",
+      "properties" : {
+        "structurizr.dsl.identifier" : "study_dep"
+      },
+      "relationships" : [ {
+        "description" : "Používá",
+        "destinationId" : "1",
+        "id" : "12",
+        "properties" : {
+          "structurizr.dsl.identifier" : "589a6436-602d-4e0c-b98e-6cda43a7dffc"
+        },
+        "sourceId" : "8",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "documentation" : { },
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Zápisy",
+      "properties" : {
+        "structurizr.dsl.identifier" : "enrollments"
+      },
+      "relationships" : [ {
+        "description" : "Posílá data o zápisech pomocí API",
+        "destinationId" : "2",
+        "id" : "15",
+        "properties" : {
+          "structurizr.dsl.identifier" : "5b3988f6-b3d8-4bf4-929d-4a53c1f3c11d"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "documentation" : { },
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Zkoušky",
+      "properties" : {
+        "structurizr.dsl.identifier" : "exams"
+      },
+      "tags" : "Element,Software System"
+    }, {
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Rozvrhy",
+      "properties" : {
+        "structurizr.dsl.identifier" : "schedules"
+      },
+      "relationships" : [ {
+        "description" : "Posílá data o rozvrzích pomocí API",
+        "destinationId" : "1",
+        "id" : "14",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ece928e6-5bc9-4e11-bcc2-f47b3713bad5"
+        },
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "documentation" : { },
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "Přihlašovací systém",
+      "properties" : {
+        "structurizr.dsl.identifier" : "login_system"
+      },
+      "relationships" : [ {
+        "description" : "Posílá data o uživatelech",
+        "destinationId" : "1",
+        "id" : "13",
+        "properties" : {
+          "structurizr.dsl.identifier" : "b8d294a9-5e7c-45e6-8f84-de5bf9f44fcc"
+        },
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Zápisy Workspace",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJaw6FwaXN5IFdvcmtzcGFjZSIgIlRlbnRvIFdvcmtzcGFjZSBkb2t1bWVudHVqZSBhcmNoaXRla3R1cnUgc29mdHdhcm92w6lobyBzeXN0w6ltdSBaw6FwaXN5IiB7CgogICAgbW9kZWwgewogICAgICAgICMgU29mdHdhcm92w6kgc3lzdMOpbXkKICAgICAgICBlbnJvbGxtZW50cyA9IHNvZnR3YXJlU3lzdGVtICJaw6FwaXN5IgogICAgICAgIGV4YW1zID0gc29mdHdhcmVTeXN0ZW0gIlprb3XFoWt5IgogICAgICAgIHNjaGVkdWxlcyA9IHNvZnR3YXJlU3lzdGVtICJSb3p2cmh5IgogICAgICAgIGxvZ2luX3N5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJQxZlpaGxhxaFvdmFjw60gc3lzdMOpbSIKICAgICAgICAKICAgICAgICAjIFXFvml2YXRlbMOpCiAgICAgICAgbWFuYWdlciA9IHBlcnNvbiAiTWFuYcW+ZXIiCiAgICAgICAgc3R1ZGVudCA9IHBlcnNvbiAiU3R1ZGVudCIKICAgICAgICB0ZWFjaGVyID0gcGVyc29uICJVxI1pdGVsIgogICAgICAgIHN0dWR5X2RlcCA9IHBlcnNvbiAiU3R1ZGlqbsOtIG9kZMSbbGVuw60iCiAgICAgICAgCiAgICAgICAgIyBWenRhaHkgbWV6aSB1xb5pdmF0ZWxpIGEgWsOhcGlzeSAoRW5yb2xsbWVudHMpCiAgICAgICAgbWFuYWdlciAtPiBlbnJvbGxtZW50cyAiUG91xb7DrXbDoSIKICAgICAgICBzdHVkZW50IC0+IGVucm9sbG1lbnRzICJQb3XFvsOtdsOhIgogICAgICAgIHRlYWNoZXIgLT4gZW5yb2xsbWVudHMgIlBvdcW+w612w6EiCiAgICAgICAgc3R1ZHlfZGVwIC0+IGVucm9sbG1lbnRzICJQb3XFvsOtdsOhIgogICAgICAgIAogICAgICAgICMgVnp0YWh5IG1lemkgc29mdHdlcm92w71taSBzeXN0w6lteQogICAgICAgIGxvZ2luX3N5c3RlbSAtPiBlbnJvbGxtZW50cyAiUG9zw61sw6EgZGF0YSBvIHXFvml2YXRlbGVjaCIKICAgICAgICBzY2hlZHVsZXMgLT4gZW5yb2xsbWVudHMgIlBvc8OtbMOhIGRhdGEgbyByb3p2cnrDrWNoIHBvbW9jw60gQVBJIgogICAgICAgIGVucm9sbG1lbnRzIC0+IGV4YW1zICJQb3PDrWzDoSBkYXRhIG8gesOhcGlzZWNoIHBvbW9jw60gQVBJIgogICAgICAgIAogICAgICAgIAogICAgICAgIAogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICB0aGVtZSBkZWZhdWx0CiAgICAgICAgCiAgICAgICAgc3lzdGVtQ29udGV4dCBlbnJvbGxtZW50cyB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KICAgIH0KCgp9"
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "SystemContext-001",
+      "styles" : { },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "systemContextViews" : [ {
+      "dimensions" : {
+        "height" : 3716,
+        "width" : 2366
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 958,
+        "y" : 1708
+      }, {
+        "id" : "2",
+        "x" : 1708,
+        "y" : 1708
+      }, {
+        "id" : "3",
+        "x" : 208,
+        "y" : 208
+      }, {
+        "id" : "4",
+        "x" : 208,
+        "y" : 808
+      }, {
+        "id" : "5",
+        "x" : 208,
+        "y" : 1408
+      }, {
+        "id" : "6",
+        "x" : 208,
+        "y" : 2008
+      }, {
+        "id" : "7",
+        "x" : 208,
+        "y" : 2608
+      }, {
+        "id" : "8",
+        "x" : 208,
+        "y" : 3208
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "generatedKey" : true,
+      "key" : "SystemContext-001",
+      "order" : 1,
+      "paperSize" : "A3_Portrait",
+      "relationships" : [ {
+        "id" : "10"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "12",
+        "vertices" : [ {
+          "x" : 658,
+          "y" : 3058
+        } ]
+      }, {
+        "id" : "13"
+      }, {
+        "id" : "14",
+        "vertices" : [ {
+          "x" : 658,
+          "y" : 658
+        } ]
+      }, {
+        "id" : "15"
+      }, {
+        "id" : "9"
+      } ],
+      "softwareSystemId" : "1"
+    } ]
+  }
+}

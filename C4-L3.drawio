@@ -1,0 +1,529 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+  <diagram name="Page-1" id="rwyt8O6BHOvwZtNAPDtA">
+    <mxGraphModel dx="1274" dy="1946" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xMFAz21Ts4hhsVR896TA-133" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="940" y="730" width="879" height="713" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-132" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2221" y="961" width="850" height="416" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-131" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1681" y="1614.86" width="335" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-130" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2643.5" y="1549" width="335" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-127" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="2232.5" y="1544" width="335" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-125" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1219" y="1559" width="335" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-1" value="Komunikácia s Databázou" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1381" y="1560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="940" y="730" width="882" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-3" value="Požiadavka&lt;div&gt;na načítanie&lt;br&gt;dát&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-4" target="xMFAz21Ts4hhsVR896TA-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Loader" technology="" description="načíta dáta predmetov pomocou Schedule API" id="xMFAz21Ts4hhsVR896TA-4">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="970" y="1130" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-4" target="xMFAz21Ts4hhsVR896TA-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1220" y="1070" as="sourcePoint" />
+            <mxPoint x="1020" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-6" value="Pošle dáta na overnie,&amp;nbsp;&lt;div&gt;či sú správne&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-5">
+          <mxGeometry x="0.0561" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-7" value="Získa pravidlá&lt;div&gt;podľa ktorých&amp;nbsp;&lt;/div&gt;&lt;div&gt;zistí, či sú&amp;nbsp;&lt;/div&gt;&lt;div&gt;načítané dáta&lt;/div&gt;&lt;div&gt;správne&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-9" target="xMFAz21Ts4hhsVR896TA-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-8" value="Pošle dáta k príprave na&lt;div&gt;zobrazenie&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-9" target="xMFAz21Ts4hhsVR896TA-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Overenie správnosti dát" technology="Module" description="Data verificator" id="xMFAz21Ts4hhsVR896TA-9">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="970" y="940" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-10" value="Požiadavka na modifikáciu dát" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-13" target="xMFAz21Ts4hhsVR896TA-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-13" target="xMFAz21Ts4hhsVR896TA-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-12" value="Požiadavka na pridanie záznamu" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-11">
+          <mxGeometry x="0.0971" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Data preparation [zmeny]" technology="Module" description="Upraví dáta do formátu, ktorý sa dá poslať do Schedule API" id="xMFAz21Ts4hhsVR896TA-13">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1610" y="1130" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Schedule API" technology="" description="Zapisování a načítání lístků ze Schedules" id="xMFAz21Ts4hhsVR896TA-14">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1280" y="1300" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-15" value="Zmeny pošle validátoru" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-16" target="xMFAz21Ts4hhsVR896TA-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Modification Handler" technology="Module" description="Lístok dostane zmeny od učiteľa" id="xMFAz21Ts4hhsVR896TA-16">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1610" y="750" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-17" value="Pošle zmeny ďalej k piprave&lt;div&gt;na odoslanie&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-19" target="xMFAz21Ts4hhsVR896TA-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-18" value="Získa pravidlá&lt;div&gt;podľa ktorých&lt;/div&gt;&lt;div&gt;vyhodnotí&lt;/div&gt;&lt;div&gt;platnosť zmien&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-19" target="xMFAz21Ts4hhsVR896TA-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Validátor" technology="Module" description="Vyhodnotí správnosť zmien" id="xMFAz21Ts4hhsVR896TA-19">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1610" y="940" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Rules" technology="Module" description="pravidlá, ktoré určujú, či sú zmeny platné" id="xMFAz21Ts4hhsVR896TA-20">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1280" y="940" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Data preparation [zobrazenie]" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-23">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="970" y="750" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-25" value="Manager zmeny" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-26" target="xMFAz21Ts4hhsVR896TA-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1777" y="680" />
+              <mxPoint x="1700" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;font style=&quot;line-height: 9.6px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;%description%&lt;/div&gt;" name="Předměty a &#xa;lístky" description="[Database]" placeholders="1" id="xMFAz21Ts4hhsVR896TA-28">
+          <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;strokeColor=#2F6FA6;strokeWidth=1;fillColor=#3B8CD2;fontSize=9;fontColor=#000000;align=center;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1291" y="1580" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1684" y="1614.8600000000001" width="335" height="162" as="geometry" />
+        </mxCell>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;font style=&quot;line-height: 9.6px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;%description%&lt;/div&gt;" name="Historie změn" description="[Database]" placeholders="1" id="xMFAz21Ts4hhsVR896TA-32">
+          <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;strokeColor=#2F6FA6;strokeWidth=1;fillColor=#3B8CD2;fontSize=9;fontColor=#000000;align=center;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1761.5" y="1635.8600000000001" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-35" target="xMFAz21Ts4hhsVR896TA-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1789.9999999999998" y="1360" as="sourcePoint" />
+            <mxPoint x="2143.695" y="1670.3180000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-34" value="Pridanie záznamu do databázy zmien" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-33">
+          <mxGeometry x="0.2985" y="6" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Changes API" technology="" description="Zapisování a načítání lístků ze Schedules" id="xMFAz21Ts4hhsVR896TA-35">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1610" y="1300" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-36" value="Zapísanie zmien&amp;nbsp;&lt;div&gt;(prihlásenie študenta na lístok)&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-52" target="xMFAz21Ts4hhsVR896TA-16">
+          <mxGeometry x="-0.2544" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="3160" y="1032" />
+              <mxPoint x="3160" y="804" />
+              <mxPoint x="2103" y="804" />
+              <mxPoint x="2103" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-38" value="Data Handling" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.562;entryY=0.971;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-2" target="xMFAz21Ts4hhsVR896TA-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2224.5" y="961" width="850" height="418" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-42" target="xMFAz21Ts4hhsVR896TA-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-42" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2643.5" y="1544" width="335" height="162" as="geometry" />
+        </mxCell>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;font style=&quot;line-height: 9.6px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;%description%&lt;/div&gt;" name="Zápisy" description="[Database]" placeholders="1" id="xMFAz21Ts4hhsVR896TA-44">
+          <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;strokeColor=#2F6FA6;strokeWidth=1;fillColor=#3B8CD2;fontSize=9;fontColor=#000000;align=center;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2721" y="1565" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-45" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-44" target="xMFAz21Ts4hhsVR896TA-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1963.5" y="1584" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-46" value="Čtení dat" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-45">
+          <mxGeometry x="-0.0857" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Načítání dat uživatelů" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-47">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2360.5" y="1229" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-47" target="xMFAz21Ts4hhsVR896TA-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3118" y="1299" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-49" value="Načítání dat" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-48">
+          <mxGeometry x="-0.0074" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-50" value="Získání dat o&amp;nbsp;&lt;div&gt;přihlášeném uživateli&lt;/div&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-47" target="xMFAz21Ts4hhsVR896TA-52">
+          <mxGeometry x="0.006" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Příprava uživatelských dat k zobrazení" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-51">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2357.5" y="1019" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Zapsat studenta na lístek" technology="Module" description="Zapíše přihlášeného studenta na lístek" id="xMFAz21Ts4hhsVR896TA-52">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2823.5" y="1032" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-57" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-127" target="xMFAz21Ts4hhsVR896TA-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-58" value="Zpřístupní ID studenta" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-57">
+          <mxGeometry x="-0.0323" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-52" target="xMFAz21Ts4hhsVR896TA-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-61" value="Zapsání nového zápisu" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-60">
+          <mxGeometry x="0.267" y="-1" relative="1" as="geometry">
+            <mxPoint x="-9" y="63" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-62" value="Zapíše přihlášeného&amp;nbsp;&lt;div&gt;studenta na lístek&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2848.5" y="1105" width="130" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-63" value="Komunikuje s databází&amp;nbsp;&lt;div&gt;a získává data&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2376" y="1301" width="143" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-64" value="Shromáždí data o uživateli&amp;nbsp;&lt;div&gt;a jeho zapsaných&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;lístkách&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;a vytvoří html&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2367.5" y="1091" width="163" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-65" value="[Container] Zápisy uživatele" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2224.5" y="1353" width="166" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-66" value="Zapsané lístky uživatelů" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2738" y="1653" width="146" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1315" y="-161" width="325" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-74" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1081" y="-163" width="1343" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-136" target="xMFAz21Ts4hhsVR896TA-81">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1791" y="44" />
+              <mxPoint x="1599" y="44" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-115" value="Odkazuje na" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-76">
+          <mxGeometry x="0.0652" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-136">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1205" y="79" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-114" value="Odkazuje na" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-77">
+          <mxGeometry x="-0.031" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-80" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-81" target="xMFAz21Ts4hhsVR896TA-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-117" value="Odkazuje na" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-80">
+          <mxGeometry x="-0.1064" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Zobrazení lístků" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-81">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1509" y="83" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="xMFAz21Ts4hhsVR896TA-82">
+          <mxCell style="group;resizable=0;rotatable=0;allowArrows=0;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="1810.5" y="-411" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Person]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Student" description="" placeholders="1" id="xMFAz21Ts4hhsVR896TA-83">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;arcSize=31;metaEdit=1;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-82">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-84" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-82">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-85" target="xMFAz21Ts4hhsVR896TA-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-124" value="Odkazuje na" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-123">
+          <mxGeometry x="-0.1876" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Detail o lístku" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-85">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1885" y="79" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="xMFAz21Ts4hhsVR896TA-86">
+          <mxCell style="group;resizable=0;rotatable=0;allowArrows=0;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="1356.5" y="-461" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Person]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Učitel" description="" placeholders="1" id="xMFAz21Ts4hhsVR896TA-87">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;arcSize=31;metaEdit=1;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-86">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-88" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-86">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="xMFAz21Ts4hhsVR896TA-89">
+          <mxCell style="group;resizable=0;rotatable=0;allowArrows=0;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="1012" y="-451" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Person]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Studijní oddělení" description="" placeholders="1" id="xMFAz21Ts4hhsVR896TA-90">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;arcSize=31;metaEdit=1;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-89">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-91" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-89">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-92" value="Zobrazení" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1091" y="211" width="72" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1477.5" y="-17" as="sourcePoint" />
+            <mxPoint x="1477.5" y="-17" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-83" target="xMFAz21Ts4hhsVR896TA-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-87" target="xMFAz21Ts4hhsVR896TA-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-90" target="xMFAz21Ts4hhsVR896TA-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Vykresľovanie rozvrhu" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-24">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1141" y="79" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-81" target="xMFAz21Ts4hhsVR896TA-52">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1641" y="203" />
+              <mxPoint x="1641" y="503" />
+              <mxPoint x="3205" y="503" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-70" value="Vybraný lístek se zapíše" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-69">
+          <mxGeometry x="-0.0173" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-21" value="Odeslání dat v HTML&lt;div&gt;pro zobrazení&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-23" target="xMFAz21Ts4hhsVR896TA-81">
+          <mxGeometry x="0.4737" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="500" />
+              <mxPoint x="1554" y="500" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-97" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="2781" y="-291" width="301" height="472" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-98" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-99" target="xMFAz21Ts4hhsVR896TA-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Tvorba emailu" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-99">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2850" y="-240" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-100" value="Mail server" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2841.5" y="232" width="180" height="150" as="geometry" />
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Odesílání emailu" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-101">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2850" y="-35" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-102" value="Email service" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2789" y="143" width="89" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-101" target="xMFAz21Ts4hhsVR896TA-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-105" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="3159.5" y="1549" width="335" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-107">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3769.5" y="1629.6315789473688" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Zápisy API" technology="" description="Zapisování a načítání lístků ze Schedules" id="xMFAz21Ts4hhsVR896TA-107">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="3227" y="1570" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Zobrazenie pre managera" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-26">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2142" y="-137" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" placeholders="1" instruction="edit data of the lower shape within the group" id="xMFAz21Ts4hhsVR896TA-109">
+          <mxCell style="group;resizable=0;rotatable=0;allowArrows=0;" vertex="1" connectable="0" parent="1">
+            <mxGeometry x="2146" y="-466" width="160" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;[Person]&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;span style=&quot;font-size: x-small&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;font size=&quot;1&quot;&gt;%description%&lt;/font&gt;&lt;/div&gt;" name="Manager" description="" placeholders="1" id="xMFAz21Ts4hhsVR896TA-110">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;arcSize=31;metaEdit=1;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-109">
+            <mxGeometry y="70" width="160" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-111" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#00315C;fillColor=#004179;fontColor=#000000;allowArrows=0;" vertex="1" parent="xMFAz21Ts4hhsVR896TA-109">
+          <mxGeometry x="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-22" value="Odoslanie dát na zobrazenie pre managera" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-23" target="xMFAz21Ts4hhsVR896TA-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1880" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1105" y="371" />
+              <mxPoint x="2232" y="371" />
+              <mxPoint x="2232" y="-8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-110" target="xMFAz21Ts4hhsVR896TA-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-51" target="xMFAz21Ts4hhsVR896TA-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-72" value="Odeslání dat HTML pro zobrazení" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-71">
+          <mxGeometry x="-0.2865" y="-2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-122" target="xMFAz21Ts4hhsVR896TA-99">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2110" y="-22" />
+              <mxPoint x="2110" y="124" />
+              <mxPoint x="2668" y="124" />
+              <mxPoint x="2668" y="-23" />
+              <mxPoint x="2663" y="-23" />
+              <mxPoint x="2663" y="-260" />
+              <mxPoint x="2940" y="-260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-118" value="Zpřístupňuje" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xMFAz21Ts4hhsVR896TA-104">
+          <mxGeometry x="0.348" y="-1" relative="1" as="geometry">
+            <mxPoint x="-172" y="218" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object label="&lt;div&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" placeholders="1" name="Zobrazenie emailového okna" technology="Module" description="" id="xMFAz21Ts4hhsVR896TA-122">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#85baf0;fontColor=#000000;strokeColor=#6992BD;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="1898" y="-82" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-126" value="Schedules&lt;div&gt;(Software System)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1215" y="1687" width="120" height="40" as="geometry" />
+        </mxCell>
+        <object label="&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;b&gt;%name%&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal ; font-size: 8px&quot;&gt;&lt;font style=&quot;line-height: 9.6px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(255 , 255 , 255) ; white-space: normal&quot;&gt;%description%&lt;/div&gt;" name="Uživatelé" description="[Database]" placeholders="1" id="xMFAz21Ts4hhsVR896TA-128">
+          <mxCell style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;strokeColor=#2F6FA6;strokeWidth=1;fillColor=#3B8CD2;fontSize=9;fontColor=#000000;align=center;resizable=0;rotatable=0;metaEdit=1;allowArrows=0;" vertex="1" parent="1">
+            <mxGeometry x="2310" y="1565" width="180" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-129" value="Uživatelé&lt;div&gt;(Software system)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2232.5" y="1666" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-135" value="UI&lt;div&gt;[Component]&lt;/div&gt;" style="html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="1076" y="-134" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-136" value="Smerovací Engine&lt;div&gt;[Component]&lt;/div&gt;" style="html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="1706" y="-134" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-137" value="Správca upozornení&lt;div&gt;[Component]&lt;/div&gt;" style="html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="1486" y="-134" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-138" value="Integrácie so systémami tretích strán&lt;div&gt;[Component]&lt;/div&gt;" style="html=1;whiteSpace=wrap;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="1286" y="-134" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xMFAz21Ts4hhsVR896TA-140" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xMFAz21Ts4hhsVR896TA-137" target="xMFAz21Ts4hhsVR896TA-135">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1716" y="156" as="sourcePoint" />
+            <mxPoint x="1636" y="156" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1466" y="-4" />
+              <mxPoint x="1376" y="-4" />
+              <mxPoint x="1296" y="-4" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
