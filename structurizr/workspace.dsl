@@ -41,7 +41,9 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             api = container "API"
         }
 
-        mail_server = softwareSystem "Mail server" {}
+        mail_server = softwareSystem "Mail server" {
+
+        }
 
         schedules = softwareSystem "Rozvrhy"{
             courses_and_events = container "Předměty a lístky" "Database"
@@ -129,6 +131,8 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi containerom Zápisy užívatele a containerom Zobrazenie
         enrollments.user_enrollment.displaying_user_data_preparator -> enrollments.displayer.schedule_renderer "Odeslání dat HTML pro zobrazení"
         enrollments.displayer.event_displayer -> enrollments.user_enrollment.event_enroller "Vybraný lístek se zapíše"
+        enrollments.user_enrollment.event_enroller -> enrollments.displayer.notification_reporter "Informace o výsledku zápisu"
+
         
         #Vzťahy medzi containerom Zápisy užívatele a containerom Data Handling
         enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapísanie zmien (prihlásenie študenta na lístok)"
@@ -180,6 +184,22 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         component enrollments.api "APICOmponentView" {
             include * 
             autoLayout
+        }
+
+        dynamic enrollments.user_enrollment {
+            title "Zápis předmětu studentem"
+            student -> enrollments.displayer.ui "Chce se zapsat na lístek"
+            enrollments.displayer.routing_engine -> enrollments.displayer.ui "Poskytne stránku"
+            enrollments.displayer.routing_engine -> enrollments.displayer.event_displayer "Nasměruje na"
+            enrollments.displayer.event_displayer -> enrollments.user_enrollment.event_enroller "Požádá o zápis vybraného lístku"
+            enrollments.user_enrollment.event_enroller -> enrollments.user_enrollment.user_data_loader "Požádá o ID studenta"
+            enrollments.user_enrollment.user_data_loader -> users "Požádá o ID studenta"
+            users -> enrollments.user_enrollment.user_data_loader "Předá ID studenta"
+            enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Předá ID studenta"
+            enrollments.user_enrollment.event_enroller -> enrollments.database "Zapíše lístek studentovi do databáze"
+            enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapíše změnu o přihlášení na lístek"
+            enrollments.user_enrollment.event_enroller -> enrollments.displayer.notification_reporter "Předá informaci o výsledku zapsání lístku"
+            enrollments.displayer.notification_reporter -> enrollments.displayer.ui "Zobrazí výsledek zápisu lístku"
         }
 
     }
