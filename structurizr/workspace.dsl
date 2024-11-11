@@ -201,6 +201,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapíše změnu o přihlášení na lístek"
             enrollments.user_enrollment.event_enroller -> enrollments.displayer.notification_reporter "Předá informaci o výsledku zapsání lístku"
             enrollments.displayer.notification_reporter -> enrollments.displayer.ui "Zobrazí výsledek zápisu lístku"
+            autoLayout
         }
 
     }
