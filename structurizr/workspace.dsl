@@ -61,7 +61,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.user_enrollment.event_enroller -> enrollments.database "Zapsání nového zápisu"
 
         #Vzťahy medzi softwareovým systémom Uživatelé a containerom Zápisy uživatele 
-        users.user_database -> enrollments.user_enrollment.user_data_loader "Zpřístupní ID studenta"
+        users.user_database -> enrollments.user_enrollment.user_data_loader "Zpřístupní ID uživatele"
 
         #Vzťahy medzi emailovými službami
         enrollments.email_service.email_sender -> mail_server "Komunikuje" ;
@@ -149,17 +149,17 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         container enrollments "ContainerView" {
             include *
-            autoLayout
+            
         }
 
         component enrollments.displayer "NavigationComponentView" {
             include *
-            autoLayout
+            
         }
 
         component enrollments.data_handling "DataHandlingComponentView" {
             include *
-            autoLayout
+            
         }
 
         component enrollments.email_service "EmailServiceComponentView" {
