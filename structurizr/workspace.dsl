@@ -64,8 +64,10 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         users.user_database -> enrollments.user_enrollment.user_data_loader "Zpřístupní ID uživatele"
 
         #Vzťahy medzi emailovými službami
-        enrollments.email_service.email_sender -> mail_server "Komunikuje" ;
+        enrollments.email_service.email_sender -> mail_server "Komunikuje"
+        enrollments.email_service.email_generator -> enrollments.email_service.email_sender "Předá email"
         enrollments.displayer.email_window_displayer -> enrollments.email_service.email_generator "Sprístupňuje"
+
 
         #Vzťahy medzi containerom Data handling a softwareovým systémom Rozvrhy
         enrollments.data_handling.schedule_api -> schedules.courses_and_events "Komunikácia s Databázou"
