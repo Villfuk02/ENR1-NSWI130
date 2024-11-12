@@ -54,7 +54,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         }
 
         #Vzťahy medzi containerom Database a API
-        enrollments.database -> enrollments.api
+        enrollments.database -> enrollments.api "Zpřístupňuje data o zápisech"
 
         #Vzťahy medzi databázou zápisov a containerom  Zápisy uživatele
         enrollments.database -> enrollments.user_enrollment.user_data_loader "Čtení dat"
@@ -110,7 +110,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Odkazuje na"
 
         #Vzťahy medzi containerami Data Handling a Zobrazenie
-        enrollments.displayer -> enrollments.data_handling.modification_handler
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie dát v HTML pre zobrazenie"
         enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Odosielanie dát na zobrazenie pre manažéra"
 
