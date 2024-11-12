@@ -27,7 +27,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 schedule_api = component "Schedule API"
                 modification_handler = component "Modification Handler"
                 validator = component "Validátor"
-                datat_preparator = component "Príprava dát [zmeny]"
+                data_preparation_changes = component "Príprava dát [zmeny]"
                 changes_api = component "Changes API"
                 rules = component "Rules"
             }
@@ -98,13 +98,14 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         student -> enrollments.displayer.ui "Ovládanie cez"
         teacher -> enrollments.displayer.ui "Ovládanie cez"
         study_dep -> enrollments.displayer.ui "Ovládanie cez"
-        manager -> enrollments.displayer.manager_displayer "Ovládanie cez"
+        manager -> enrollments.displayer.ui "Ovládanie cez"
         
         #Vztahy medzi komponentami displayer containeru
         enrollments.displayer.notification_reporter ->  enrollments.displayer.ui "Posielanie notifikácii"
         enrollments.displayer.routing_engine ->  enrollments.displayer.ui "Posielanie notifikácii"
         enrollments.displayer.routing_engine -> enrollments.displayer.schedule_renderer "Odkazuje na"
         enrollments.displayer.routing_engine -> enrollments.displayer.event_displayer "Odkazuje na"
+        enrollments.displayer.routing_engine -> enrollments.displayer.manager_displayer "Odkazuje na"
         enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Odkazuje na"
         enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Odkazuje na"
 
@@ -115,15 +116,16 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         #Vzťahy vo vnútri containeru Data Handling
         enrollments.data_handling.modification_handler -> enrollments.data_handling.validator "Pošle zmeny validátoru"
-        enrollments.data_handling.data_validation ->  enrollments.data_handling.data_preparation "Pošle zmeny k príprave na odoslanie"
-        enrollments.data_handling.data_validation -> enrollments.data_handling.rules "Získa pravidlá, podľa ktorých vyhodnotí platnosť zmien"
-        enrollments.data_handling.data_preparation -> enrollments.data_handling.changes_api "Požiadavka na pridanie záznamu"
-        enrollments.data_handling.data_preparation -> enrollments.data_handling.schedule_api "Požiadavka na modifikáciu dát"
+        enrollments.data_handling.validator ->  enrollments.data_handling.data_preparation_changes "Pošle zmeny k príprave na odoslanie"
+        enrollments.data_handling.validator -> enrollments.data_handling.rules "Získa pravidlá, podľa ktorých vyhodnotí platnosť zmien"
+        enrollments.data_handling.data_preparation_changes -> enrollments.data_handling.schedule_api "Požiadavka na modifikáciu dát"
+        enrollments.data_handling.data_preparation_changes -> enrollments.data_handling.changes_api "Požiadavka na pridanie záznamu"
         enrollments.data_handling.data_validation -> enrollments.data_handling.data_preparation "Pošle dáta k príprave na zobrazenie"
-        enrollments.data_handling.data_validation -> enrollments.data_handling.rules "Získa pravidlá, podľ ktorých zistí, či sú načítané dáta správne"
+        enrollments.data_handling.data_validation -> enrollments.data_handling.rules "Získa pravidlá, podľa ktorých zistí, či sú načítané dáta správne"
         enrollments.data_handling.loader ->  enrollments.data_handling.data_validation "Pošle dáta na overenie správnosti"
         enrollments.data_handling.loader -> enrollments.data_handling.schedule_api "Požiadavka na nčítanie dát"
-        enrollments.data_handling.loader -> enrollments.data_handling.changes_api
+        enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Posílá požadavky na data"
+        enrollments.data_handling.loader -> enrollments.data_handling.changes_api "Posílá požadavky na načítání dat"
 
         #Vzťahy medzi komponentami containeru Zápisy užívateľa
         enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.displaying_user_data_preparator "Načítání dat"
@@ -202,6 +204,29 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.user_enrollment.event_enroller -> enrollments.displayer.notification_reporter "Předá informaci o výsledku zapsání lístku"
             enrollments.displayer.notification_reporter -> enrollments.displayer.ui "Zobrazí výsledek zápisu lístku"
             autoLayout
+        }
+
+        dynamic enrollments.data_handling {
+            title "Zobrazení historie pro manažera"
+            manager -> enrollments.displayer.ui "Chce si zobraziť históriu zmien"
+            enrollments.displayer.routing_engine -> enrollments.displayer.ui "Poskytne HTML stránku"
+            enrollments.displayer.routing_engine -> enrollments.displayer.manager_displayer "Nasmeruje na zobrazenie"
+            enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Vyžiada dáta"
+    
+            enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_validation "Pošle požiadavok na overenie"
+            enrollments.data_handling.rules -> enrollments.data_handling.data_validation "Získa pravidlá na overenie správnosti požiadavku"
+            enrollments.data_handling.data_validation -> enrollments.data_handling.loader "Informuje o správnosti"
+            enrollments.data_handling.loader -> enrollments.data_handling.changes_api "Pošle request na načítanie"
+            enrollments.data_handling.changes_api -> enrollments.modification_history "Request zmení na SQL a pošle ho"
+            enrollments.modification_history -> enrollments.data_handling.changes_api "Vráti získané dáta"
+            enrollments.data_handling.changes_api -> enrollments.data_handling.loader "Vráti získané dáta"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_validation "Pošle získané dáta na overenie"
+            
+            enrollments.data_handling.rules -> enrollments.data_handling.data_validation "Získa pravidlá na overenie správnosti dát"
+            enrollments.data_handling.data_validation -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
+        
+            enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Poskytne dáta"
         }
 
     }
