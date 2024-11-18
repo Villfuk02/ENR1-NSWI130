@@ -9,7 +9,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 ui = component "UI" "Určuje rozhranie, pomocou ktoráho užívateľ interaguje so systémom"
                 notification_reporter = component "Správca upozornení" "Upozorní užívateľa o nových dôležitých aktuálnostiach"
                 routing_engine = component "Smerovací Engine" "Kontroluje presmerovania na jednotlivé časti systému"
-                third_party_integrations = component "Integrácie so systémami tretích strán" "Spája systém s inými systémami a zaisťuje prúdenie dát"
                 schedule_renderer = component "Vykresľovanie rozvrhu"
                 event_displayer = component "Zobrazenie lístkov"
                 event_details = component "Detail o lístku"
@@ -49,9 +48,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             courses_and_events = container "Předměty a lístky" "Database"
         }
 
-        users = softwareSystem "Uživatelé" {
-            user_database = container "Database"
-        }
 
         #Vzťahy medzi containerom Database a API
         enrollments.database -> enrollments.api "Zpřístupňuje data o zápisech"
@@ -59,9 +55,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi databázou zápisov a containerom  Zápisy uživatele
         enrollments.database -> enrollments.user_enrollment.user_data_loader "Čtení dat"
         enrollments.user_enrollment.event_enroller -> enrollments.database "Zapsání nového zápisu"
-
-        #Vzťahy medzi softwareovým systémom Uživatelé a containerom Zápisy uživatele 
-        users.user_database -> enrollments.user_enrollment.user_data_loader "Zpřístupní ID uživatele"
+        
 
         #Vzťahy medzi emailovými službami
         enrollments.email_service.email_sender -> mail_server "Komunikuje"
@@ -95,6 +89,8 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         login_system -> enrollments "Posílá data o uživatelech"
         schedules -> enrollments "Posílá data o rozvrzích pomocí API"
         enrollments -> exams "Posílá data o zápisech pomocí API"
+        enrollments.user_enrollment.user_data_loader -> login_system "Posílání požadavků na uživatelská data"
+        login_system -> enrollments.user_enrollment.user_data_loader "Posílání dat uživatele"
         
         #Vzťahy medzi užívateľami a zobrazením
         student -> enrollments.displayer.ui "Ovládanie cez"
@@ -114,6 +110,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi containerami Data Handling a Zobrazenie
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie dát v HTML pre zobrazenie"
         enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Odosielanie dát na zobrazenie pre manažéra"
+        enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odesílání dat o lístku v HTML"
 
         #Vzťahy vo vnútri containeru Data Handling
         enrollments.data_handling.modification_handler -> enrollments.data_handling.validator "Pošle zmeny validátoru"
@@ -131,6 +128,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi komponentami containeru Zápisy užívateľa
         enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.displaying_user_data_preparator "Načítání dat"
         enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Získání dat o přihlášeném uživateli"
+
 
         #Vzťahy medzi containerom Zápisy užívatele a containerom Zobrazenie
         enrollments.user_enrollment.displaying_user_data_preparator -> enrollments.displayer.schedule_renderer "Odeslání dat HTML pro zobrazení"
@@ -197,8 +195,8 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.displayer.routing_engine -> enrollments.displayer.event_displayer "Nasměruje na"
             enrollments.displayer.event_displayer -> enrollments.user_enrollment.event_enroller "Požádá o zápis vybraného lístku"
             enrollments.user_enrollment.event_enroller -> enrollments.user_enrollment.user_data_loader "Požádá o ID studenta"
-            enrollments.user_enrollment.user_data_loader -> users "Požádá o ID studenta"
-            users -> enrollments.user_enrollment.user_data_loader "Předá ID studenta"
+            enrollments.user_enrollment.user_data_loader -> login_system "Požádá o ID studenta"
+            login_system -> enrollments.user_enrollment.user_data_loader "Předá ID studenta"
             enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Předá ID studenta"
             enrollments.user_enrollment.event_enroller -> enrollments.database "Zapíše lístek studentovi do databáze"
             enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapíše změnu o přihlášení na lístek"
@@ -229,7 +227,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
         
             enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Poskytne dáta"
-            autoLayout
+            
         
         }
 
