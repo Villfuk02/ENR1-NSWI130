@@ -225,9 +225,12 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.data_handling.loader -> enrollments.data_handling.data_validation "Pošle získané dáta na overenie"
             
             enrollments.data_handling.rules -> enrollments.data_handling.data_validation "Získa pravidlá na overenie správnosti dát"
-            enrollments.data_handling.data_validation -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
+            enrollments.data_handling.data_validation -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
         
             enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Poskytne dáta"
+            autoLayout
+        
         }
 
     }
