@@ -13,7 +13,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 event_displayer = component "Zobrazenie lístkov"
                 event_details = component "Detail o lístku"
                 email_window_displayer = component "Zobrazenie emailového okna"
-                manager_displayer = component "Zobrrazenie pre manažéra"
+                manager_displayer = component "Zobrazenie pre manažéra"
             }
             email_service = container "Email service" {
                 email_generator = component "Tvorba emailov"
