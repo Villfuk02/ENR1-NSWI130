@@ -109,7 +109,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         #Vzťahy medzi containerami Data Handling a Zobrazenie
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie dát v HTML pre zobrazenie"
-        enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Odosielanie dát na zobrazenie pre manažéra"
+        enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Odosielanie dát na zobrazenie pre manažéra"
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odesílání dat o lístku v HTML"
 
         #Vzťahy vo vnútri containeru Data Handling
