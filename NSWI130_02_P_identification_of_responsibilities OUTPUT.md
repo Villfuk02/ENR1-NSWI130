@@ -28,32 +28,30 @@ Jako student si chci zapsat předmět, abych mohl začít docházet na tento př
 - seřadit 
 - filtrovat podle názvu/fakulty
 
-### Feature: Zobrazovanie lístkov pre študijné oddelenie
-Ako pracovník študijného oddelenia chcem mať prehľad o vypísaných rozvrhových lístkoch vyučovaných predmetov.
+### Feature: Zobrazovanie zmien pre manažéra
+Ako manažér chcem mať prehľad o všetkých zmenách v lístkoch.
 
 #### Feature breakdown:
-1. Na dashboarde pracovník študijného oddelenia klikne tlačidlo "Zobraziť rozvrhové lístky"
-2. Po kliknutí sa zobrazí chronologický zoznam lístkov.
-	- lístky treba načítať z databázy a zobraziť ich chronologicky (podľa času, kedy sú v rozvrhu)
- 	- Lístok má čas, názov a kód predmetu a meno vyučujúceho
-3. Pracovník študijného oddelenia si môže vybrať ľubovoľný lístok a kliknúť naň
-4. Zobrazí sa detail lístku
-	- získa sa zoznam študentov na lístku
-	- vypíšu sa všetky informácie o lístku (čas, názov, kód a vyučujúci)
-	- vypíše sa zoznam študentov prihlásených na lístku
+1. Na dashboarde manažér klikne tlačidlo "Zobraziť audit log"
+2. Po kliknutí sa zobrazí chronologický zoznam zmien.
+	- zmeny treba načítať z databázy a zobraziť ich chronologicky (podľa času, kedy sa udiali)
+ 	- Každá zmena má dátum, čas, meno pracovníka, ktorý ju vykonal a náhľad obsahu zmeny
+3. Manažér si môže vybrať ľubovoľnú zmeu a kliknúť na ňu
+4. Zobrazí sa detail zmeny
+   	- Zobrazí sa celý obsah zmeny
 
 #### Responsibilities
 ##### Dashboard responsibilities
-- tlačítko, ktoré presmeruje užívateľa na zoznam rozvrhových lístkov
+- tlačítko, ktoré presmeruje manažéra na zobrazenie zmien
 
-##### Zoznam lístkov responsibilities
-- Získanie zoznamu lístkov z databázy
-- Zoradenie a zobrazenie lístkov v chronologickom poradí
-- Zaistenie správneho priradenia vyučujúceho k lístku
-
-##### Detail lístka responsibilities
-- Získanie zoznamu študentov pre daný lístok z databázy
-- Zobrazenie zoznamu študentov zapísaných na daný lístok
+##### Zoznam zmien responsibilities
+- Získanie zoznamu zmien z databázy
+- Zoradenie a zobrazenie zmien v chronologickom poradí
+- Zobrazenie náhľadu zmeny (kvôli kompaktnosti UI)
+- Zaistenie správneho priradenia zodpovednej osoby k zmene
+  
+##### Detail zmeny responsibilities
+- Zobrazenie celej zmeny s dátumom, časom, zodpovednou osobou a jej plným obsahom
 
 ### Feature: Zobrazenie zapísaných študentov pre učiteľa
 
