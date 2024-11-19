@@ -6,12 +6,24 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         # Softwarové systémy
         enrollments = softwareSystem "Zápisy" {
 
+            browser = container "Browser" {
+                dom_reader = component "Dom Reader"
+                spa_router = component "SPA Router"
+            }
+
+
+            server = container "Server" {
+                routing_engine = component "Smerovací Engine" "Kontroluje presmerovania na jednotlivé časti systému"
+                ui_templator = component "UI Templator" "Je možné meniť za runtimeu pomocou SPA Routeru"
+            }
+
+
             displayer = container "Zobrazení" {
                 ui = component "UI" "Určuje rozhranie, pomocou ktoráho užívateľ interaguje so systémom"
-                notification_reporter = component "Správca upozornení" "Upozorní užívateľa o nových dôležitých aktuálnostiach"
                 routing_engine = component "Smerovací Engine" "Kontroluje presmerovania na jednotlivé časti systému"
                 third_party_integrations = component "Integrácie so systémami tretích strán" "Spája systém s inými systémami a zaisťuje prúdenie dát"
                 schedule_renderer = component "Vykresľovanie rozvrhu"
+                schedule_displayer = component "Zobrazovanie rozvrhu"
                 event_displayer = component "Zobrazenie lístkov"
                 event_details = component "Detail o lístku"
                 email_window_displayer = component "Zobrazenie emailového okna"
@@ -102,15 +114,31 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         teacher -> enrollments.displayer.ui "Ovládanie cez"
         study_dep -> enrollments.displayer.ui "Ovládanie cez"
         manager -> enrollments.displayer.ui "Ovládanie cez"
+
+        #Vzťahy medzi komponentami containeru browser
+        enrollments.browser.dom_reader -> enrollments.browser.spa_router "Request JS"
+        enrollments.browser.spa_router -> enrollments.browser.dom_reader "Up to date dom"
         
         #Vztahy medzi komponentami displayer containeru
-        enrollments.displayer.notification_reporter ->  enrollments.displayer.ui "Posielanie notifikácii"
-        enrollments.displayer.routing_engine ->  enrollments.displayer.ui "Posielanie notifikácii"
-        enrollments.displayer.routing_engine -> enrollments.displayer.schedule_renderer "Odkazuje na"
-        enrollments.displayer.routing_engine -> enrollments.displayer.event_displayer "Odkazuje na"
-        enrollments.displayer.routing_engine -> enrollments.displayer.manager_displayer "Odkazuje na"
+        enrollments.displayer.schedule_renderer -> enrollments.displayer.schedule_displayer "Posiela vykreslený rozvrh"
+        enrollments.displayer.schedule_displayer -> enrollments.displayer.schedule_renderer "Posiela žiadosť o vykreslenie rozvrhu"
         enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Odkazuje na"
         enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Odkazuje na"
+
+        #Vzťahy medzi komponentami containeru server
+        enrollments.server.ui_templator -> enrollments.server.routing_engine
+
+        #Vzťahy medzi containerom server a ostatnými systémami
+        enrollments.server.routing_engine -> enrollments.displayer.event_displayer
+        enrollments.server.routing_engine -> enrollments.email_service
+        enrollments.server.routing_engine -> enrollments.user_enrollment.event_enroller
+        enrollments.server.routing_engine -> enrollments.displayer.schedule_displayer
+        enrollments.server.routing_engine -> enrollments.browser.spa_router 
+        enrollments.server.routing_engine -> enrollments.browser.dom_reader
+        
+        #Vzťahy medzi containerom browser a ostatnými containermi
+        enrollments.browser.spa_router -> enrollments.server.routing_engine 
+        enrollments.browser.dom_reader -> enrollments.server.routing_engine "Request NoJs"
 
         #Vzťahy medzi containerami Data Handling a Zobrazenie
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie dát v HTML pre zobrazenie"
@@ -136,11 +164,14 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi containerom Zápisy užívatele a containerom Zobrazenie
         enrollments.user_enrollment.displaying_user_data_preparator -> enrollments.displayer.schedule_renderer "Odeslání dat HTML pro zobrazení"
         enrollments.displayer.event_displayer -> enrollments.user_enrollment.event_enroller "Vybraný lístek se zapíše"
-        enrollments.user_enrollment.event_enroller -> enrollments.displayer.notification_reporter "Informace o výsledku zápisu"
 
         
         #Vzťahy medzi containerom Zápisy užívatele a containerom Data Handling
         enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapísanie zmien (prihlásenie študenta na lístok)"
+
+        #Vzťah medzi containerom displayer a containerom server
+        enrollments.displayer.event_displayer -> enrollments.server.routing_engine
+
     }
 
     views {
@@ -153,17 +184,17 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         container enrollments "ContainerView" {
             include *
-            
+            autoLayout   
         }
 
         component enrollments.displayer "NavigationComponentView" {
             include *
-            
+            autoLayout
         }
 
         component enrollments.data_handling "DataHandlingComponentView" {
             include *
-            
+            autoLayout
         }
 
         component enrollments.email_service "EmailServiceComponentView" {
@@ -186,16 +217,24 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             autoLayout
         }
 
-        component enrollments.api "APICOmponentView" {
+        component enrollments.api "APIComponentView" {
             include * 
+            autoLayout
+        }
+
+        component enrollments.server "ServerComponentView" {
+            include *
+            autoLayout
+        }
+
+        component enrollments.browser "BrowserComponentView" {
+            include *
             autoLayout
         }
 
         dynamic enrollments.user_enrollment {
             title "Zápis předmětu studentem"
             student -> enrollments.displayer.ui "Chce se zapsat na lístek"
-            enrollments.displayer.routing_engine -> enrollments.displayer.ui "Poskytne stránku"
-            enrollments.displayer.routing_engine -> enrollments.displayer.event_displayer "Nasměruje na"
             enrollments.displayer.event_displayer -> enrollments.user_enrollment.event_enroller "Požádá o zápis vybraného lístku"
             enrollments.user_enrollment.event_enroller -> enrollments.user_enrollment.user_data_loader "Požádá o ID studenta"
             enrollments.user_enrollment.user_data_loader -> users "Požádá o ID studenta"
@@ -203,16 +242,12 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Předá ID studenta"
             enrollments.user_enrollment.event_enroller -> enrollments.database "Zapíše lístek studentovi do databáze"
             enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapíše změnu o přihlášení na lístek"
-            enrollments.user_enrollment.event_enroller -> enrollments.displayer.notification_reporter "Předá informaci o výsledku zapsání lístku"
-            enrollments.displayer.notification_reporter -> enrollments.displayer.ui "Zobrazí výsledek zápisu lístku"
             autoLayout
         }
 
         dynamic enrollments.data_handling {
             title "Zobrazení historie pro manažera"
             manager -> enrollments.displayer.ui "Chce si zobraziť históriu zmien"
-            enrollments.displayer.routing_engine -> enrollments.displayer.ui "Poskytne HTML stránku"
-            enrollments.displayer.routing_engine -> enrollments.displayer.manager_displayer "Nasmeruje na zobrazenie"
             enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Vyžiada dáta"
     
             enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
@@ -229,6 +264,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.data_handling.data_validation -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
         
             enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Poskytne dáta"
+            autoLayout
         }
 
     }
