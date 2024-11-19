@@ -7,20 +7,17 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments = softwareSystem "Zápisy" {
 
             browser = container "Browser" {
-                dom_reader = component "Dom Reader"
+                dom_reader = component "DOM Reader"
                 spa_router = component "SPA Router"
             }
-
 
             server = container "Server" {
                 routing_engine = component "Smerovací Engine" "Kontroluje presmerovania na jednotlivé časti systému"
                 ui_templator = component "UI Templator" "Je možné meniť za runtimeu pomocou SPA Routeru"
             }
 
-
             displayer = container "Zobrazení" {
                 ui = component "UI" "Určuje rozhranie, pomocou ktoráho užívateľ interaguje so systémom"
-                routing_engine = component "Smerovací Engine" "Kontroluje presmerovania na jednotlivé časti systému"
                 schedule_renderer = component "Vykresľovanie rozvrhu"
                 schedule_displayer = component "Zobrazovanie rozvrhu"
                 event_displayer = component "Zobrazenie lístkov"
@@ -28,10 +25,12 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 email_window_displayer = component "Zobrazenie emailového okna"
                 manager_displayer = component "Zobrazenie pre manažéra"
             }
+
             email_service = container "Email service" {
                 email_generator = component "Tvorba emailov"
                 email_sender = component "Odosielanie emailov"
             }
+
             data_handling = container "Data Handling"{
                 data_preparation = component "Príprava dát"
                 data_validation = component "Overenie správnosti dát"
@@ -43,11 +42,13 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 changes_api = component "Changes API"
                 rules = component "Rules"
             }
+
             user_enrollment = container "Zápisy uživatele" {
                 displaying_user_data_preparator = component "Príprava užívateľských dát ka zobrazení" "Shromáždí data o uživateli a jeho zapsaných lístkách a vytvoří html"
                 user_data_loader = component "Načítání dat uživatelů" "Komunikuje s databází a získává data"
                 event_enroller = component "Zapsat studenta na lístek" "Zapíše přihlášeného studenta na lístek"
             }
+            
             modification_history = container "Historie změn" "Database"
             database = container "Database"
             api = container "API"
