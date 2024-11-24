@@ -118,7 +118,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         #Vzťahy medzi containerom router a ostatnými systémami
         enrollments.router.routing_engine -> enrollments.displayer.event_displayer
-        enrollments.router.routing_engine -> enrollments.user_enrollment.event_enroller "Žádá o zapsání předmětu"
+        enrollments.router.routing_engine -> enrollments.user_enrollment.event_enroller "Žádá o zapsání lístku"
         enrollments.router.routing_engine -> enrollments.displayer.schedule_displayer
         enrollments.router.routing_engine -> enrollments.browser.dom_reader
         enrollments.router.routing_engine -> enrollments.displayer.manager_displayer
@@ -146,6 +146,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         #Vzťahy medzi komponentami containeru Zápisy užívateľa
         enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Získání dat o přihlášeném uživateli"
+        enrollments.user_enrollment.event_enroller -> enrollments.user_enrollment.user_data_loader "Doptá se na data o uživateli"
 
 
         #Vzťahy medzi containerom Zápisy užívatele a containerom Zobrazenie
@@ -156,6 +157,8 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         #Vzťah medzi containerom displayer a containerom router
         enrollments.displayer.event_displayer -> enrollments.router.routing_engine
+        enrollments.user_enrollment.event_enroller -> enrollments.router.routing_engine "Pošle informaci o výsledku zápisu"
+        
 
     }
 
@@ -205,7 +208,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         component enrollments.router "routerComponentView" {
             include *
-            autoLayout
         }
 
         component enrollments.browser "BrowserComponentView" {
@@ -213,18 +215,33 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             autoLayout
         }
 
-        # dynamic enrollments.user_enrollment {
-        #     title "Zápis předmětu studentem"
-        #     student -> enrollments.displayer.ui "Chce se zapsat na lístek"
-        #     enrollments.displayer.event_displayer -> enrollments.user_enrollment.event_enroller "Požádá o zápis vybraného lístku"
-        #     enrollments.user_enrollment.event_enroller -> enrollments.user_enrollment.user_data_loader "Požádá o ID studenta"
-        #     enrollments.user_enrollment.user_data_loader -> login_system "Požádá o ID studenta"
-        #     login_system -> enrollments.user_enrollment.user_data_loader "Předá ID studenta"
-        #     enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Předá ID studenta"
-        #     enrollments.user_enrollment.event_enroller -> enrollments.database "Zapíše lístek studentovi do databáze"
-        #     enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Zapíše změnu o přihlášení na lístek"
-        #     autoLayout
-        # }
+        dynamic enrollments.user_enrollment {
+            title "Zápis předmětu studentem"
+            student -> enrollments.browser "Chce se zapsat na lístek"
+            # prohlížeč -> směrovač
+            enrollments.browser -> enrollments.router.routing_engine "Požádá o zápis předmětu"
+            # směrovač -> zapsat studenta na lístek 
+            enrollments.router.routing_engine -> enrollments.user_enrollment.event_enroller "Požádá o zápis předmětu"
+            
+            enrollments.user_enrollment.event_enroller -> enrollments.user_enrollment.user_data_loader "Požádá o ID studenta"
+            # načítání dat uživatelů -> přihlašovací systém
+            enrollments.user_enrollment.user_data_loader -> login_system "Požádá o ID studenta"
+            # přihlašovací systém -> načítání dat uživatelů     
+            login_system -> enrollments.user_enrollment.user_data_loader "Pošle ID studenta"
+            # načítání dat uživatelů -> zapsat studenta na lístek   id stud
+            enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Předá ID studenta"
+            # zapsat studenta na lístek -> databáze     zápis do db
+            enrollments.user_enrollment.event_enroller -> enrollments.database "Zapsání nového zápisu studenta na lístek"
+            # zapsat studenta na lístek -> data handling    log
+            enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Požádá o zápis do historie změn"
+            # zapsat studenta na lístek -> směrovač     info o výsledku
+            enrollments.user_enrollment.event_enroller -> enrollments.router.routing_engine "Pošle informaci o výsledku zápisu"
+            # směrovač zobrazí studentovi
+            enrollments.router.routing_engine -> enrollments.browser "Předá informaci o výsledku zápisu"
+
+
+            autoLayout
+        }
 
         # dynamic enrollments.data_handling {
         #     title "Zobrazení historie pro manažera"
