@@ -120,6 +120,9 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.displayer.event_displayer -> enrollments.router.routing_engine "Předání zobrazení lístků"
         enrollments.displayer.schedule_displayer -> enrollments.router.routing_engine "Předání zobrazení rozvrhu"
         enrollments.displayer.manager_displayer -> enrollments.router.routing_engine "Předání zobrazení pro manažera"
+        enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Požadavek na zobrazení lístků"
+        enrollments.router.routing_engine -> enrollments.displayer.schedule_displayer "Požadavek na zobrazení rozvrhu"
+        enrollments.router.routing_engine -> enrollments.displayer.manager_displayer "Požadavek na zobrazení pro manažera"
         enrollments.router.routing_engine -> enrollments.user_enrollment.event_enroller "Žádá o zapsání lístku"
         enrollments.router.routing_engine -> enrollments.browser.dom_reader "Předání stránky"
         
@@ -232,7 +235,13 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             # zapsat studenta na lístek -> databáze
             enrollments.user_enrollment.event_enroller -> enrollments.database "Zapsání nového zápisu studenta na lístek"
             # zapsat studenta na lístek -> data handling
-            enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Požádá o zápis do historie změn"
+            enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Pošle informace o zápisu lístku pro zápisu do historie změn"
+            enrollments.data_handling.modification_handler -> enrollments.data_handling.validator 
+            enrollments.data_handling.validator -> enrollments.data_handling.rules
+            enrollments.data_handling.validator -> enrollments.data_handling.data_preparation_changes
+            enrollments.data_handling.data_preparation_changes -> enrollments.data_handling.changes_api
+            enrollments.data_handling.changes_api -> enrollments.modification_history "Zapíše informaci o zápisu lístku do databáze změn"
+
             # zapsat studenta na lístek -> směrovač
             enrollments.user_enrollment.event_enroller -> enrollments.router.routing_engine "Pošle informaci o výsledku zápisu"
             # směrovač zobrazí studentovi
@@ -242,28 +251,35 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             autoLayout
         }
 
-        # dynamic enrollments.data_handling {
-        #     title "Zobrazení historie pro manažera"
-        #     manager -> enrollments.browser "Chce si zobraziť históriu zmien"
-        #     enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Vyžiada dáta"
-    
-        #     enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
-        #     enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavok na overenie"
-        #     enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
-        #     enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
-        #     enrollments.data_handling.loader -> enrollments.data_handling.changes_api "Pošle request na načítanie"
-        #     enrollments.data_handling.changes_api -> enrollments.modification_history "Request zmení na SQL a pošle ho"
-        #     enrollments.modification_history -> enrollments.data_handling.changes_api "Vráti získané dáta"
-        #     enrollments.data_handling.changes_api -> enrollments.data_handling.loader "Vráti získané dáta"
-        #     enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
+        dynamic enrollments.data_handling {
+            title "Zobrazení historie pro manažera"
+            manager -> enrollments.browser "Chce si zobraziť históriu zmien"
+
+            enrollments.browser -> enrollments.router.routing_engine
+            enrollments.router.routing_engine -> enrollments.displayer.manager_displayer "Požádá o zobrazení pro manažera"
+
+            enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Vyžiada dáta"
+            enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavok na overenie"
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
+            enrollments.data_handling.loader -> enrollments.data_handling.changes_api "Pošle request na načítanie"
+            enrollments.data_handling.changes_api -> enrollments.modification_history "Request zmení na SQL a pošle ho"
+            enrollments.modification_history -> enrollments.data_handling.changes_api "Vráti získané dáta"
+            enrollments.data_handling.changes_api -> enrollments.data_handling.loader "Vráti získané dáta"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
             
-        #     enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
-        #     enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
-        #     enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
         
-        #     enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Poskytne dáta"
-        #     autoLayout
-        # }
+            enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Poskytne dáta"
+            enrollments.displayer.manager_displayer -> enrollments.router.routing_engine "Předá zobrazení"
+            enrollments.router.ui_templator -> enrollments.router.routing_engine "Předá template pro vytvoření stránky"
+            enrollments.router.routing_engine -> enrollments.browser "Předá stránku"
+
+            autoLayout
+        }
 
     dynamic enrollments.email_service {
         title "Komunikace učitele se studenty"
