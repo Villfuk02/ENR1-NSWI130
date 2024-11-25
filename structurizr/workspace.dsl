@@ -38,6 +38,8 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 data_preparation_changes = component "Príprava dát [zmeny]" "Upraví dáta do formátu, ktorý sa dá poslať do Schedule API"
                 changes_api = component "Changes API" "Zapisování a načítání historie změn"
                 rules = component "Rules" "pravidlá, ktoré určujú, či sú zmeny platné"
+            
+                listky_api = component "Lístky API" "API na komunikáciu s databázou so zapismi študentov"
             }
 
             user_enrollment = container "Zápisy uživatele" "Zajišťuje zápis uživatele na daný lístek"{
@@ -146,6 +148,9 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.data_handling.loader -> enrollments.data_handling.schedule_api "Požiadavka na nčítanie dát"
         enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Posílá požadavky na data"
         enrollments.data_handling.loader -> enrollments.data_handling.changes_api "Posílá požadavky na načítání dat"
+        enrollments.data_handling.loader -> enrollments.data_handling.listky_api "Posíla požadavky na data"
+        enrollments.data_handling.listky_api -> enrollments.database "Posílá požadavky na data"
+
 
         #Vzťahy medzi komponentami containeru Zápisy užívateľa
         enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Získání dat o přihlášeném uživateli"
@@ -280,6 +285,37 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
             autoLayout
         }
+
+    dynamic enrollments.displayer {
+        title "Zobrazenie zapísaných študentov pre učiteľa"
+        teacher -> enrollments.browser "Chce si zobraziť detail o lístku so zapísanými študentmi"
+        enrollments.browser -> enrollments.router.routing_engine "Požiada o presmerovanie na zobrazenie"
+        enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Predá požiadavok na zobrazenie lístkov"
+        enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požiada o zobrazenie detailu lístku"
+        enrollments.displayer.event_details -> enrollments.data_handling.data_preparation "Vyžiada dáta o detaile lístku"
+        
+        enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
+        enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavok na overenie"
+        enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
+        enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
+        enrollments.data_handling.loader -> enrollments.data_handling.listky_api "Pošle request na načítanie"
+        enrollments.data_handling.listky_api -> enrollments.database "Request zmení na SQL a pošle ho"
+        enrollments.database -> enrollments.data_handling.listky_api "Vráti získané dáta"
+        enrollments.data_handling.listky_api -> enrollments.data_handling.loader "Vráti získané dáta"
+        enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
+        
+        enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
+        enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
+        enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
+    
+        enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odošle dáta o lístku"
+        enrollments.displayer.event_details -> enrollments.displayer.event_displayer "Vráti na"
+        enrollments.displayer.event_displayer -> enrollments.router.routing_engine "Vráti zobrazenie lístkov"
+        enrollments.router.ui_templator -> enrollments.router.routing_engine "Predá template na vytvorenie stránky"
+        enrollments.router.routing_engine -> enrollments.browser "Predá stránku"
+        
+        autoLayout
+    }
 
     dynamic enrollments.email_service {
         title "Komunikace učitele se studenty"
