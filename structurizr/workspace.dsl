@@ -33,7 +33,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 data_verificator = component "Data verificator" "Overenie správnosti dát"
                 loader = component "Loader" "načíta dáta predmetov pomocou Schedule API"
                 schedule_api = component "Schedule API" "Zapisování a načítání lístků ze Schedules"
-                modification_handler = component "Modification Handler" "Lístok dostane zmeny od učiteľa"
+                modification_handler = component "Modification Handler"
                 validator = component "Validátor" "Vyhodnotí správnosť zmien"
                 data_preparation_changes = component "Príprava dát [zmeny]" "Upraví dáta do formátu, ktorý sa dá poslať do Schedule API"
                 changes_api = component "Changes API" "Zapisování a načítání historie změn"
@@ -227,13 +227,13 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.user_enrollment.user_data_loader -> login_system "Požádá o ID studenta"
             # přihlašovací systém -> načítání dat uživatelů     
             login_system -> enrollments.user_enrollment.user_data_loader "Pošle ID studenta"
-            # načítání dat uživatelů -> zapsat studenta na lístek   id stud
+            # načítání dat uživatelů -> zapsat studenta na lístek
             enrollments.user_enrollment.user_data_loader -> enrollments.user_enrollment.event_enroller "Předá ID studenta"
-            # zapsat studenta na lístek -> databáze     zápis do db
+            # zapsat studenta na lístek -> databáze
             enrollments.user_enrollment.event_enroller -> enrollments.database "Zapsání nového zápisu studenta na lístek"
-            # zapsat studenta na lístek -> data handling    log
+            # zapsat studenta na lístek -> data handling
             enrollments.user_enrollment.event_enroller -> enrollments.data_handling.modification_handler "Požádá o zápis do historie změn"
-            # zapsat studenta na lístek -> směrovač     info o výsledku
+            # zapsat studenta na lístek -> směrovač
             enrollments.user_enrollment.event_enroller -> enrollments.router.routing_engine "Pošle informaci o výsledku zápisu"
             # směrovač zobrazí studentovi
             enrollments.router.routing_engine -> enrollments.browser "Předá informaci o výsledku zápisu"
@@ -244,7 +244,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
 
         # dynamic enrollments.data_handling {
         #     title "Zobrazení historie pro manažera"
-        #     manager -> enrollments.displayer.ui "Chce si zobraziť históriu zmien"
+        #     manager -> enrollments.browser "Chce si zobraziť históriu zmien"
         #     enrollments.displayer.manager_displayer -> enrollments.data_handling.data_preparation "Vyžiada dáta"
     
         #     enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
