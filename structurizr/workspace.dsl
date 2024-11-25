@@ -266,5 +266,25 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #     autoLayout
         # }
 
+    dynamic enrollments.email_service {
+        title "Komunikace učitele se studenty"
+        teacher -> enrollments.browser "Chce odeslat email studentům"
+        # prohlížeč -> směrovač
+        enrollments.browser -> enrollments.router.routing_engine "Požádá o presměrování na zobrazení"
+        # směrovač -> zobrazení lístku
+        enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Požádá o zobrazení svých lístků"
+        # zobrazení lístku -> zobrazení detailu o lístku
+        enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požádá o zobrazení detailu o lístku"
+        # zobrazení detailu o lístku -> zobrazení okna pro tvorbu emailu
+        enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Požádá o zobrazení okna pro vyplnění emailu"
+        # okno pro tvorbu emailu -> email generator
+        enrollments.displayer.email_window_displayer -> enrollments.email_service.email_generator "Požádá o vygenerování emailu"
+        # email generator -> email sender
+        enrollments.email_service.email_generator -> enrollments.email_service.email_sender "Požádá o odeslání emailu"
+        # email sender -> mail router
+        enrollments.email_service.email_sender -> mail_router "Odešle email"                                                                                                                       
+                                                                                                                            
+        autoLayout
+}
     }
 }
