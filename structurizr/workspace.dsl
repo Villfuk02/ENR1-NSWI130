@@ -357,6 +357,25 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Požádá o zobrazení svých lístků"
             # zobrazení lístku -> zobrazení detailu o lístku
             enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požádá o zobrazení detailu o lístku"
+    
+            enrollments.displayer.event_details -> enrollments.data_handling.data_preparation "Vyžiada dáta o lístkoch"
+            
+            enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavku na načítanie dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavku na overenie"
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
+            enrollments.data_handling.loader -> enrollments.data_handling.listky_api "Pošle request na načítanie"
+            enrollments.data_handling.listky_api -> enrollments.database "Request zmení na SQL a pošle ho"
+            enrollments.database -> enrollments.data_handling.listky_api "Vráti získané dáta"
+            enrollments.data_handling.listky_api -> enrollments.data_handling.loader "Vráti získané dáta"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
+            
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát
+            enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
+
+            enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odošle dáta o lístkoch"
+    
             # zobrazení detailu o lístku -> zobrazení okna pro tvorbu emailu
             enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Požádá o zobrazení okna pro vyplnění emailu"
             # okno pro tvorbu emailu -> email generator
@@ -365,8 +384,9 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.email_service.email_generator -> enrollments.email_service.email_sender "Požádá o odeslání emailu"
             # email sender -> mail router
             enrollments.email_service.email_sender -> mail_router "Odešle email"                                                                                                                       
-                                                                                                                                
+                                                                                                                           
             autoLayout
         }
+
     }
 }
