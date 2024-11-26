@@ -286,56 +286,87 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             autoLayout
         }
 
-    dynamic enrollments.displayer {
-        title "Zobrazenie zapísaných študentov pre učiteľa"
-        teacher -> enrollments.browser "Chce si zobraziť detail o lístku so zapísanými študentmi"
-        enrollments.browser -> enrollments.router.routing_engine "Požiada o presmerovanie na zobrazenie"
-        enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Predá požiadavok na zobrazenie lístkov"
-        enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požiada o zobrazenie detailu lístku"
-        enrollments.displayer.event_details -> enrollments.data_handling.data_preparation "Vyžiada dáta o detaile lístku"
+        dynamic enrollments.displayer {
+            title "Zobrazenie zapísaných študentov pre učiteľa"
+            teacher -> enrollments.browser "Chce si zobraziť detail o lístku so zapísanými študentmi"
+            enrollments.browser -> enrollments.router.routing_engine "Požiada o presmerovanie na zobrazenie"
+            enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Predá požiadavok na zobrazenie lístkov"
+            enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požiada o zobrazenie detailu lístku"
+            enrollments.displayer.event_details -> enrollments.data_handling.data_preparation "Vyžiada dáta o detaile lístku"
+            
+            enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavok na overenie"
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
+            enrollments.data_handling.loader -> enrollments.data_handling.listky_api "Pošle request na načítanie"
+            enrollments.data_handling.listky_api -> enrollments.database "Request zmení na SQL a pošle ho"
+            enrollments.database -> enrollments.data_handling.listky_api "Vráti získané dáta"
+            enrollments.data_handling.listky_api -> enrollments.data_handling.loader "Vráti získané dáta"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
+            
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
         
-        enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavok na načítanie dát"
-        enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavok na overenie"
-        enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
-        enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
-        enrollments.data_handling.loader -> enrollments.data_handling.listky_api "Pošle request na načítanie"
-        enrollments.data_handling.listky_api -> enrollments.database "Request zmení na SQL a pošle ho"
-        enrollments.database -> enrollments.data_handling.listky_api "Vráti získané dáta"
-        enrollments.data_handling.listky_api -> enrollments.data_handling.loader "Vráti získané dáta"
-        enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
-        
-        enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
-        enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
-        enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
-    
-        enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odošle dáta o lístku"
-        enrollments.displayer.event_details -> enrollments.displayer.event_displayer "Vráti na"
-        enrollments.displayer.event_displayer -> enrollments.router.routing_engine "Vráti zobrazenie lístkov"
-        enrollments.router.ui_templator -> enrollments.router.routing_engine "Predá template na vytvorenie stránky"
-        enrollments.router.routing_engine -> enrollments.browser "Predá stránku"
-        
-        autoLayout
-    }
+            enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odošle dáta o lístku"
+            enrollments.displayer.event_details -> enrollments.displayer.event_displayer "Vráti na"
+            enrollments.displayer.event_displayer -> enrollments.router.routing_engine "Vráti zobrazenie lístkov"
+            enrollments.router.ui_templator -> enrollments.router.routing_engine "Predá template na vytvorenie stránky"
+            enrollments.router.routing_engine -> enrollments.browser "Predá stránku"
+            
+            autoLayout
+        }
 
-    dynamic enrollments.email_service {
-        title "Komunikace učitele se studenty"
-        teacher -> enrollments.browser "Chce odeslat email studentům"
-        # prohlížeč -> směrovač
-        enrollments.browser -> enrollments.router.routing_engine "Požádá o presměrování na zobrazení"
-        # směrovač -> zobrazení lístku
-        enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Požádá o zobrazení svých lístků"
-        # zobrazení lístku -> zobrazení detailu o lístku
-        enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požádá o zobrazení detailu o lístku"
-        # zobrazení detailu o lístku -> zobrazení okna pro tvorbu emailu
-        enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Požádá o zobrazení okna pro vyplnění emailu"
-        # okno pro tvorbu emailu -> email generator
-        enrollments.displayer.email_window_displayer -> enrollments.email_service.email_generator "Požádá o vygenerování emailu"
-        # email generator -> email sender
-        enrollments.email_service.email_generator -> enrollments.email_service.email_sender "Požádá o odeslání emailu"
-        # email sender -> mail router
-        enrollments.email_service.email_sender -> mail_router "Odešle email"                                                                                                                       
-                                                                                                                            
-        autoLayout
-}
+        dynamic enrollments.displayer {
+            title "Zobrazenie zapísaných predmetov pre študenta"
+            student -> enrollments.browser "Chce si zobraziť zapísané predmety"
+            enrollments.browser -> enrollments.router.routing_engine "Požiada o presmerovanie na zobrazenie predmetov"
+            enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Požiada o zobrazenie lístkov"
+            enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Vyžiada detaily lístkov"
+            enrollments.displayer.event_details -> enrollments.data_handling.data_preparation "Vyžiada dáta o lístkoch"
+            
+            enrollments.data_handling.data_preparation -> enrollments.data_handling.loader "Pošle požiadavku na načítanie dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle požiadavku na overenie"
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti požiadavku"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Informuje o správnosti"
+            enrollments.data_handling.loader -> enrollments.data_handling.listky_api "Pošle request na načítanie"
+            enrollments.data_handling.listky_api -> enrollments.database "Request zmení na SQL a pošle ho"
+            enrollments.database -> enrollments.data_handling.listky_api "Vráti získané dáta"
+            enrollments.data_handling.listky_api -> enrollments.data_handling.loader "Vráti získané dáta"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
+            
+            enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
+            enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
+
+            enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odošle dáta o lístkoch"
+            enrollments.displayer.event_details -> enrollments.displayer.event_displayer "Vráti na"
+            enrollments.displayer.event_displayer -> enrollments.router.routing_engine "Vráti zobrazenie predmetov"
+            enrollments.router.ui_templator -> enrollments.router.routing_engine "Predá template na vytvorenie stránky"
+            enrollments.router.routing_engine -> enrollments.browser "Predá stránku"
+            
+            autoLayout
+        }
+
+        dynamic enrollments.email_service {
+            title "Komunikace učitele se studenty"
+            teacher -> enrollments.browser "Chce odeslat email studentům"
+            # prohlížeč -> směrovač
+            enrollments.browser -> enrollments.router.routing_engine "Požádá o presměrování na zobrazení"
+            # směrovač -> zobrazení lístku
+            enrollments.router.routing_engine -> enrollments.displayer.event_displayer "Požádá o zobrazení svých lístků"
+            # zobrazení lístku -> zobrazení detailu o lístku
+            enrollments.displayer.event_displayer -> enrollments.displayer.event_details "Požádá o zobrazení detailu o lístku"
+            # zobrazení detailu o lístku -> zobrazení okna pro tvorbu emailu
+            enrollments.displayer.event_details -> enrollments.displayer.email_window_displayer "Požádá o zobrazení okna pro vyplnění emailu"
+            # okno pro tvorbu emailu -> email generator
+            enrollments.displayer.email_window_displayer -> enrollments.email_service.email_generator "Požádá o vygenerování emailu"
+            # email generator -> email sender
+            enrollments.email_service.email_generator -> enrollments.email_service.email_sender "Požádá o odeslání emailu"
+            # email sender -> mail router
+            enrollments.email_service.email_sender -> mail_router "Odešle email"                                                                                                                       
+                                                                                                                                
+            autoLayout
+        }
     }
 }
