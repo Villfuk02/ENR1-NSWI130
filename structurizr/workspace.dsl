@@ -89,7 +89,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         manager = person "Manažer"
         student = person "Student"
         teacher = person "Učitel"
-        study_dep = person "Studijní oddělení"
         
         # Vztahy mezi uživateli a Zápisy (Enrollments)
         manager -> enrollments "Používá"
