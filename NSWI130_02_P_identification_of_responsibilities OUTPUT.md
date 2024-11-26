@@ -133,3 +133,26 @@ Jakožto učitel chci mít možnost komunikovat se studenty na svých lístcích
  
 #### Odesílací responsibilities
 - Po vyplnění obsahu emailu a stisknutí tlačítka "Odeslat" se email rozešle všem adresovaným
+
+### Feature: Zobrazování lístků pro učitele
+Jakožto učitel chci mít přehled o svých rozvržených lístcích a možnost se na ně kdykoliv podívat.
+
+#### Feature breakdown:
+1. Na dashboarde učitel klikne tlačidlo "Zobraziť rozvrhové lístky"
+2. Po kliknutí sa zobrazí chronologický zoznam jeho vedenych lístkov.
+- lístky treba načítať z databázy a zobraziť ich chronologicky (podľa času, kedy sú v rozvrhu)
+ - Lístok má čas, názov a kód predmetu a meno vyučujúceho
+3. Učitel si môže vybrať ľubovoľný lístok a kliknúť naň
+4. Zobrazí sa detail lístku
+- získa sa zoznam študentov na lístku
+- vypíšu sa všetky informácie o lístku (čas, názov, kód a vyučujúci)
+- vypíše sa zoznam študentov prihlásených na lístku
+
+#### Responsibilities
+##### Dashboard responsibilities
+- tlačítko, ktoré presmeruje užívateľa na zoznam rozvrhových lístkov
+
+##### Zoznam lístkov responsibilities
+- Získanie zoznamu lístkov z databázy
+- Zoradenie a zobrazenie lístkov v chronologickom poradí
+- Zaistenie správneho priradenia vyučujúceho k lístku
