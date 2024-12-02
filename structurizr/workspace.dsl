@@ -94,7 +94,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         manager -> enrollments "Používá"
         student -> enrollments "Používá"
         teacher -> enrollments "Používá"
-        study_dep -> enrollments "Používá"
         
         # Vztahy mezi softwerovými systémy
         login_system -> enrollments "Posílá data o uživatelech"
@@ -106,7 +105,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         #Vzťahy medzi užívateľami a zobrazením
         student -> enrollments.browser "Ovládanie cez"
         teacher -> enrollments.browser "Ovládanie cez"
-        study_dep -> enrollments.browser "Ovládanie cez"
         manager -> enrollments.browser "Ovládanie cez"
 
         
