@@ -4,10 +4,10 @@
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2024-12-02T20:48:26Z",
+  "lastModifiedDate" : "2024-12-09T12:47:20Z",
   "model" : {
     "people" : [ {
-      "id" : "59",
+      "id" : "62",
       "location" : "Unspecified",
       "name" : "Manažer",
       "properties" : {
@@ -16,19 +16,19 @@
       "relationships" : [ {
         "description" : "Používá",
         "destinationId" : "1",
-        "id" : "62",
-        "sourceId" : "59",
+        "id" : "65",
+        "sourceId" : "62",
         "tags" : "Relationship"
       }, {
         "description" : "Ovládanie cez",
         "destinationId" : "2",
-        "id" : "75",
-        "sourceId" : "59",
+        "id" : "78",
+        "sourceId" : "62",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
     }, {
-      "id" : "60",
+      "id" : "63",
       "location" : "Unspecified",
       "name" : "Student",
       "properties" : {
@@ -37,19 +37,19 @@
       "relationships" : [ {
         "description" : "Používá",
         "destinationId" : "1",
-        "id" : "63",
-        "sourceId" : "60",
+        "id" : "66",
+        "sourceId" : "63",
         "tags" : "Relationship"
       }, {
         "description" : "Ovládanie cez",
         "destinationId" : "2",
-        "id" : "73",
-        "sourceId" : "60",
+        "id" : "76",
+        "sourceId" : "63",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
     }, {
-      "id" : "61",
+      "id" : "64",
       "location" : "Unspecified",
       "name" : "Učitel",
       "properties" : {
@@ -58,14 +58,14 @@
       "relationships" : [ {
         "description" : "Používá",
         "destinationId" : "1",
-        "id" : "64",
-        "sourceId" : "61",
+        "id" : "67",
+        "sourceId" : "64",
         "tags" : "Relationship"
       }, {
         "description" : "Ovládanie cez",
         "destinationId" : "2",
-        "id" : "74",
-        "sourceId" : "61",
+        "id" : "77",
+        "sourceId" : "64",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
@@ -82,14 +82,14 @@
           "relationships" : [ {
             "description" : "Požadavek na změnu stránky",
             "destinationId" : "5",
-            "id" : "103",
+            "id" : "106",
             "sourceId" : "3",
             "tags" : "Relationship"
           }, {
             "description" : "Požadavek na změnu stránky",
             "destinationId" : "4",
-            "id" : "104",
-            "linkedRelationshipId" : "103",
+            "id" : "107",
+            "linkedRelationshipId" : "106",
             "sourceId" : "3"
           } ],
           "tags" : "Element,Component"
@@ -103,14 +103,14 @@
         "relationships" : [ {
           "description" : "Požadavek na změnu stránky",
           "destinationId" : "5",
-          "id" : "105",
-          "linkedRelationshipId" : "103",
+          "id" : "108",
+          "linkedRelationshipId" : "106",
           "sourceId" : "2"
         }, {
           "description" : "Požadavek na změnu stránky",
           "destinationId" : "4",
-          "id" : "106",
-          "linkedRelationshipId" : "103",
+          "id" : "109",
+          "linkedRelationshipId" : "106",
           "sourceId" : "2"
         } ],
         "tags" : "Element,Container"
@@ -125,51 +125,51 @@
           },
           "relationships" : [ {
             "description" : "Požadavek na zobrazení lístků",
-            "destinationId" : "9",
-            "id" : "87",
+            "destinationId" : "12",
+            "id" : "90",
             "sourceId" : "5",
             "tags" : "Relationship"
           }, {
             "description" : "Požadavek na zobrazení lístků",
-            "destinationId" : "7",
-            "id" : "88",
-            "linkedRelationshipId" : "87",
+            "destinationId" : "10",
+            "id" : "91",
+            "linkedRelationshipId" : "90",
             "sourceId" : "5"
           }, {
             "description" : "Požadavek na zobrazení rozvrhu",
-            "destinationId" : "8",
-            "id" : "91",
+            "destinationId" : "11",
+            "id" : "94",
             "sourceId" : "5",
             "tags" : "Relationship"
           }, {
             "description" : "Požadavek na zobrazení pro manažera",
-            "destinationId" : "12",
-            "id" : "93",
-            "sourceId" : "5",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Žádá o zapsání lístku",
-            "destinationId" : "29",
-            "id" : "95",
-            "sourceId" : "5",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Žádá o zapsání lístku",
-            "destinationId" : "27",
+            "destinationId" : "15",
             "id" : "96",
-            "linkedRelationshipId" : "95",
+            "sourceId" : "5",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Žádá o zapsání lístku",
+            "destinationId" : "32",
+            "id" : "98",
+            "sourceId" : "5",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Žádá o zapsání lístku",
+            "destinationId" : "30",
+            "id" : "99",
+            "linkedRelationshipId" : "98",
             "sourceId" : "5"
           }, {
             "description" : "Předání stránky",
             "destinationId" : "3",
-            "id" : "99",
+            "id" : "102",
             "sourceId" : "5",
             "tags" : "Relationship"
           }, {
             "description" : "Předání stránky",
             "destinationId" : "2",
-            "id" : "100",
-            "linkedRelationshipId" : "99",
+            "id" : "103",
+            "linkedRelationshipId" : "102",
             "sourceId" : "5"
           } ],
           "tags" : "Element,Component"
@@ -184,7 +184,7 @@
           "relationships" : [ {
             "description" : "Poskytnutí template",
             "destinationId" : "5",
-            "id" : "78",
+            "id" : "81",
             "sourceId" : "6",
             "tags" : "Relationship"
           } ],
@@ -199,58 +199,125 @@
         },
         "relationships" : [ {
           "description" : "Požadavek na zobrazení lístků",
-          "destinationId" : "9",
-          "id" : "89",
-          "linkedRelationshipId" : "87",
+          "destinationId" : "12",
+          "id" : "92",
+          "linkedRelationshipId" : "90",
           "sourceId" : "4"
         }, {
           "description" : "Požadavek na zobrazení lístků",
-          "destinationId" : "7",
-          "id" : "90",
-          "linkedRelationshipId" : "87",
+          "destinationId" : "10",
+          "id" : "93",
+          "linkedRelationshipId" : "90",
           "sourceId" : "4"
         }, {
           "description" : "Požadavek na zobrazení rozvrhu",
-          "destinationId" : "8",
-          "id" : "92",
-          "linkedRelationshipId" : "91",
+          "destinationId" : "11",
+          "id" : "95",
+          "linkedRelationshipId" : "94",
           "sourceId" : "4"
         }, {
           "description" : "Požadavek na zobrazení pro manažera",
-          "destinationId" : "12",
-          "id" : "94",
-          "linkedRelationshipId" : "93",
-          "sourceId" : "4"
-        }, {
-          "description" : "Žádá o zapsání lístku",
-          "destinationId" : "29",
+          "destinationId" : "15",
           "id" : "97",
-          "linkedRelationshipId" : "95",
+          "linkedRelationshipId" : "96",
           "sourceId" : "4"
         }, {
           "description" : "Žádá o zapsání lístku",
-          "destinationId" : "27",
-          "id" : "98",
-          "linkedRelationshipId" : "95",
+          "destinationId" : "32",
+          "id" : "100",
+          "linkedRelationshipId" : "98",
+          "sourceId" : "4"
+        }, {
+          "description" : "Žádá o zapsání lístku",
+          "destinationId" : "30",
+          "id" : "101",
+          "linkedRelationshipId" : "98",
           "sourceId" : "4"
         }, {
           "description" : "Předání stránky",
           "destinationId" : "3",
-          "id" : "101",
-          "linkedRelationshipId" : "99",
+          "id" : "104",
+          "linkedRelationshipId" : "102",
           "sourceId" : "4"
         }, {
           "description" : "Předání stránky",
           "destinationId" : "2",
-          "id" : "102",
-          "linkedRelationshipId" : "99",
+          "id" : "105",
+          "linkedRelationshipId" : "102",
           "sourceId" : "4"
         } ],
         "tags" : "Element,Container"
       }, {
         "components" : [ {
+          "description" : "Kontroluje stav směrovače",
           "documentation" : { },
           "id" : "8",
+          "name" : "Health checker",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.routing_reliability.routing_health_checker"
+          },
+          "relationships" : [ {
+            "description" : "Upozorňuje na nezdravé instance",
+            "destinationId" : "9",
+            "id" : "146",
+            "sourceId" : "8",
+            "tags" : "Relationship,quality"
+          }, {
+            "description" : "Kontroluje zdraví pingováním",
+            "destinationId" : "5",
+            "id" : "147",
+            "sourceId" : "8",
+            "tags" : "Relationship,quality"
+          }, {
+            "description" : "Kontroluje zdraví pingováním",
+            "destinationId" : "4",
+            "id" : "148",
+            "linkedRelationshipId" : "147",
+            "sourceId" : "8"
+          } ],
+          "tags" : "Element,Component,quality component"
+        }, {
+          "description" : "Spravuje instance směrovače",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Failover",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.routing_reliability.routing_failover"
+          },
+          "relationships" : [ {
+            "description" : "Spravuje instance",
+            "destinationId" : "4",
+            "id" : "151",
+            "sourceId" : "9",
+            "tags" : "Relationship,quality"
+          } ],
+          "tags" : "Element,Component,quality component"
+        } ],
+        "description" : "Zajišťuje spolehlivost Směrovače stránek",
+        "documentation" : { },
+        "id" : "7",
+        "name" : "Spolehlivost směrovače",
+        "properties" : {
+          "structurizr.dsl.identifier" : "enrollments.routing_reliability"
+        },
+        "relationships" : [ {
+          "description" : "Kontroluje zdraví pingováním",
+          "destinationId" : "5",
+          "id" : "149",
+          "linkedRelationshipId" : "147",
+          "sourceId" : "7"
+        }, {
+          "description" : "Kontroluje zdraví pingováním",
+          "destinationId" : "4",
+          "id" : "150",
+          "linkedRelationshipId" : "147",
+          "sourceId" : "7"
+        } ],
+        "tags" : "Element,Container,quality container"
+      }, {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "11",
           "name" : "Zobrazovanie rozvrhu",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.displayer.schedule_displayer"
@@ -258,83 +325,83 @@
           "relationships" : [ {
             "description" : "Předání zobrazení rozvrhu",
             "destinationId" : "5",
-            "id" : "83",
-            "sourceId" : "8",
+            "id" : "86",
+            "sourceId" : "11",
             "tags" : "Relationship"
           }, {
             "description" : "Předání zobrazení rozvrhu",
             "destinationId" : "4",
-            "id" : "84",
-            "linkedRelationshipId" : "83",
-            "sourceId" : "8"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "documentation" : { },
-          "id" : "9",
-          "name" : "Zobrazenie lístkov",
-          "properties" : {
-            "structurizr.dsl.identifier" : "enrollments.displayer.event_displayer"
-          },
-          "relationships" : [ {
-            "description" : "Odkazuje na",
-            "destinationId" : "10",
-            "id" : "76",
-            "sourceId" : "9",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Předání zobrazení lístků",
-            "destinationId" : "5",
-            "id" : "79",
-            "sourceId" : "9",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Předání zobrazení lístků",
-            "destinationId" : "4",
-            "id" : "80",
-            "linkedRelationshipId" : "79",
-            "sourceId" : "9"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "documentation" : { },
-          "id" : "10",
-          "name" : "Detail o lístku",
-          "properties" : {
-            "structurizr.dsl.identifier" : "enrollments.displayer.event_details"
-          },
-          "relationships" : [ {
-            "description" : "Odkazuje na",
-            "destinationId" : "11",
-            "id" : "77",
-            "sourceId" : "10",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "documentation" : { },
-          "id" : "11",
-          "name" : "Zobrazenie emailového okna",
-          "properties" : {
-            "structurizr.dsl.identifier" : "enrollments.displayer.email_window_displayer"
-          },
-          "relationships" : [ {
-            "description" : "Sprístupňuje",
-            "destinationId" : "14",
-            "id" : "45",
-            "sourceId" : "11",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Sprístupňuje",
-            "destinationId" : "13",
-            "id" : "46",
-            "linkedRelationshipId" : "45",
+            "id" : "87",
+            "linkedRelationshipId" : "86",
             "sourceId" : "11"
           } ],
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
           "id" : "12",
+          "name" : "Zobrazenie lístkov",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.displayer.event_displayer"
+          },
+          "relationships" : [ {
+            "description" : "Odkazuje na",
+            "destinationId" : "13",
+            "id" : "79",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Předání zobrazení lístků",
+            "destinationId" : "5",
+            "id" : "82",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Předání zobrazení lístků",
+            "destinationId" : "4",
+            "id" : "83",
+            "linkedRelationshipId" : "82",
+            "sourceId" : "12"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Detail o lístku",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.displayer.event_details"
+          },
+          "relationships" : [ {
+            "description" : "Odkazuje na",
+            "destinationId" : "14",
+            "id" : "80",
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Zobrazenie emailového okna",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.displayer.email_window_displayer"
+          },
+          "relationships" : [ {
+            "description" : "Sprístupňuje",
+            "destinationId" : "17",
+            "id" : "48",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Sprístupňuje",
+            "destinationId" : "16",
+            "id" : "49",
+            "linkedRelationshipId" : "48",
+            "sourceId" : "14"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "15",
           "name" : "Zobrazenie pre manažéra",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.displayer.manager_displayer"
@@ -342,295 +409,295 @@
           "relationships" : [ {
             "description" : "Předání zobrazení pro manažera",
             "destinationId" : "5",
-            "id" : "85",
-            "sourceId" : "12",
+            "id" : "88",
+            "sourceId" : "15",
             "tags" : "Relationship"
           }, {
             "description" : "Předání zobrazení pro manažera",
             "destinationId" : "4",
-            "id" : "86",
-            "linkedRelationshipId" : "85",
-            "sourceId" : "12"
+            "id" : "89",
+            "linkedRelationshipId" : "88",
+            "sourceId" : "15"
           } ],
           "tags" : "Element,Component"
         } ],
         "description" : "Vytváří jednotlivá zobrazení s daty",
         "documentation" : { },
-        "id" : "7",
+        "id" : "10",
         "name" : "Zobrazení",
         "properties" : {
           "structurizr.dsl.identifier" : "enrollments.displayer"
         },
         "relationships" : [ {
           "description" : "Sprístupňuje",
-          "destinationId" : "14",
-          "id" : "47",
-          "linkedRelationshipId" : "45",
-          "sourceId" : "7"
+          "destinationId" : "17",
+          "id" : "50",
+          "linkedRelationshipId" : "48",
+          "sourceId" : "10"
         }, {
           "description" : "Sprístupňuje",
-          "destinationId" : "13",
-          "id" : "48",
-          "linkedRelationshipId" : "45",
-          "sourceId" : "7"
+          "destinationId" : "16",
+          "id" : "51",
+          "linkedRelationshipId" : "48",
+          "sourceId" : "10"
         }, {
           "description" : "Předání zobrazení lístků",
           "destinationId" : "5",
-          "id" : "81",
-          "linkedRelationshipId" : "79",
-          "sourceId" : "7"
+          "id" : "84",
+          "linkedRelationshipId" : "82",
+          "sourceId" : "10"
         }, {
           "description" : "Předání zobrazení lístků",
           "destinationId" : "4",
-          "id" : "82",
-          "linkedRelationshipId" : "79",
-          "sourceId" : "7"
-        } ],
-        "tags" : "Element,Container"
-      }, {
-        "components" : [ {
-          "documentation" : { },
-          "id" : "14",
-          "name" : "Tvorba emailov",
-          "properties" : {
-            "structurizr.dsl.identifier" : "enrollments.email_service.email_generator"
-          },
-          "relationships" : [ {
-            "description" : "Předá email",
-            "destinationId" : "15",
-            "id" : "44",
-            "sourceId" : "14",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "documentation" : { },
-          "id" : "15",
-          "name" : "Odosielanie emailov",
-          "properties" : {
-            "structurizr.dsl.identifier" : "enrollments.email_service.email_sender"
-          },
-          "relationships" : [ {
-            "description" : "Komunikuje",
-            "destinationId" : "33",
-            "id" : "41",
-            "sourceId" : "15",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
-        } ],
-        "description" : "Vytváření a zasílání emailů",
-        "documentation" : { },
-        "id" : "13",
-        "name" : "Email service",
-        "properties" : {
-          "structurizr.dsl.identifier" : "enrollments.email_service"
-        },
-        "relationships" : [ {
-          "description" : "Komunikuje",
-          "destinationId" : "33",
-          "id" : "42",
-          "linkedRelationshipId" : "41",
-          "sourceId" : "13"
+          "id" : "85",
+          "linkedRelationshipId" : "82",
+          "sourceId" : "10"
         } ],
         "tags" : "Element,Container"
       }, {
         "components" : [ {
           "documentation" : { },
           "id" : "17",
+          "name" : "Tvorba emailov",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.email_service.email_generator"
+          },
+          "relationships" : [ {
+            "description" : "Předá email",
+            "destinationId" : "18",
+            "id" : "47",
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "18",
+          "name" : "Odosielanie emailov",
+          "properties" : {
+            "structurizr.dsl.identifier" : "enrollments.email_service.email_sender"
+          },
+          "relationships" : [ {
+            "description" : "Komunikuje",
+            "destinationId" : "36",
+            "id" : "44",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Vytváření a zasílání emailů",
+        "documentation" : { },
+        "id" : "16",
+        "name" : "Email service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "enrollments.email_service"
+        },
+        "relationships" : [ {
+          "description" : "Komunikuje",
+          "destinationId" : "36",
+          "id" : "45",
+          "linkedRelationshipId" : "44",
+          "sourceId" : "16"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "20",
           "name" : "Príprava dát",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.data_preparation"
           },
           "relationships" : [ {
             "description" : "Odosielanie dát v HTML pre zobrazenie",
-            "destinationId" : "9",
-            "id" : "107",
-            "sourceId" : "17",
+            "destinationId" : "12",
+            "id" : "110",
+            "sourceId" : "20",
             "tags" : "Relationship"
           }, {
             "description" : "Odosielanie dát v HTML pre zobrazenie",
-            "destinationId" : "7",
-            "id" : "108",
-            "linkedRelationshipId" : "107",
-            "sourceId" : "17"
+            "destinationId" : "10",
+            "id" : "111",
+            "linkedRelationshipId" : "110",
+            "sourceId" : "20"
           }, {
             "description" : "Odosielanie dát na zobrazenie pre manažéra",
-            "destinationId" : "12",
-            "id" : "111",
-            "sourceId" : "17",
+            "destinationId" : "15",
+            "id" : "114",
+            "sourceId" : "20",
             "tags" : "Relationship"
           }, {
             "description" : "Odesílání dat o lístku v HTML",
-            "destinationId" : "10",
-            "id" : "113",
-            "sourceId" : "17",
+            "destinationId" : "13",
+            "id" : "116",
+            "sourceId" : "20",
             "tags" : "Relationship"
           }, {
             "description" : "Posílá požadavky na data",
-            "destinationId" : "19",
-            "id" : "124",
-            "sourceId" : "17",
+            "destinationId" : "22",
+            "id" : "127",
+            "sourceId" : "20",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Overenie správnosti dát",
           "documentation" : { },
-          "id" : "18",
+          "id" : "21",
           "name" : "Data verificator",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.data_verificator"
           },
           "relationships" : [ {
             "description" : "Pošle dáta k príprave na zobrazenie",
-            "destinationId" : "17",
-            "id" : "120",
-            "sourceId" : "18",
+            "destinationId" : "20",
+            "id" : "123",
+            "sourceId" : "21",
             "tags" : "Relationship"
           }, {
             "description" : "Získa pravidlá, podľa ktorých zistí, či sú načítané dáta správne",
-            "destinationId" : "25",
-            "id" : "121",
-            "sourceId" : "18",
+            "destinationId" : "28",
+            "id" : "124",
+            "sourceId" : "21",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "načíta dáta predmetov pomocou Schedule API",
           "documentation" : { },
-          "id" : "19",
+          "id" : "22",
           "name" : "Loader",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.loader"
           },
           "relationships" : [ {
             "description" : "Pošle dáta na overenie správnosti",
-            "destinationId" : "18",
-            "id" : "122",
-            "sourceId" : "19",
+            "destinationId" : "21",
+            "id" : "125",
+            "sourceId" : "22",
             "tags" : "Relationship"
           }, {
             "description" : "Požiadavka na nčítanie dát",
-            "destinationId" : "20",
-            "id" : "123",
-            "sourceId" : "19",
+            "destinationId" : "23",
+            "id" : "126",
+            "sourceId" : "22",
             "tags" : "Relationship"
           }, {
             "description" : "Posílá požadavky na načítání dat",
-            "destinationId" : "24",
-            "id" : "125",
-            "sourceId" : "19",
+            "destinationId" : "27",
+            "id" : "128",
+            "sourceId" : "22",
             "tags" : "Relationship"
           }, {
             "description" : "Posíla požadavky na data",
-            "destinationId" : "26",
-            "id" : "126",
-            "sourceId" : "19",
+            "destinationId" : "29",
+            "id" : "129",
+            "sourceId" : "22",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Zapisování a načítání lístků ze Schedules",
           "documentation" : { },
-          "id" : "20",
+          "id" : "23",
           "name" : "Schedule API",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.schedule_api"
           },
           "relationships" : [ {
             "description" : "Komunikácia s Databázou",
-            "destinationId" : "35",
-            "id" : "49",
-            "sourceId" : "20",
+            "destinationId" : "38",
+            "id" : "52",
+            "sourceId" : "23",
             "tags" : "Relationship"
           }, {
             "description" : "Komunikácia s Databázou",
-            "destinationId" : "34",
-            "id" : "50",
-            "linkedRelationshipId" : "49",
-            "sourceId" : "20"
+            "destinationId" : "37",
+            "id" : "53",
+            "linkedRelationshipId" : "52",
+            "sourceId" : "23"
           } ],
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "21",
+          "id" : "24",
           "name" : "Modification Handler",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.modification_handler"
           },
           "relationships" : [ {
             "description" : "Pošle zmeny validátoru",
-            "destinationId" : "22",
-            "id" : "115",
-            "sourceId" : "21",
+            "destinationId" : "25",
+            "id" : "118",
+            "sourceId" : "24",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Vyhodnotí správnosť zmien",
           "documentation" : { },
-          "id" : "22",
+          "id" : "25",
           "name" : "Validátor",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.validator"
           },
           "relationships" : [ {
             "description" : "Pošle zmeny k príprave na odoslanie",
-            "destinationId" : "23",
-            "id" : "116",
-            "sourceId" : "22",
+            "destinationId" : "26",
+            "id" : "119",
+            "sourceId" : "25",
             "tags" : "Relationship"
           }, {
             "description" : "Získa pravidlá, podľa ktorých vyhodnotí platnosť zmien",
-            "destinationId" : "25",
-            "id" : "117",
-            "sourceId" : "22",
+            "destinationId" : "28",
+            "id" : "120",
+            "sourceId" : "25",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Upraví dáta do formátu, ktorý sa dá poslať do Schedule API",
           "documentation" : { },
-          "id" : "23",
+          "id" : "26",
           "name" : "Príprava dát [zmeny]",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.data_preparation_changes"
           },
           "relationships" : [ {
             "description" : "Požiadavka na modifikáciu dát",
-            "destinationId" : "20",
-            "id" : "118",
-            "sourceId" : "23",
+            "destinationId" : "23",
+            "id" : "121",
+            "sourceId" : "26",
             "tags" : "Relationship"
           }, {
             "description" : "Požiadavka na pridanie záznamu",
-            "destinationId" : "24",
-            "id" : "119",
-            "sourceId" : "23",
+            "destinationId" : "27",
+            "id" : "122",
+            "sourceId" : "26",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Zapisování a načítání historie změn",
           "documentation" : { },
-          "id" : "24",
+          "id" : "27",
           "name" : "Changes API",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.changes_api"
           },
           "relationships" : [ {
             "description" : "Pridanie záznamu do databázy zmien",
-            "destinationId" : "30",
-            "id" : "55",
-            "sourceId" : "24",
+            "destinationId" : "33",
+            "id" : "58",
+            "sourceId" : "27",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "pravidlá, ktoré určujú, či sú zmeny platné",
           "documentation" : { },
-          "id" : "25",
+          "id" : "28",
           "name" : "Rules",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.rules"
@@ -639,219 +706,219 @@
         }, {
           "description" : "API na komunikáciu s databázou so zapismi študentov",
           "documentation" : { },
-          "id" : "26",
+          "id" : "29",
           "name" : "Lístky API",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.data_handling.listky_api"
           },
           "relationships" : [ {
             "description" : "Posílá požadavky na data",
-            "destinationId" : "31",
-            "id" : "127",
-            "sourceId" : "26",
+            "destinationId" : "34",
+            "id" : "130",
+            "sourceId" : "29",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         } ],
         "description" : "Zaznamenává změny, komunikuje s Rozvrhy a vytváří jejich zobrazení",
         "documentation" : { },
-        "id" : "16",
+        "id" : "19",
         "name" : "Data Handling",
         "properties" : {
           "structurizr.dsl.identifier" : "enrollments.data_handling"
         },
         "relationships" : [ {
           "description" : "Komunikácia s Databázou",
-          "destinationId" : "35",
-          "id" : "51",
-          "linkedRelationshipId" : "49",
-          "sourceId" : "16"
+          "destinationId" : "38",
+          "id" : "54",
+          "linkedRelationshipId" : "52",
+          "sourceId" : "19"
         }, {
           "description" : "Komunikácia s Databázou",
-          "destinationId" : "34",
-          "id" : "52",
-          "linkedRelationshipId" : "49",
-          "sourceId" : "16"
+          "destinationId" : "37",
+          "id" : "55",
+          "linkedRelationshipId" : "52",
+          "sourceId" : "19"
         }, {
           "description" : "Pridanie záznamu do databázy zmien",
-          "destinationId" : "30",
-          "id" : "56",
-          "linkedRelationshipId" : "55",
-          "sourceId" : "16"
+          "destinationId" : "33",
+          "id" : "59",
+          "linkedRelationshipId" : "58",
+          "sourceId" : "19"
         }, {
           "description" : "Odosielanie dát v HTML pre zobrazenie",
-          "destinationId" : "9",
-          "id" : "109",
-          "linkedRelationshipId" : "107",
-          "sourceId" : "16"
-        }, {
-          "description" : "Odosielanie dát v HTML pre zobrazenie",
-          "destinationId" : "7",
-          "id" : "110",
-          "linkedRelationshipId" : "107",
-          "sourceId" : "16"
-        }, {
-          "description" : "Odosielanie dát na zobrazenie pre manažéra",
           "destinationId" : "12",
           "id" : "112",
-          "linkedRelationshipId" : "111",
-          "sourceId" : "16"
+          "linkedRelationshipId" : "110",
+          "sourceId" : "19"
+        }, {
+          "description" : "Odosielanie dát v HTML pre zobrazenie",
+          "destinationId" : "10",
+          "id" : "113",
+          "linkedRelationshipId" : "110",
+          "sourceId" : "19"
+        }, {
+          "description" : "Odosielanie dát na zobrazenie pre manažéra",
+          "destinationId" : "15",
+          "id" : "115",
+          "linkedRelationshipId" : "114",
+          "sourceId" : "19"
         }, {
           "description" : "Odesílání dat o lístku v HTML",
-          "destinationId" : "10",
-          "id" : "114",
-          "linkedRelationshipId" : "113",
-          "sourceId" : "16"
+          "destinationId" : "13",
+          "id" : "117",
+          "linkedRelationshipId" : "116",
+          "sourceId" : "19"
         }, {
           "description" : "Posílá požadavky na data",
-          "destinationId" : "31",
-          "id" : "128",
-          "linkedRelationshipId" : "127",
-          "sourceId" : "16"
+          "destinationId" : "34",
+          "id" : "131",
+          "linkedRelationshipId" : "130",
+          "sourceId" : "19"
         } ],
         "tags" : "Element,Container"
       }, {
         "components" : [ {
           "description" : "Komunikuje s databází a získává data",
           "documentation" : { },
-          "id" : "28",
+          "id" : "31",
           "name" : "Načítání dat uživatelů",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.user_enrollment.user_data_loader"
           },
           "relationships" : [ {
             "description" : "Posílání požadavků na uživatelská data",
-            "destinationId" : "58",
-            "id" : "68",
-            "sourceId" : "28",
+            "destinationId" : "61",
+            "id" : "71",
+            "sourceId" : "31",
             "tags" : "Relationship"
           }, {
             "description" : "Získání dat o přihlášeném uživateli",
-            "destinationId" : "29",
-            "id" : "129",
-            "sourceId" : "28",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Předání dat o zapsaných lístcích",
-            "destinationId" : "8",
-            "id" : "131",
-            "sourceId" : "28",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Předání dat o zapsaných lístcích",
-            "destinationId" : "7",
+            "destinationId" : "32",
             "id" : "132",
-            "linkedRelationshipId" : "131",
-            "sourceId" : "28"
+            "sourceId" : "31",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Předání dat o zapsaných lístcích",
+            "destinationId" : "11",
+            "id" : "134",
+            "sourceId" : "31",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Předání dat o zapsaných lístcích",
+            "destinationId" : "10",
+            "id" : "135",
+            "linkedRelationshipId" : "134",
+            "sourceId" : "31"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Zapíše přihlášeného studenta na lístek",
           "documentation" : { },
-          "id" : "29",
+          "id" : "32",
           "name" : "Zapsat studenta na lístek",
           "properties" : {
             "structurizr.dsl.identifier" : "enrollments.user_enrollment.event_enroller"
           },
           "relationships" : [ {
             "description" : "Zapsání nového zápisu",
-            "destinationId" : "31",
-            "id" : "39",
-            "sourceId" : "29",
+            "destinationId" : "34",
+            "id" : "42",
+            "sourceId" : "32",
             "tags" : "Relationship"
           }, {
             "description" : "Doptá se na data o uživateli",
-            "destinationId" : "28",
-            "id" : "130",
-            "sourceId" : "29",
+            "destinationId" : "31",
+            "id" : "133",
+            "sourceId" : "32",
             "tags" : "Relationship"
           }, {
             "description" : "Zapísanie zmien (prihlásenie študenta na lístok)",
-            "destinationId" : "21",
-            "id" : "135",
-            "sourceId" : "29",
+            "destinationId" : "24",
+            "id" : "138",
+            "sourceId" : "32",
             "tags" : "Relationship"
           }, {
             "description" : "Zapísanie zmien (prihlásenie študenta na lístok)",
-            "destinationId" : "16",
-            "id" : "136",
-            "linkedRelationshipId" : "135",
-            "sourceId" : "29"
+            "destinationId" : "19",
+            "id" : "139",
+            "linkedRelationshipId" : "138",
+            "sourceId" : "32"
           }, {
             "description" : "Pošle informaci o výsledku zápisu",
             "destinationId" : "5",
-            "id" : "139",
-            "sourceId" : "29",
+            "id" : "142",
+            "sourceId" : "32",
             "tags" : "Relationship"
           }, {
             "description" : "Pošle informaci o výsledku zápisu",
             "destinationId" : "4",
-            "id" : "140",
-            "linkedRelationshipId" : "139",
-            "sourceId" : "29"
+            "id" : "143",
+            "linkedRelationshipId" : "142",
+            "sourceId" : "32"
           } ],
           "tags" : "Element,Component"
         } ],
         "description" : "Zajišťuje zápis uživatele na daný lístek",
         "documentation" : { },
-        "id" : "27",
+        "id" : "30",
         "name" : "Zápisy uživatele",
         "properties" : {
           "structurizr.dsl.identifier" : "enrollments.user_enrollment"
         },
         "relationships" : [ {
           "description" : "Zapsání nového zápisu",
-          "destinationId" : "31",
-          "id" : "40",
-          "linkedRelationshipId" : "39",
-          "sourceId" : "27"
+          "destinationId" : "34",
+          "id" : "43",
+          "linkedRelationshipId" : "42",
+          "sourceId" : "30"
         }, {
           "description" : "Posílání požadavků na uživatelská data",
-          "destinationId" : "58",
-          "id" : "69",
-          "linkedRelationshipId" : "68",
-          "sourceId" : "27"
+          "destinationId" : "61",
+          "id" : "72",
+          "linkedRelationshipId" : "71",
+          "sourceId" : "30"
         }, {
           "description" : "Předání dat o zapsaných lístcích",
-          "destinationId" : "8",
-          "id" : "133",
-          "linkedRelationshipId" : "131",
-          "sourceId" : "27"
+          "destinationId" : "11",
+          "id" : "136",
+          "linkedRelationshipId" : "134",
+          "sourceId" : "30"
         }, {
           "description" : "Předání dat o zapsaných lístcích",
-          "destinationId" : "7",
-          "id" : "134",
-          "linkedRelationshipId" : "131",
-          "sourceId" : "27"
-        }, {
-          "description" : "Zapísanie zmien (prihlásenie študenta na lístok)",
-          "destinationId" : "21",
+          "destinationId" : "10",
           "id" : "137",
-          "linkedRelationshipId" : "135",
-          "sourceId" : "27"
+          "linkedRelationshipId" : "134",
+          "sourceId" : "30"
         }, {
           "description" : "Zapísanie zmien (prihlásenie študenta na lístok)",
-          "destinationId" : "16",
-          "id" : "138",
-          "linkedRelationshipId" : "135",
-          "sourceId" : "27"
+          "destinationId" : "24",
+          "id" : "140",
+          "linkedRelationshipId" : "138",
+          "sourceId" : "30"
+        }, {
+          "description" : "Zapísanie zmien (prihlásenie študenta na lístok)",
+          "destinationId" : "19",
+          "id" : "141",
+          "linkedRelationshipId" : "138",
+          "sourceId" : "30"
         }, {
           "description" : "Pošle informaci o výsledku zápisu",
           "destinationId" : "5",
-          "id" : "141",
-          "linkedRelationshipId" : "139",
-          "sourceId" : "27"
+          "id" : "144",
+          "linkedRelationshipId" : "142",
+          "sourceId" : "30"
         }, {
           "description" : "Pošle informaci o výsledku zápisu",
           "destinationId" : "4",
-          "id" : "142",
-          "linkedRelationshipId" : "139",
-          "sourceId" : "27"
+          "id" : "145",
+          "linkedRelationshipId" : "142",
+          "sourceId" : "30"
         } ],
         "tags" : "Element,Container"
       }, {
         "documentation" : { },
-        "id" : "30",
+        "id" : "33",
         "name" : "Databáze historie změn",
         "properties" : {
           "structurizr.dsl.identifier" : "enrollments.modification_history"
@@ -860,34 +927,34 @@
       }, {
         "description" : "Databáze zapsaných lístků uživatelů",
         "documentation" : { },
-        "id" : "31",
+        "id" : "34",
         "name" : "Databáze",
         "properties" : {
           "structurizr.dsl.identifier" : "enrollments.database"
         },
         "relationships" : [ {
           "description" : "Zpřístupňuje data o zápisech",
-          "destinationId" : "32",
-          "id" : "36",
-          "sourceId" : "31",
+          "destinationId" : "35",
+          "id" : "39",
+          "sourceId" : "34",
           "tags" : "Relationship"
         }, {
           "description" : "Čtení dat",
-          "destinationId" : "28",
-          "id" : "37",
-          "sourceId" : "31",
+          "destinationId" : "31",
+          "id" : "40",
+          "sourceId" : "34",
           "tags" : "Relationship"
         }, {
           "description" : "Čtení dat",
-          "destinationId" : "27",
-          "id" : "38",
-          "linkedRelationshipId" : "37",
-          "sourceId" : "31"
+          "destinationId" : "30",
+          "id" : "41",
+          "linkedRelationshipId" : "40",
+          "sourceId" : "34"
         } ],
         "tags" : "Element,Container"
       }, {
         "documentation" : { },
-        "id" : "32",
+        "id" : "35",
         "name" : "API",
         "properties" : {
           "structurizr.dsl.identifier" : "enrollments.api"
@@ -903,39 +970,39 @@
       },
       "relationships" : [ {
         "description" : "Komunikuje",
-        "destinationId" : "33",
-        "id" : "43",
-        "linkedRelationshipId" : "41",
+        "destinationId" : "36",
+        "id" : "46",
+        "linkedRelationshipId" : "44",
         "sourceId" : "1"
       }, {
         "description" : "Komunikácia s Databázou",
-        "destinationId" : "35",
-        "id" : "53",
-        "linkedRelationshipId" : "49",
+        "destinationId" : "38",
+        "id" : "56",
+        "linkedRelationshipId" : "52",
         "sourceId" : "1"
       }, {
         "description" : "Komunikácia s Databázou",
-        "destinationId" : "34",
-        "id" : "54",
-        "linkedRelationshipId" : "49",
+        "destinationId" : "37",
+        "id" : "57",
+        "linkedRelationshipId" : "52",
         "sourceId" : "1"
       }, {
         "description" : "Posílá data o zápisech pomocí API",
-        "destinationId" : "57",
-        "id" : "67",
+        "destinationId" : "60",
+        "id" : "70",
         "sourceId" : "1",
         "tags" : "Relationship"
       }, {
         "description" : "Posílání požadavků na uživatelská data",
-        "destinationId" : "58",
-        "id" : "70",
-        "linkedRelationshipId" : "68",
+        "destinationId" : "61",
+        "id" : "73",
+        "linkedRelationshipId" : "71",
         "sourceId" : "1"
       } ],
       "tags" : "Element,Software System"
     }, {
       "documentation" : { },
-      "id" : "33",
+      "id" : "36",
       "location" : "Unspecified",
       "name" : "Mail router",
       "properties" : {
@@ -946,7 +1013,7 @@
       "containers" : [ {
         "description" : "Database",
         "documentation" : { },
-        "id" : "35",
+        "id" : "38",
         "name" : "Předměty a lístky",
         "properties" : {
           "structurizr.dsl.identifier" : "schedules.courses_and_events"
@@ -954,7 +1021,7 @@
         "tags" : "Element,Container"
       } ],
       "documentation" : { },
-      "id" : "34",
+      "id" : "37",
       "location" : "Unspecified",
       "name" : "Rozvrhy",
       "properties" : {
@@ -963,14 +1030,14 @@
       "relationships" : [ {
         "description" : "Posílá data o rozvrzích pomocí API",
         "destinationId" : "1",
-        "id" : "66",
-        "sourceId" : "34",
+        "id" : "69",
+        "sourceId" : "37",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System"
     }, {
       "documentation" : { },
-      "id" : "57",
+      "id" : "60",
       "location" : "Unspecified",
       "name" : "Zkoušky",
       "properties" : {
@@ -979,7 +1046,7 @@
       "tags" : "Element,Software System"
     }, {
       "documentation" : { },
-      "id" : "58",
+      "id" : "61",
       "location" : "Unspecified",
       "name" : "Přihlašovací systém",
       "properties" : {
@@ -988,32 +1055,32 @@
       "relationships" : [ {
         "description" : "Posílá data o uživatelech",
         "destinationId" : "1",
-        "id" : "65",
-        "sourceId" : "58",
+        "id" : "68",
+        "sourceId" : "61",
         "tags" : "Relationship"
       }, {
         "description" : "Posílání dat uživatele",
-        "destinationId" : "28",
-        "id" : "71",
-        "sourceId" : "58",
+        "destinationId" : "31",
+        "id" : "74",
+        "sourceId" : "61",
         "tags" : "Relationship"
       }, {
         "description" : "Posílání dat uživatele",
-        "destinationId" : "27",
-        "id" : "72",
-        "linkedRelationshipId" : "71",
-        "sourceId" : "58"
+        "destinationId" : "30",
+        "id" : "75",
+        "linkedRelationshipId" : "74",
+        "sourceId" : "61"
       } ],
       "tags" : "Element,Software System"
     } ]
   },
   "name" : "Zápisy Workspace",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlICJaw6FwaXN5IFdvcmtzcGFjZSIgIlRlbnRvIFdvcmtzcGFjZSBkb2t1bWVudHVqZSBhcmNoaXRla3R1cnUgc29mdHdhcm92w6lobyBzeXN0w6ltdSBaw6FwaXN5IiB7CgogICAgIWlkZW50aWZpZXJzIGhpZXJhcmNoaWNhbAoKICAgIG1vZGVsIHsKICAgICAgICAjIFNvZnR3YXJvdsOpIHN5c3TDqW15CiAgICAgICAgZW5yb2xsbWVudHMgPSBzb2Z0d2FyZVN5c3RlbSAiWsOhcGlzeSIgewoKICAgICAgICAgICAgYnJvd3NlciA9IGNvbnRhaW5lciAiUHJvaGzDrcW+ZcSNIiB7CiAgICAgICAgICAgICAgICBkb21fcmVhZGVyID0gY29tcG9uZW50ICJET00gUmVhZGVyIgogICAgICAgICAgICB9CgogICAgICAgICAgICByb3V0ZXIgPSBjb250YWluZXIgIlNtxJtyb3ZhxI0gc3Ryw6FuZWsiICJTZXN0YXZ1amUgcG/FvmFkb3Zhbm91IHN0csOhbmt1InsKICAgICAgICAgICAgICAgIHJvdXRpbmdfZW5naW5lID0gY29tcG9uZW50ICJTbWVyb3ZhY8OtIEVuZ2luZSIgIlNlc3RhdnVqZSBwb8W+YWRvdmFub3Ugc3Ryw6Fua3UiCiAgICAgICAgICAgICAgICB1aV90ZW1wbGF0b3IgPSBjb21wb25lbnQgIlVJIFRlbXBsYXRvciIgIlBvc2t5dHVqZSB0ZW1wbGF0ZSBwcm8gc3Ryw6Fua3UgdiBwcm9obMOtxb5lxI1pIgogICAgICAgICAgICB9CgogICAgICAgICAgICBkaXNwbGF5ZXIgPSBjb250YWluZXIgIlpvYnJhemVuw60iICJWeXR2w6HFmcOtIGplZG5vdGxpdsOhIHpvYnJhemVuw60gcyBkYXR5InsKICAgICAgICAgICAgICAgIHNjaGVkdWxlX2Rpc3BsYXllciA9IGNvbXBvbmVudCAiWm9icmF6b3ZhbmllIHJvenZyaHUiCiAgICAgICAgICAgICAgICBldmVudF9kaXNwbGF5ZXIgPSBjb21wb25lbnQgIlpvYnJhemVuaWUgbMOtc3Rrb3YiCiAgICAgICAgICAgICAgICBldmVudF9kZXRhaWxzID0gY29tcG9uZW50ICJEZXRhaWwgbyBsw61zdGt1IgogICAgICAgICAgICAgICAgZW1haWxfd2luZG93X2Rpc3BsYXllciA9IGNvbXBvbmVudCAiWm9icmF6ZW5pZSBlbWFpbG92w6lobyBva25hIgogICAgICAgICAgICAgICAgbWFuYWdlcl9kaXNwbGF5ZXIgPSBjb21wb25lbnQgIlpvYnJhemVuaWUgcHJlIG1hbmHFvsOpcmEiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVtYWlsX3NlcnZpY2UgPSBjb250YWluZXIgIkVtYWlsIHNlcnZpY2UiICJWeXR2w6HFmWVuw60gYSB6YXPDrWzDoW7DrSBlbWFpbMWvInsKICAgICAgICAgICAgICAgIGVtYWlsX2dlbmVyYXRvciA9IGNvbXBvbmVudCAiVHZvcmJhIGVtYWlsb3YiCiAgICAgICAgICAgICAgICBlbWFpbF9zZW5kZXIgPSBjb21wb25lbnQgIk9kb3NpZWxhbmllIGVtYWlsb3YiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRhdGFfaGFuZGxpbmcgPSBjb250YWluZXIgIkRhdGEgSGFuZGxpbmciICJaYXpuYW1lbsOhdsOhIHptxJtueSwga29tdW5pa3VqZSBzIFJvenZyaHkgYSB2eXR2w6HFmcOtIGplamljaCB6b2JyYXplbsOtIiB7CiAgICAgICAgICAgICAgICBkYXRhX3ByZXBhcmF0aW9uID0gY29tcG9uZW50ICJQcsOtcHJhdmEgZMOhdCIKICAgICAgICAgICAgICAgIGRhdGFfdmVyaWZpY2F0b3IgPSBjb21wb25lbnQgIkRhdGEgdmVyaWZpY2F0b3IiICJPdmVyZW5pZSBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICAgICAgbG9hZGVyID0gY29tcG9uZW50ICJMb2FkZXIiICJuYcSNw610YSBkw6F0YSBwcmVkbWV0b3YgcG9tb2NvdSBTY2hlZHVsZSBBUEkiCiAgICAgICAgICAgICAgICBzY2hlZHVsZV9hcGkgPSBjb21wb25lbnQgIlNjaGVkdWxlIEFQSSIgIlphcGlzb3bDoW7DrSBhIG5hxI3DrXTDoW7DrSBsw61zdGvFryB6ZSBTY2hlZHVsZXMiCiAgICAgICAgICAgICAgICBtb2RpZmljYXRpb25faGFuZGxlciA9IGNvbXBvbmVudCAiTW9kaWZpY2F0aW9uIEhhbmRsZXIiCiAgICAgICAgICAgICAgICB2YWxpZGF0b3IgPSBjb21wb25lbnQgIlZhbGlkw6F0b3IiICJWeWhvZG5vdMOtIHNwcsOhdm5vc8WlIHptaWVuIgogICAgICAgICAgICAgICAgZGF0YV9wcmVwYXJhdGlvbl9jaGFuZ2VzID0gY29tcG9uZW50ICJQcsOtcHJhdmEgZMOhdCBbem1lbnldIiAiVXByYXbDrSBkw6F0YSBkbyBmb3Jtw6F0dSwga3RvcsO9IHNhIGTDoSBwb3NsYcWlIGRvIFNjaGVkdWxlIEFQSSIKICAgICAgICAgICAgICAgIGNoYW5nZXNfYXBpID0gY29tcG9uZW50ICJDaGFuZ2VzIEFQSSIgIlphcGlzb3bDoW7DrSBhIG5hxI3DrXTDoW7DrSBoaXN0b3JpZSB6bcSbbiIKICAgICAgICAgICAgICAgIHJ1bGVzID0gY29tcG9uZW50ICJSdWxlcyIgInByYXZpZGzDoSwga3RvcsOpIHVyxI11asO6LCDEjWkgc8O6IHptZW55IHBsYXRuw6kiCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgbGlzdGt5X2FwaSA9IGNvbXBvbmVudCAiTMOtc3RreSBBUEkiICJBUEkgbmEga29tdW5pa8OhY2l1IHMgZGF0YWLDoXpvdSBzbyB6YXBpc21pIMWhdHVkZW50b3YiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHVzZXJfZW5yb2xsbWVudCA9IGNvbnRhaW5lciAiWsOhcGlzeSB1xb5pdmF0ZWxlIiAiWmFqacWhxaV1amUgesOhcGlzIHXFvml2YXRlbGUgbmEgZGFuw70gbMOtc3RlayJ7CiAgICAgICAgICAgICAgICB1c2VyX2RhdGFfbG9hZGVyID0gY29tcG9uZW50ICJOYcSNw610w6Fuw60gZGF0IHXFvml2YXRlbMWvIiAiS29tdW5pa3VqZSBzIGRhdGFiw6F6w60gYSB6w61za8OhdsOhIGRhdGEiCiAgICAgICAgICAgICAgICBldmVudF9lbnJvbGxlciA9IGNvbXBvbmVudCAiWmFwc2F0IHN0dWRlbnRhIG5hIGzDrXN0ZWsiICJaYXDDrcWhZSBwxZlpaGzDocWhZW7DqWhvIHN0dWRlbnRhIG5hIGzDrXN0ZWsiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIG1vZGlmaWNhdGlvbl9oaXN0b3J5ID0gY29udGFpbmVyICJEYXRhYsOhemUgaGlzdG9yaWUgem3Em24iCiAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJEYXRhYsOhemUiICJEYXRhYsOhemUgemFwc2Fuw71jaCBsw61zdGvFryB1xb5pdmF0ZWzFryIKICAgICAgICAgICAgYXBpID0gY29udGFpbmVyICJBUEkiCiAgICAgICAgfQoKICAgICAgICBtYWlsX3JvdXRlciA9IHNvZnR3YXJlU3lzdGVtICJNYWlsIHJvdXRlciIgewoKICAgICAgICB9CgogICAgICAgIHNjaGVkdWxlcyA9IHNvZnR3YXJlU3lzdGVtICJSb3p2cmh5InsKICAgICAgICAgICAgY291cnNlc19hbmRfZXZlbnRzID0gY29udGFpbmVyICJQxZllZG3Em3R5IGEgbMOtc3RreSIgIkRhdGFiYXNlIgogICAgICAgIH0KCgogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcm9tIERhdGFiYXNlIGEgQVBJCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YWJhc2UgLT4gZW5yb2xsbWVudHMuYXBpICJacMWZw61zdHVwxYh1amUgZGF0YSBvIHrDoXBpc2VjaCIKCiAgICAgICAgI1Z6xaVhaHkgbWVkemkgZGF0YWLDoXpvdSB6w6FwaXNvdiBhIGNvbnRhaW5lcm9tICBaw6FwaXN5IHXFvml2YXRlbGUKICAgICAgICBlbnJvbGxtZW50cy5kYXRhYmFzZSAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQudXNlcl9kYXRhX2xvYWRlciAixIx0ZW7DrSBkYXQiCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyIC0+IGVucm9sbG1lbnRzLmRhdGFiYXNlICJaYXBzw6Fuw60gbm92w6lobyB6w6FwaXN1IgogICAgICAgIAoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBlbWFpbG92w71taSBzbHXFvmJhbWkKICAgICAgICBlbnJvbGxtZW50cy5lbWFpbF9zZXJ2aWNlLmVtYWlsX3NlbmRlciAtPiBtYWlsX3JvdXRlciAiS29tdW5pa3VqZSIKICAgICAgICBlbnJvbGxtZW50cy5lbWFpbF9zZXJ2aWNlLmVtYWlsX2dlbmVyYXRvciAtPiBlbnJvbGxtZW50cy5lbWFpbF9zZXJ2aWNlLmVtYWlsX3NlbmRlciAiUMWZZWTDoSBlbWFpbCIKICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZW1haWxfd2luZG93X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5lbWFpbF9zZXJ2aWNlLmVtYWlsX2dlbmVyYXRvciAiU3Byw61zdHVwxYh1amUiCgoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBjb250YWluZXJvbSBEYXRhIGhhbmRsaW5nIGEgc29mdHdhcmVvdsO9bSBzeXN0w6ltb20gUm96dnJoeQogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuc2NoZWR1bGVfYXBpIC0+IHNjaGVkdWxlcy5jb3Vyc2VzX2FuZF9ldmVudHMgIktvbXVuaWvDoWNpYSBzIERhdGFiw6F6b3UiCiAgICAgICAgCiAgICAgICAgI1Z6xaVhaHkgbWVkemkgY29udGFpbmVyb20gRGF0YSBIYW5kbGluZyBhIGNvbnRhaW5lcm9tIEhpc3RvcmllIHptxJtuCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAtPiBlbnJvbGxtZW50cy5tb2RpZmljYXRpb25faGlzdG9yeSAiUHJpZGFuaWUgesOhem5hbXUgZG8gZGF0YWLDoXp5IHptaWVuIgoKICAgICAgICAjT3N0YXRuw6kgc29mdHdhcmVvdsOpIHN5c3TDqW15CiAgICAgICAgZXhhbXMgPSBzb2Z0d2FyZVN5c3RlbSAiWmtvdcWha3kiCiAgICAgICAgbG9naW5fc3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIlDFmWlobGHFoW92YWPDrSBzeXN0w6ltIgogICAgICAgIAogICAgICAgICMgVcW+aXZhdGVsw6kKICAgICAgICBtYW5hZ2VyID0gcGVyc29uICJNYW5hxb5lciIKICAgICAgICBzdHVkZW50ID0gcGVyc29uICJTdHVkZW50IgogICAgICAgIHRlYWNoZXIgPSBwZXJzb24gIlXEjWl0ZWwiCiAgICAgICAgCiAgICAgICAgIyBWenRhaHkgbWV6aSB1xb5pdmF0ZWxpIGEgWsOhcGlzeSAoRW5yb2xsbWVudHMpCiAgICAgICAgbWFuYWdlciAtPiBlbnJvbGxtZW50cyAiUG91xb7DrXbDoSIKICAgICAgICBzdHVkZW50IC0+IGVucm9sbG1lbnRzICJQb3XFvsOtdsOhIgogICAgICAgIHRlYWNoZXIgLT4gZW5yb2xsbWVudHMgIlBvdcW+w612w6EiCiAgICAgICAgCiAgICAgICAgIyBWenRhaHkgbWV6aSBzb2Z0d2Vyb3bDvW1pIHN5c3TDqW15CiAgICAgICAgbG9naW5fc3lzdGVtIC0+IGVucm9sbG1lbnRzICJQb3PDrWzDoSBkYXRhIG8gdcW+aXZhdGVsZWNoIgogICAgICAgIHNjaGVkdWxlcyAtPiBlbnJvbGxtZW50cyAiUG9zw61sw6EgZGF0YSBvIHJvenZyesOtY2ggcG9tb2PDrSBBUEkiCiAgICAgICAgZW5yb2xsbWVudHMgLT4gZXhhbXMgIlBvc8OtbMOhIGRhdGEgbyB6w6FwaXNlY2ggcG9tb2PDrSBBUEkiCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgLT4gbG9naW5fc3lzdGVtICJQb3PDrWzDoW7DrSBwb8W+YWRhdmvFryBuYSB1xb5pdmF0ZWxza8OhIGRhdGEiCiAgICAgICAgbG9naW5fc3lzdGVtIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyICJQb3PDrWzDoW7DrSBkYXQgdcW+aXZhdGVsZSIKICAgICAgICAKICAgICAgICAjVnrFpWFoeSBtZWR6aSB1xb7DrXZhdGXEvmFtaSBhIHpvYnJhemVuw61tCiAgICAgICAgc3R1ZGVudCAtPiBlbnJvbGxtZW50cy5icm93c2VyICJPdmzDoWRhbmllIGNleiIKICAgICAgICB0ZWFjaGVyIC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIk92bMOhZGFuaWUgY2V6IgogICAgICAgIG1hbmFnZXIgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiT3Zsw6FkYW5pZSBjZXoiCgogICAgICAgIAogICAgICAgICNWenRhaHkgbWVkemkga29tcG9uZW50YW1pIGRpc3BsYXllciBjb250YWluZXJ1CiAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiT2RrYXp1amUgbmEiCiAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmVtYWlsX3dpbmRvd19kaXNwbGF5ZXIgIk9ka2F6dWplIG5hIgoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBrb21wb25lbnRhbWkgY29udGFpbmVydSByb3V0ZXIKICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIudWlfdGVtcGxhdG9yIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG9za3l0bnV0w60gdGVtcGxhdGUiCgogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcm9tIHJvdXRlciBhIG9zdGF0bsO9bWkgc3lzdMOpbWFtaQogICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQxZllZMOhbsOtIHpvYnJhemVuw60gbMOtc3Rrxa8iCiAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLnNjaGVkdWxlX2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6Fuw60gem9icmF6ZW7DrSByb3p2cmh1IgogICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6Fuw60gem9icmF6ZW7DrSBwcm8gbWFuYcW+ZXJhIgogICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJQb8W+YWRhdmVrIG5hIHpvYnJhemVuw60gbMOtc3Rrxa8iCiAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5zY2hlZHVsZV9kaXNwbGF5ZXIgIlBvxb5hZGF2ZWsgbmEgem9icmF6ZW7DrSByb3p2cmh1IgogICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIubWFuYWdlcl9kaXNwbGF5ZXIgIlBvxb5hZGF2ZWsgbmEgem9icmF6ZW7DrSBwcm8gbWFuYcW+ZXJhIgogICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgIsW9w6Fkw6EgbyB6YXBzw6Fuw60gbMOtc3RrdSIKICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuYnJvd3Nlci5kb21fcmVhZGVyICJQxZllZMOhbsOtIHN0csOhbmt5IgogICAgICAgIAogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcm9tIGJyb3dzZXIgYSBvc3RhdG7DvW1pIGNvbnRhaW5lcm1pCiAgICAgICAgZW5yb2xsbWVudHMuYnJvd3Nlci5kb21fcmVhZGVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG/FvmFkYXZlayBuYSB6bcSbbnUgc3Ryw6Fua3kiCgogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcmFtaSBEYXRhIEhhbmRsaW5nIGEgWm9icmF6ZW5pZQogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJPZG9zaWVsYW5pZSBkw6F0IHYgSFRNTCBwcmUgem9icmF6ZW5pZSIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLm1hbmFnZXJfZGlzcGxheWVyICJPZG9zaWVsYW5pZSBkw6F0IG5hIHpvYnJhemVuaWUgcHJlIG1hbmHFvsOpcmEiCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzICJPZGVzw61sw6Fuw60gZGF0IG8gbMOtc3RrdSB2IEhUTUwiCgogICAgICAgICNWesWlYWh5IHZvIHZuw7p0cmkgY29udGFpbmVydSBEYXRhIEhhbmRsaW5nCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5tb2RpZmljYXRpb25faGFuZGxlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnZhbGlkYXRvciAiUG/FoWxlIHptZW55IHZhbGlkw6F0b3J1IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcudmFsaWRhdG9yIC0+ICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb25fY2hhbmdlcyAiUG/FoWxlIHptZW55IGsgcHLDrXByYXZlIG5hIG9kb3NsYW5pZSIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnZhbGlkYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzICJaw61za2EgcHJhdmlkbMOhLCBwb2TEvmEga3RvcsO9Y2ggdnlob2Rub3TDrSBwbGF0bm9zxaUgem1pZW4iCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uX2NoYW5nZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5zY2hlZHVsZV9hcGkgIlBvxb5pYWRhdmthIG5hIG1vZGlmaWvDoWNpdSBkw6F0IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbl9jaGFuZ2VzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuY2hhbmdlc19hcGkgIlBvxb5pYWRhdmthIG5hIHByaWRhbmllIHrDoXpuYW11IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlBvxaFsZSBkw6F0YSBrIHByw61wcmF2ZSBuYSB6b2JyYXplbmllIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzICJaw61za2EgcHJhdmlkbMOhLCBwb2TEvmEga3RvcsO9Y2ggemlzdMOtLCDEjWkgc8O6IG5hxI3DrXRhbsOpIGTDoXRhIHNwcsOhdm5lIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+ICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSBkw6F0YSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnNjaGVkdWxlX2FwaSAiUG/FvmlhZGF2a2EgbmEgbsSNw610YW5pZSBkw6F0IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG9zw61sw6EgcG/FvmFkYXZreSBuYSBkYXRhIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuY2hhbmdlc19hcGkgIlBvc8OtbMOhIHBvxb5hZGF2a3kgbmEgbmHEjcOtdMOhbsOtIGRhdCIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgIlBvc8OtbGEgcG/FvmFkYXZreSBuYSBkYXRhIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAtPiBlbnJvbGxtZW50cy5kYXRhYmFzZSAiUG9zw61sw6EgcG/FvmFkYXZreSBuYSBkYXRhIgoKCiAgICAgICAgI1Z6xaVhaHkgbWVkemkga29tcG9uZW50YW1pIGNvbnRhaW5lcnUgWsOhcGlzeSB1xb7DrXZhdGXEvmEKICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQudXNlcl9kYXRhX2xvYWRlciAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgIlrDrXNrw6Fuw60gZGF0IG8gcMWZaWhsw6HFoWVuw6ltIHXFvml2YXRlbGkiCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyICJEb3B0w6Egc2UgbmEgZGF0YSBvIHXFvml2YXRlbGkiCgoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBjb250YWluZXJvbSBaw6FwaXN5IHXFvsOtdmF0ZWxlIGEgY29udGFpbmVyb20gWm9icmF6ZW5pZQogICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5zY2hlZHVsZV9kaXNwbGF5ZXIgIlDFmWVkw6Fuw60gZGF0IG8gemFwc2Fuw71jaCBsw61zdGPDrWNoIgogICAgICAgIAogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcm9tIFrDoXBpc3kgdcW+w612YXRlbGUgYSBjb250YWluZXJvbSBEYXRhIEhhbmRsaW5nCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubW9kaWZpY2F0aW9uX2hhbmRsZXIgIlphcMOtc2FuaWUgem1pZW4gKHByaWhsw6FzZW5pZSDFoXR1ZGVudGEgbmEgbMOtc3RvaykiCgoKICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQb8WhbGUgaW5mb3JtYWNpIG8gdsO9c2xlZGt1IHrDoXBpc3UiCiAgICAgICAgCgogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICB0aGVtZSBkZWZhdWx0CiAgICAgICAgCiAgICAgICAgc3lzdGVtQ29udGV4dCBlbnJvbGxtZW50cyB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgZW5yb2xsbWVudHMgIkNvbnRhaW5lclZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgZW5yb2xsbWVudHMuZGlzcGxheWVyICJOYXZpZ2F0aW9uQ29tcG9uZW50VmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nICJEYXRhSGFuZGxpbmdDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UgIkVtYWlsU2VydmljZUNvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQgIlVzZXJFbnJvbGxtZW50Q29tcG9uZW50VmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5tb2RpZmljYXRpb25faGlzdG9yeSAiTW9kaWZpY2F0aW9uSGlzdG9yeUNvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5kYXRhYmFzZSAiRGF0YWJhc2VDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgZW5yb2xsbWVudHMuYXBpICJBUElDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKiAKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGVucm9sbG1lbnRzLnJvdXRlciAicm91dGVyQ29tcG9uZW50VmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5icm93c2VyICJCcm93c2VyQ29tcG9uZW50VmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQgewogICAgICAgICAgICB0aXRsZSAiWsOhcGlzIHDFmWVkbcSbdHUgc3R1ZGVudGVtIgogICAgICAgICAgICBzdHVkZW50IC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIkNoY2Ugc2UgemFwc2F0IG5hIGzDrXN0ZWsiCiAgICAgICAgICAgICMgcHJvaGzDrcW+ZcSNIC0+IHNtxJtyb3ZhxI0KICAgICAgICAgICAgZW5yb2xsbWVudHMuYnJvd3NlciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlBvxb7DoWTDoSBvIHrDoXBpcyBwxZllZG3Em3R1IgogICAgICAgICAgICAjIHNtxJtyb3ZhxI0gLT4gemFwc2F0IHN0dWRlbnRhIG5hIGzDrXN0ZWsgCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgIlBvxb7DoWTDoSBvIHrDoXBpcyBwxZllZG3Em3R1IgogICAgICAgICAgICAKICAgICAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyICJQb8W+w6Fkw6EgbyBJRCBzdHVkZW50YSIKICAgICAgICAgICAgIyBuYcSNw610w6Fuw60gZGF0IHXFvml2YXRlbMWvIC0+IHDFmWlobGHFoW92YWPDrSBzeXN0w6ltCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyIC0+IGxvZ2luX3N5c3RlbSAiUG/FvsOhZMOhIG8gSUQgc3R1ZGVudGEiCiAgICAgICAgICAgICMgcMWZaWhsYcWhb3ZhY8OtIHN5c3TDqW0gLT4gbmHEjcOtdMOhbsOtIGRhdCB1xb5pdmF0ZWzFryAgICAgCiAgICAgICAgICAgIGxvZ2luX3N5c3RlbSAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQudXNlcl9kYXRhX2xvYWRlciAiUG/FoWxlIElEIHN0dWRlbnRhIgogICAgICAgICAgICAjIG5hxI3DrXTDoW7DrSBkYXQgdcW+aXZhdGVsxa8gLT4gemFwc2F0IHN0dWRlbnRhIG5hIGzDrXN0ZWsKICAgICAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgLT4gZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyICJQxZllZMOhIElEIHN0dWRlbnRhIgogICAgICAgICAgICAjIHphcHNhdCBzdHVkZW50YSBuYSBsw61zdGVrIC0+IGRhdGFiw6F6ZQogICAgICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgLT4gZW5yb2xsbWVudHMuZGF0YWJhc2UgIlphcHPDoW7DrSBub3bDqWhvIHrDoXBpc3Ugc3R1ZGVudGEgbmEgbMOtc3RlayIKICAgICAgICAgICAgIyB6YXBzYXQgc3R1ZGVudGEgbmEgbMOtc3RlayAtPiBkYXRhIGhhbmRsaW5nCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLm1vZGlmaWNhdGlvbl9oYW5kbGVyICJQb8WhbGUgaW5mb3JtYWNlIG8gesOhcGlzdSBsw61zdGt1IHBybyB6w6FwaXN1IGRvIGhpc3RvcmllIHptxJtuIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLm1vZGlmaWNhdGlvbl9oYW5kbGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcudmFsaWRhdG9yIAogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnZhbGlkYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcudmFsaWRhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbl9jaGFuZ2VzCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbl9jaGFuZ2VzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuY2hhbmdlc19hcGkKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAtPiBlbnJvbGxtZW50cy5tb2RpZmljYXRpb25faGlzdG9yeSAiWmFww63FoWUgaW5mb3JtYWNpIG8gesOhcGlzdSBsw61zdGt1IGRvIGRhdGFiw6F6ZSB6bcSbbiIKCiAgICAgICAgICAgICMgemFwc2F0IHN0dWRlbnRhIG5hIGzDrXN0ZWsgLT4gc23Em3JvdmHEjQogICAgICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQb8WhbGUgaW5mb3JtYWNpIG8gdsO9c2xlZGt1IHrDoXBpc3UiCiAgICAgICAgICAgICMgc23Em3JvdmHEjSB6b2JyYXrDrSBzdHVkZW50b3ZpCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5icm93c2VyICJQxZllZMOhIGluZm9ybWFjaSBvIHbDvXNsZWRrdSB6w6FwaXN1IgoKCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZyB7CiAgICAgICAgICAgIHRpdGxlICJab2JyYXplbsOtIGhpc3RvcmllIHBybyBtYW5hxb5lcmEiCiAgICAgICAgICAgIG1hbmFnZXIgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiQ2hjZSBzaSB6b2JyYXppxaUgaGlzdMOzcml1IHptaWVuIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuYnJvd3NlciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAiUG/FvsOhZMOhIG8gem9icmF6ZW7DrSBwcm8gbWFuYcW+ZXJhIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLm1hbmFnZXJfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAiVnnFvmlhZGEgZMOhdGEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG/FoWxlIHBvxb5pYWRhdm9rIG5hIG5hxI3DrXRhbmllIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiUG/FoWxlIHBvxb5pYWRhdm9rIG5hIG92ZXJlbmllIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBwb8W+aWFkYXZrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJJbmZvcm11amUgbyBzcHLDoXZub3N0aSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAiUG/FoWxlIHJlcXVlc3QgbmEgbmHEjcOtdGFuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuY2hhbmdlc19hcGkgLT4gZW5yb2xsbWVudHMubW9kaWZpY2F0aW9uX2hpc3RvcnkgIlJlcXVlc3Qgem1lbsOtIG5hIFNRTCBhIHBvxaFsZSBobyIKICAgICAgICAgICAgZW5yb2xsbWVudHMubW9kaWZpY2F0aW9uX2hpc3RvcnkgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAiVnLDoXRpIHrDrXNrYW7DqSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiVnLDoXRpIHrDrXNrYW7DqSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJQb8WhbGUgesOtc2thbsOpIGTDoXRhIG5hIG92ZXJlbmllIgogICAgICAgICAgICAKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5ydWxlcyAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlrDrXNrYSBwcmF2aWRsw6EgbmEgb3ZlcmVuaWUgc3Byw6F2bm9zdGkgZMOhdCIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJQb8WhbGUgaW5mb3Jtw6FjaXUgbyBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlBvxaFsZSBuYSBwcsOtcHJhdnUgcHJlZCB6b2JyYXplbsOtbSIKICAgICAgICAKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAiUG9za3l0bmUgZMOhdGEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6Egem9icmF6ZW7DrSIKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnVpX3RlbXBsYXRvciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6EgdGVtcGxhdGUgcHJvIHZ5dHZvxZllbsOtIHN0csOhbmt5IgogICAgICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiUMWZZWTDoSBzdHLDoW5rdSIKCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgZW5yb2xsbWVudHMuZGlzcGxheWVyIHsKICAgICAgICAgICAgdGl0bGUgIlpvYnJhemVuaWUgemFww61zYW7DvWNoIMWhdHVkZW50b3YgcHJlIHXEjWl0ZcS+YSIKICAgICAgICAgICAgdGVhY2hlciAtPiBlbnJvbGxtZW50cy5icm93c2VyICJDaGNlIHNpIHpvYnJhemnFpSBkZXRhaWwgbyBsw61zdGt1IHNvIHphcMOtc2Fuw71taSDFoXR1ZGVudG1pIgogICAgICAgICAgICBlbnJvbGxtZW50cy5icm93c2VyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG/FvmlhZGEgbyBwcmVzbWVyb3ZhbmllIG5hIHpvYnJhemVuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJQcmVkw6EgcG/FvmlhZGF2b2sgbmEgem9icmF6ZW5pZSBsw61zdGtvdiIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiUG/FvmlhZGEgbyB6b2JyYXplbmllIGRldGFpbHUgbMOtc3RrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uICJWecW+aWFkYSBkw6F0YSBvIGRldGFpbGUgbMOtc3RrdSIKICAgICAgICAgICAgCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG/FoWxlIHBvxb5pYWRhdm9rIG5hIG5hxI3DrXRhbmllIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiUG/FoWxlIHBvxb5pYWRhdm9rIG5hIG92ZXJlbmllIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBwb8W+aWFkYXZrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJJbmZvcm11amUgbyBzcHLDoXZub3N0aSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpICJQb8WhbGUgcmVxdWVzdCBuYSBuYcSNw610YW5pZSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFiYXNlICJSZXF1ZXN0IHptZW7DrSBuYSBTUUwgYSBwb8WhbGUgaG8iCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFiYXNlIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAiVnLDoXRpIHrDrXNrYW7DqSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSB6w61za2Fuw6kgZMOhdGEgbmEgb3ZlcmVuaWUiCiAgICAgICAgICAgIAogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlBvxaFsZSBpbmZvcm3DoWNpdSBvIHNwcsOhdm5vc3RpIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAiUG/FoWxlIG5hIHByw61wcmF2dSBwcmVkIHpvYnJhemVuw61tIgogICAgICAgIAogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgIk9kb8WhbGUgZMOhdGEgbyBsw61zdGt1IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJWcsOhdGkgbmEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJWcsOhdGkgem9icmF6ZW5pZSBsw61zdGtvdiIKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnVpX3RlbXBsYXRvciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlByZWTDoSB0ZW1wbGF0ZSBuYSB2eXR2b3JlbmllIHN0csOhbmt5IgogICAgICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiUHJlZMOhIHN0csOhbmt1IgogICAgICAgICAgICAKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBlbnJvbGxtZW50cy5kaXNwbGF5ZXIgewogICAgICAgICAgICB0aXRsZSAiWm9icmF6ZW5pZSB6YXDDrXNhbsO9Y2ggcHJlZG1ldG92IHByZSDFoXR1ZGVudGEiCiAgICAgICAgICAgIHN0dWRlbnQgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiQ2hjZSBzaSB6b2JyYXppxaUgemFww61zYW7DqSBwcmVkbWV0eSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuYnJvd3NlciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlBvxb5pYWRhIG8gcHJlc21lcm92YW5pZSBuYSB6b2JyYXplbmllIHByZWRtZXRvdiIKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgIlBvxb5pYWRhIG8gem9icmF6ZW5pZSBsw61zdGtvdiIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiVnnFvmlhZGEgZGV0YWlseSBsw61zdGtvdiIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uICJWecW+aWFkYSBkw6F0YSBvIGzDrXN0a29jaCIKICAgICAgICAgICAgCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG/FoWxlIHBvxb5pYWRhdmt1IG5hIG5hxI3DrXRhbmllIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiUG/FoWxlIHBvxb5pYWRhdmt1IG5hIG92ZXJlbmllIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBwb8W+aWFkYXZrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJJbmZvcm11amUgbyBzcHLDoXZub3N0aSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpICJQb8WhbGUgcmVxdWVzdCBuYSBuYcSNw610YW5pZSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFiYXNlICJSZXF1ZXN0IHptZW7DrSBuYSBTUUwgYSBwb8WhbGUgaG8iCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFiYXNlIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAiVnLDoXRpIHrDrXNrYW7DqSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSB6w61za2Fuw6kgZMOhdGEgbmEgb3ZlcmVuaWUiCiAgICAgICAgICAgIAogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlBvxaFsZSBpbmZvcm3DoWNpdSBvIHNwcsOhdm5vc3RpIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAiUG/FoWxlIG5hIHByw61wcmF2dSBwcmVkIHpvYnJhemVuw61tIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzICJPZG/FoWxlIGTDoXRhIG8gbMOtc3Rrb2NoIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJWcsOhdGkgbmEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJWcsOhdGkgem9icmF6ZW5pZSBwcmVkbWV0b3YiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci51aV90ZW1wbGF0b3IgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQcmVkw6EgdGVtcGxhdGUgbmEgdnl0dm9yZW5pZSBzdHLDoW5reSIKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIlByZWTDoSBzdHLDoW5rdSIKICAgICAgICAgICAgCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgZW5yb2xsbWVudHMuZW1haWxfc2VydmljZSB7CiAgICAgICAgICAgIHRpdGxlICJLb211bmlrYWNlIHXEjWl0ZWxlIHNlIHN0dWRlbnR5IgogICAgICAgICAgICB0ZWFjaGVyIC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIkNoY2Ugb2Rlc2xhdCBlbWFpbCBzdHVkZW50xa9tIgogICAgICAgICAgICAjIHByb2hsw63FvmXEjSAtPiBzbcSbcm92YcSNCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmJyb3dzZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQb8W+w6Fkw6EgbyBwcmVzbcSbcm92w6Fuw60gbmEgem9icmF6ZW7DrSIKICAgICAgICAgICAgIyBzbcSbcm92YcSNIC0+IHpvYnJhemVuw60gbMOtc3RrdQogICAgICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAiUG/FvsOhZMOhIG8gem9icmF6ZW7DrSBzdsO9Y2ggbMOtc3Rrxa8iCiAgICAgICAgICAgICMgem9icmF6ZW7DrSBsw61zdGt1IC0+IHpvYnJhemVuw60gZGV0YWlsdSBvIGzDrXN0a3UKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiUG/FvsOhZMOhIG8gem9icmF6ZW7DrSBkZXRhaWx1IG8gbMOtc3RrdSIKICAgIAogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlZ5xb5pYWRhIGTDoXRhIG8gbMOtc3Rrb2NoIgogICAgICAgICAgICAKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJQb8WhbGUgcG/FvmlhZGF2a3UgbmEgbmHEjcOtdGFuaWUgZMOhdCIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJQb8WhbGUgcG/FvmlhZGF2a3UgbmEgb3ZlcmVuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcucnVsZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJaw61za2EgcHJhdmlkbMOhIG5hIG92ZXJlbmllIHNwcsOhdm5vc3RpIHBvxb5pYWRhdmt1IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIkluZm9ybXVqZSBvIHNwcsOhdm5vc3RpIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgIlBvxaFsZSByZXF1ZXN0IG5hIG5hxI3DrXRhbmllIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgLT4gZW5yb2xsbWVudHMuZGF0YWJhc2UgIlJlcXVlc3Qgem1lbsOtIG5hIFNRTCBhIHBvxaFsZSBobyIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YWJhc2UgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlZyw6F0aSB6w61za2Fuw6kgZMOhdGEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiUG/FoWxlIHrDrXNrYW7DqSBkw6F0YSBuYSBvdmVyZW5pZSIKICAgICAgICAgICAgCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcucnVsZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJaw61za2EgcHJhdmlkbMOhIG5hIG92ZXJlbmllIHNwcsOhdm5vc3RpIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG/FoWxlIGluZm9ybcOhY2l1IG8gc3Byw6F2bm9zdGkgZMOhdAogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlBvxaFsZSBuYSBwcsOtcHJhdnUgcHJlZCB6b2JyYXplbsOtbSIKCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiT2RvxaFsZSBkw6F0YSBvIGzDrXN0a29jaCIKICAgIAogICAgICAgICAgICAjIHpvYnJhemVuw60gZGV0YWlsdSBvIGzDrXN0a3UgLT4gem9icmF6ZW7DrSBva25hIHBybyB0dm9yYnUgZW1haWx1CiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5lbWFpbF93aW5kb3dfZGlzcGxheWVyICJQb8W+w6Fkw6EgbyB6b2JyYXplbsOtIG9rbmEgcHJvIHZ5cGxuxJtuw60gZW1haWx1IgogICAgICAgICAgICAjIG9rbm8gcHJvIHR2b3JidSBlbWFpbHUgLT4gZW1haWwgZ2VuZXJhdG9yCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5lbWFpbF93aW5kb3dfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfZ2VuZXJhdG9yICJQb8W+w6Fkw6EgbyB2eWdlbmVyb3bDoW7DrSBlbWFpbHUiCiAgICAgICAgICAgICMgZW1haWwgZ2VuZXJhdG9yIC0+IGVtYWlsIHNlbmRlcgogICAgICAgICAgICBlbnJvbGxtZW50cy5lbWFpbF9zZXJ2aWNlLmVtYWlsX2dlbmVyYXRvciAtPiBlbnJvbGxtZW50cy5lbWFpbF9zZXJ2aWNlLmVtYWlsX3NlbmRlciAiUG/FvsOhZMOhIG8gb2Rlc2zDoW7DrSBlbWFpbHUiCiAgICAgICAgICAgICMgZW1haWwgc2VuZGVyIC0+IG1haWwgcm91dGVyCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfc2VuZGVyIC0+IG1haWxfcm91dGVyICJPZGXFoWxlIGVtYWlsIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgIH0KfQ=="
+    "structurizr.dsl" : "d29ya3NwYWNlICJaw6FwaXN5IFdvcmtzcGFjZSIgIlRlbnRvIFdvcmtzcGFjZSBkb2t1bWVudHVqZSBhcmNoaXRla3R1cnUgc29mdHdhcm92w6lobyBzeXN0w6ltdSBaw6FwaXN5IiB7CgogICAgIWlkZW50aWZpZXJzIGhpZXJhcmNoaWNhbAoKICAgIG1vZGVsIHsKICAgICAgICAjIFNvZnR3YXJvdsOpIHN5c3TDqW15CiAgICAgICAgZW5yb2xsbWVudHMgPSBzb2Z0d2FyZVN5c3RlbSAiWsOhcGlzeSIgewoKICAgICAgICAgICAgYnJvd3NlciA9IGNvbnRhaW5lciAiUHJvaGzDrcW+ZcSNIiB7CiAgICAgICAgICAgICAgICBkb21fcmVhZGVyID0gY29tcG9uZW50ICJET00gUmVhZGVyIgogICAgICAgICAgICB9CgogICAgICAgICAgICByb3V0ZXIgPSBjb250YWluZXIgIlNtxJtyb3ZhxI0gc3Ryw6FuZWsiICJTZXN0YXZ1amUgcG/FvmFkb3Zhbm91IHN0csOhbmt1InsKICAgICAgICAgICAgICAgIHJvdXRpbmdfZW5naW5lID0gY29tcG9uZW50ICJTbWVyb3ZhY8OtIEVuZ2luZSIgIlNlc3RhdnVqZSBwb8W+YWRvdmFub3Ugc3Ryw6Fua3UiCiAgICAgICAgICAgICAgICB1aV90ZW1wbGF0b3IgPSBjb21wb25lbnQgIlVJIFRlbXBsYXRvciIgIlBvc2t5dHVqZSB0ZW1wbGF0ZSBwcm8gc3Ryw6Fua3UgdiBwcm9obMOtxb5lxI1pIgogICAgICAgICAgICB9CgogICAgICAgICAgICByb3V0aW5nX3JlbGlhYmlsaXR5ID0gY29udGFpbmVyICJTcG9sZWhsaXZvc3Qgc23Em3JvdmHEjWUiICJaYWppxaHFpXVqZSBzcG9sZWhsaXZvc3QgU23Em3JvdmHEjWUgc3Ryw6FuZWsiewogICAgICAgICAgICAgICAgdGFncyAicXVhbGl0eSBjb250YWluZXIiCiAgICAgICAgICAgICAgICByb3V0aW5nX2hlYWx0aF9jaGVja2VyID0gY29tcG9uZW50ICJIZWFsdGggY2hlY2tlciIgIktvbnRyb2x1amUgc3RhdiBzbcSbcm92YcSNZSJ7CiAgICAgICAgICAgICAgICAgICAgdGFncyAicXVhbGl0eSBjb21wb25lbnQiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICByb3V0aW5nX2ZhaWxvdmVyID0gY29tcG9uZW50ICJGYWlsb3ZlciIgIlNwcmF2dWplIGluc3RhbmNlIHNtxJtyb3ZhxI1lInsKICAgICAgICAgICAgICAgICAgICB0YWdzICJxdWFsaXR5IGNvbXBvbmVudCIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGlzcGxheWVyID0gY29udGFpbmVyICJab2JyYXplbsOtIiAiVnl0dsOhxZnDrSBqZWRub3RsaXbDoSB6b2JyYXplbsOtIHMgZGF0eSJ7CiAgICAgICAgICAgICAgICBzY2hlZHVsZV9kaXNwbGF5ZXIgPSBjb21wb25lbnQgIlpvYnJhem92YW5pZSByb3p2cmh1IgogICAgICAgICAgICAgICAgZXZlbnRfZGlzcGxheWVyID0gY29tcG9uZW50ICJab2JyYXplbmllIGzDrXN0a292IgogICAgICAgICAgICAgICAgZXZlbnRfZGV0YWlscyA9IGNvbXBvbmVudCAiRGV0YWlsIG8gbMOtc3RrdSIKICAgICAgICAgICAgICAgIGVtYWlsX3dpbmRvd19kaXNwbGF5ZXIgPSBjb21wb25lbnQgIlpvYnJhemVuaWUgZW1haWxvdsOpaG8gb2tuYSIKICAgICAgICAgICAgICAgIG1hbmFnZXJfZGlzcGxheWVyID0gY29tcG9uZW50ICJab2JyYXplbmllIHByZSBtYW5hxb7DqXJhIgogICAgICAgICAgICB9CgogICAgICAgICAgICBlbWFpbF9zZXJ2aWNlID0gY29udGFpbmVyICJFbWFpbCBzZXJ2aWNlIiAiVnl0dsOhxZllbsOtIGEgemFzw61sw6Fuw60gZW1haWzFryJ7CiAgICAgICAgICAgICAgICBlbWFpbF9nZW5lcmF0b3IgPSBjb21wb25lbnQgIlR2b3JiYSBlbWFpbG92IgogICAgICAgICAgICAgICAgZW1haWxfc2VuZGVyID0gY29tcG9uZW50ICJPZG9zaWVsYW5pZSBlbWFpbG92IgogICAgICAgICAgICB9CgogICAgICAgICAgICBkYXRhX2hhbmRsaW5nID0gY29udGFpbmVyICJEYXRhIEhhbmRsaW5nIiAiWmF6bmFtZW7DoXbDoSB6bcSbbnksIGtvbXVuaWt1amUgcyBSb3p2cmh5IGEgdnl0dsOhxZnDrSBqZWppY2ggem9icmF6ZW7DrSIgewogICAgICAgICAgICAgICAgZGF0YV9wcmVwYXJhdGlvbiA9IGNvbXBvbmVudCAiUHLDrXByYXZhIGTDoXQiCiAgICAgICAgICAgICAgICBkYXRhX3ZlcmlmaWNhdG9yID0gY29tcG9uZW50ICJEYXRhIHZlcmlmaWNhdG9yIiAiT3ZlcmVuaWUgc3Byw6F2bm9zdGkgZMOhdCIKICAgICAgICAgICAgICAgIGxvYWRlciA9IGNvbXBvbmVudCAiTG9hZGVyIiAibmHEjcOtdGEgZMOhdGEgcHJlZG1ldG92IHBvbW9jb3UgU2NoZWR1bGUgQVBJIgogICAgICAgICAgICAgICAgc2NoZWR1bGVfYXBpID0gY29tcG9uZW50ICJTY2hlZHVsZSBBUEkiICJaYXBpc292w6Fuw60gYSBuYcSNw610w6Fuw60gbMOtc3Rrxa8gemUgU2NoZWR1bGVzIgogICAgICAgICAgICAgICAgbW9kaWZpY2F0aW9uX2hhbmRsZXIgPSBjb21wb25lbnQgIk1vZGlmaWNhdGlvbiBIYW5kbGVyIgogICAgICAgICAgICAgICAgdmFsaWRhdG9yID0gY29tcG9uZW50ICJWYWxpZMOhdG9yIiAiVnlob2Rub3TDrSBzcHLDoXZub3PFpSB6bWllbiIKICAgICAgICAgICAgICAgIGRhdGFfcHJlcGFyYXRpb25fY2hhbmdlcyA9IGNvbXBvbmVudCAiUHLDrXByYXZhIGTDoXQgW3ptZW55XSIgIlVwcmF2w60gZMOhdGEgZG8gZm9ybcOhdHUsIGt0b3LDvSBzYSBkw6EgcG9zbGHFpSBkbyBTY2hlZHVsZSBBUEkiCiAgICAgICAgICAgICAgICBjaGFuZ2VzX2FwaSA9IGNvbXBvbmVudCAiQ2hhbmdlcyBBUEkiICJaYXBpc292w6Fuw60gYSBuYcSNw610w6Fuw60gaGlzdG9yaWUgem3Em24iCiAgICAgICAgICAgICAgICBydWxlcyA9IGNvbXBvbmVudCAiUnVsZXMiICJwcmF2aWRsw6EsIGt0b3LDqSB1csSNdWrDuiwgxI1pIHPDuiB6bWVueSBwbGF0bsOpIgoKICAgICAgICAgICAgICAgIGxpc3RreV9hcGkgPSBjb21wb25lbnQgIkzDrXN0a3kgQVBJIiAiQVBJIG5hIGtvbXVuaWvDoWNpdSBzIGRhdGFiw6F6b3Ugc28gemFwaXNtaSDFoXR1ZGVudG92IgogICAgICAgICAgICB9CgogICAgICAgICAgICB1c2VyX2Vucm9sbG1lbnQgPSBjb250YWluZXIgIlrDoXBpc3kgdcW+aXZhdGVsZSIgIlphamnFocWldWplIHrDoXBpcyB1xb5pdmF0ZWxlIG5hIGRhbsO9IGzDrXN0ZWsiewogICAgICAgICAgICAgICAgdXNlcl9kYXRhX2xvYWRlciA9IGNvbXBvbmVudCAiTmHEjcOtdMOhbsOtIGRhdCB1xb5pdmF0ZWzFryIgIktvbXVuaWt1amUgcyBkYXRhYsOhesOtIGEgesOtc2vDoXbDoSBkYXRhIgogICAgICAgICAgICAgICAgZXZlbnRfZW5yb2xsZXIgPSBjb21wb25lbnQgIlphcHNhdCBzdHVkZW50YSBuYSBsw61zdGVrIiAiWmFww63FoWUgcMWZaWhsw6HFoWVuw6lobyBzdHVkZW50YSBuYSBsw61zdGVrIgogICAgICAgICAgICB9CgogICAgICAgICAgICBtb2RpZmljYXRpb25faGlzdG9yeSA9IGNvbnRhaW5lciAiRGF0YWLDoXplIGhpc3RvcmllIHptxJtuIgogICAgICAgICAgICBkYXRhYmFzZSA9IGNvbnRhaW5lciAiRGF0YWLDoXplIiAiRGF0YWLDoXplIHphcHNhbsO9Y2ggbMOtc3Rrxa8gdcW+aXZhdGVsxa8iCiAgICAgICAgICAgIGFwaSA9IGNvbnRhaW5lciAiQVBJIgogICAgICAgIH0KCiAgICAgICAgbWFpbF9yb3V0ZXIgPSBzb2Z0d2FyZVN5c3RlbSAiTWFpbCByb3V0ZXIiIHsKCiAgICAgICAgfQoKICAgICAgICBzY2hlZHVsZXMgPSBzb2Z0d2FyZVN5c3RlbSAiUm96dnJoeSJ7CiAgICAgICAgICAgIGNvdXJzZXNfYW5kX2V2ZW50cyA9IGNvbnRhaW5lciAiUMWZZWRtxJt0eSBhIGzDrXN0a3kiICJEYXRhYmFzZSIKICAgICAgICB9CgoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBjb250YWluZXJvbSBEYXRhYmFzZSBhIEFQSQogICAgICAgIGVucm9sbG1lbnRzLmRhdGFiYXNlIC0+IGVucm9sbG1lbnRzLmFwaSAiWnDFmcOtc3R1cMWIdWplIGRhdGEgbyB6w6FwaXNlY2giCgogICAgICAgICNWesWlYWh5IG1lZHppIGRhdGFiw6F6b3UgesOhcGlzb3YgYSBjb250YWluZXJvbSAgWsOhcGlzeSB1xb5pdmF0ZWxlCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YWJhc2UgLT4gZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgIsSMdGVuw60gZGF0IgogICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAtPiBlbnJvbGxtZW50cy5kYXRhYmFzZSAiWmFwc8OhbsOtIG5vdsOpaG8gesOhcGlzdSIKCgogICAgICAgICNWesWlYWh5IG1lZHppIGVtYWlsb3bDvW1pIHNsdcW+YmFtaQogICAgICAgIGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfc2VuZGVyIC0+IG1haWxfcm91dGVyICJLb211bmlrdWplIgogICAgICAgIGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfZ2VuZXJhdG9yIC0+IGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfc2VuZGVyICJQxZllZMOhIGVtYWlsIgogICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5lbWFpbF93aW5kb3dfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfZ2VuZXJhdG9yICJTcHLDrXN0dXDFiHVqZSIKCgogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcm9tIERhdGEgaGFuZGxpbmcgYSBzb2Z0d2FyZW92w71tIHN5c3TDqW1vbSBSb3p2cmh5CiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5zY2hlZHVsZV9hcGkgLT4gc2NoZWR1bGVzLmNvdXJzZXNfYW5kX2V2ZW50cyAiS29tdW5pa8OhY2lhIHMgRGF0YWLDoXpvdSIKCiAgICAgICAgI1Z6xaVhaHkgbWVkemkgY29udGFpbmVyb20gRGF0YSBIYW5kbGluZyBhIGNvbnRhaW5lcm9tIEhpc3RvcmllIHptxJtuCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAtPiBlbnJvbGxtZW50cy5tb2RpZmljYXRpb25faGlzdG9yeSAiUHJpZGFuaWUgesOhem5hbXUgZG8gZGF0YWLDoXp5IHptaWVuIgoKICAgICAgICAjT3N0YXRuw6kgc29mdHdhcmVvdsOpIHN5c3TDqW15CiAgICAgICAgZXhhbXMgPSBzb2Z0d2FyZVN5c3RlbSAiWmtvdcWha3kiCiAgICAgICAgbG9naW5fc3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIlDFmWlobGHFoW92YWPDrSBzeXN0w6ltIgoKICAgICAgICAjIFXFvml2YXRlbMOpCiAgICAgICAgbWFuYWdlciA9IHBlcnNvbiAiTWFuYcW+ZXIiCiAgICAgICAgc3R1ZGVudCA9IHBlcnNvbiAiU3R1ZGVudCIKICAgICAgICB0ZWFjaGVyID0gcGVyc29uICJVxI1pdGVsIgoKICAgICAgICAjIFZ6dGFoeSBtZXppIHXFvml2YXRlbGkgYSBaw6FwaXN5IChFbnJvbGxtZW50cykKICAgICAgICBtYW5hZ2VyIC0+IGVucm9sbG1lbnRzICJQb3XFvsOtdsOhIgogICAgICAgIHN0dWRlbnQgLT4gZW5yb2xsbWVudHMgIlBvdcW+w612w6EiCiAgICAgICAgdGVhY2hlciAtPiBlbnJvbGxtZW50cyAiUG91xb7DrXbDoSIKCiAgICAgICAgIyBWenRhaHkgbWV6aSBzb2Z0d2Vyb3bDvW1pIHN5c3TDqW15CiAgICAgICAgbG9naW5fc3lzdGVtIC0+IGVucm9sbG1lbnRzICJQb3PDrWzDoSBkYXRhIG8gdcW+aXZhdGVsZWNoIgogICAgICAgIHNjaGVkdWxlcyAtPiBlbnJvbGxtZW50cyAiUG9zw61sw6EgZGF0YSBvIHJvenZyesOtY2ggcG9tb2PDrSBBUEkiCiAgICAgICAgZW5yb2xsbWVudHMgLT4gZXhhbXMgIlBvc8OtbMOhIGRhdGEgbyB6w6FwaXNlY2ggcG9tb2PDrSBBUEkiCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgLT4gbG9naW5fc3lzdGVtICJQb3PDrWzDoW7DrSBwb8W+YWRhdmvFryBuYSB1xb5pdmF0ZWxza8OhIGRhdGEiCiAgICAgICAgbG9naW5fc3lzdGVtIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyICJQb3PDrWzDoW7DrSBkYXQgdcW+aXZhdGVsZSIKCiAgICAgICAgI1Z6xaVhaHkgbWVkemkgdcW+w612YXRlxL5hbWkgYSB6b2JyYXplbsOtbQogICAgICAgIHN0dWRlbnQgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiT3Zsw6FkYW5pZSBjZXoiCiAgICAgICAgdGVhY2hlciAtPiBlbnJvbGxtZW50cy5icm93c2VyICJPdmzDoWRhbmllIGNleiIKICAgICAgICBtYW5hZ2VyIC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIk92bMOhZGFuaWUgY2V6IgoKCiAgICAgICAgI1Z6dGFoeSBtZWR6aSBrb21wb25lbnRhbWkgZGlzcGxheWVyIGNvbnRhaW5lcnUKICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzICJPZGthenVqZSBuYSIKICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZW1haWxfd2luZG93X2Rpc3BsYXllciAiT2RrYXp1amUgbmEiCgogICAgICAgICNWesWlYWh5IG1lZHppIGtvbXBvbmVudGFtaSBjb250YWluZXJ1IHJvdXRlcgogICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci51aV90ZW1wbGF0b3IgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQb3NreXRudXTDrSB0ZW1wbGF0ZSIKCiAgICAgICAgI1Z6xaVhaHkgbWVkemkgY29udGFpbmVyb20gcm91dGVyIGEgb3N0YXRuw71taSBzeXN0w6ltYW1pCiAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6Fuw60gem9icmF6ZW7DrSBsw61zdGvFryIKICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuc2NoZWR1bGVfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUMWZZWTDoW7DrSB6b2JyYXplbsOtIHJvenZyaHUiCiAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLm1hbmFnZXJfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUMWZZWTDoW7DrSB6b2JyYXplbsOtIHBybyBtYW5hxb5lcmEiCiAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgIlBvxb5hZGF2ZWsgbmEgem9icmF6ZW7DrSBsw61zdGvFryIKICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLnNjaGVkdWxlX2Rpc3BsYXllciAiUG/FvmFkYXZlayBuYSB6b2JyYXplbsOtIHJvenZyaHUiCiAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAiUG/FvmFkYXZlayBuYSB6b2JyYXplbsOtIHBybyBtYW5hxb5lcmEiCiAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAixb3DoWTDoSBvIHphcHPDoW7DrSBsw61zdGt1IgogICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5icm93c2VyLmRvbV9yZWFkZXIgIlDFmWVkw6Fuw60gc3Ryw6Fua3kiCgogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcm9tIGJyb3dzZXIgYSBvc3RhdG7DvW1pIGNvbnRhaW5lcm1pCiAgICAgICAgZW5yb2xsbWVudHMuYnJvd3Nlci5kb21fcmVhZGVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG/FvmFkYXZlayBuYSB6bcSbbnUgc3Ryw6Fua3kiCgogICAgICAgICNWesWlYWh5IG1lZHppIGNvbnRhaW5lcmFtaSBEYXRhIEhhbmRsaW5nIGEgWm9icmF6ZW5pZQogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJPZG9zaWVsYW5pZSBkw6F0IHYgSFRNTCBwcmUgem9icmF6ZW5pZSIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLm1hbmFnZXJfZGlzcGxheWVyICJPZG9zaWVsYW5pZSBkw6F0IG5hIHpvYnJhemVuaWUgcHJlIG1hbmHFvsOpcmEiCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzICJPZGVzw61sw6Fuw60gZGF0IG8gbMOtc3RrdSB2IEhUTUwiCgogICAgICAgICNWesWlYWh5IHZvIHZuw7p0cmkgY29udGFpbmVydSBEYXRhIEhhbmRsaW5nCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5tb2RpZmljYXRpb25faGFuZGxlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnZhbGlkYXRvciAiUG/FoWxlIHptZW55IHZhbGlkw6F0b3J1IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcudmFsaWRhdG9yIC0+ICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb25fY2hhbmdlcyAiUG/FoWxlIHptZW55IGsgcHLDrXByYXZlIG5hIG9kb3NsYW5pZSIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnZhbGlkYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzICJaw61za2EgcHJhdmlkbMOhLCBwb2TEvmEga3RvcsO9Y2ggdnlob2Rub3TDrSBwbGF0bm9zxaUgem1pZW4iCiAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uX2NoYW5nZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5zY2hlZHVsZV9hcGkgIlBvxb5pYWRhdmthIG5hIG1vZGlmaWvDoWNpdSBkw6F0IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbl9jaGFuZ2VzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuY2hhbmdlc19hcGkgIlBvxb5pYWRhdmthIG5hIHByaWRhbmllIHrDoXpuYW11IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlBvxaFsZSBkw6F0YSBrIHByw61wcmF2ZSBuYSB6b2JyYXplbmllIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzICJaw61za2EgcHJhdmlkbMOhLCBwb2TEvmEga3RvcsO9Y2ggemlzdMOtLCDEjWkgc8O6IG5hxI3DrXRhbsOpIGTDoXRhIHNwcsOhdm5lIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+ICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSBkw6F0YSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnNjaGVkdWxlX2FwaSAiUG/FvmlhZGF2a2EgbmEgbsSNw610YW5pZSBkw6F0IgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG9zw61sw6EgcG/FvmFkYXZreSBuYSBkYXRhIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuY2hhbmdlc19hcGkgIlBvc8OtbMOhIHBvxb5hZGF2a3kgbmEgbmHEjcOtdMOhbsOtIGRhdCIKICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgIlBvc8OtbGEgcG/FvmFkYXZreSBuYSBkYXRhIgogICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAtPiBlbnJvbGxtZW50cy5kYXRhYmFzZSAiUG9zw61sw6EgcG/FvmFkYXZreSBuYSBkYXRhIgoKCiAgICAgICAgI1Z6xaVhaHkgbWVkemkga29tcG9uZW50YW1pIGNvbnRhaW5lcnUgWsOhcGlzeSB1xb7DrXZhdGXEvmEKICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQudXNlcl9kYXRhX2xvYWRlciAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgIlrDrXNrw6Fuw60gZGF0IG8gcMWZaWhsw6HFoWVuw6ltIHXFvml2YXRlbGkiCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyICJEb3B0w6Egc2UgbmEgZGF0YSBvIHXFvml2YXRlbGkiCgoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBjb250YWluZXJvbSBaw6FwaXN5IHXFvsOtdmF0ZWxlIGEgY29udGFpbmVyb20gWm9icmF6ZW5pZQogICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC51c2VyX2RhdGFfbG9hZGVyIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5zY2hlZHVsZV9kaXNwbGF5ZXIgIlDFmWVkw6Fuw60gZGF0IG8gemFwc2Fuw71jaCBsw61zdGPDrWNoIgoKICAgICAgICAjVnrFpWFoeSBtZWR6aSBjb250YWluZXJvbSBaw6FwaXN5IHXFvsOtdmF0ZWxlIGEgY29udGFpbmVyb20gRGF0YSBIYW5kbGluZwogICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLm1vZGlmaWNhdGlvbl9oYW5kbGVyICJaYXDDrXNhbmllIHptaWVuIChwcmlobMOhc2VuaWUgxaF0dWRlbnRhIG5hIGzDrXN0b2spIgoKCiAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG/FoWxlIGluZm9ybWFjaSBvIHbDvXNsZWRrdSB6w6FwaXN1IgoKICAgICAgICAjIFFVQUxJVFkKICAgICAgICBlbnJvbGxtZW50cy5yb3V0aW5nX3JlbGlhYmlsaXR5LnJvdXRpbmdfaGVhbHRoX2NoZWNrZXIgLT4gZW5yb2xsbWVudHMucm91dGluZ19yZWxpYWJpbGl0eS5yb3V0aW5nX2ZhaWxvdmVyICJVcG96b3LFiHVqZSBuYSBuZXpkcmF2w6kgaW5zdGFuY2UiewogICAgICAgICAgICAgICAgICAgIHRhZ3MgInF1YWxpdHkiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgZW5yb2xsbWVudHMucm91dGluZ19yZWxpYWJpbGl0eS5yb3V0aW5nX2hlYWx0aF9jaGVja2VyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiS29udHJvbHVqZSB6ZHJhdsOtIHBpbmdvdsOhbsOtbSJ7CiAgICAgICAgICAgICAgICAgICAgdGFncyAicXVhbGl0eSIKICAgICAgICAgICAgICAgIH0KICAgICAgICBlbnJvbGxtZW50cy5yb3V0aW5nX3JlbGlhYmlsaXR5LnJvdXRpbmdfZmFpbG92ZXIgLT4gZW5yb2xsbWVudHMucm91dGVyICJTcHJhdnVqZSBpbnN0YW5jZSJ7CiAgICAgICAgICAgICAgICAgICAgdGFncyAicXVhbGl0eSIKICAgICAgICAgICAgICAgIH0KCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHRoZW1lIGRlZmF1bHQKCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAicXVhbGl0eSBjb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgI2JkNjgxMQogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJxdWFsaXR5IGNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjZjBiYjg1CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHJlbGF0aW9uc2hpcCAicXVhbGl0eSIgewogICAgICAgICAgICAgICAgY29sb3IgI2RkNzcxMQogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBzeXN0ZW1Db250ZXh0IGVucm9sbG1lbnRzIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBlbnJvbGxtZW50cyAiQ29udGFpbmVyVmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5kaXNwbGF5ZXIgIk5hdmlnYXRpb25Db21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcgIkRhdGFIYW5kbGluZ0NvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgZW5yb2xsbWVudHMuZW1haWxfc2VydmljZSAiRW1haWxTZXJ2aWNlQ29tcG9uZW50VmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudCAiVXNlckVucm9sbG1lbnRDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGVucm9sbG1lbnRzLm1vZGlmaWNhdGlvbl9oaXN0b3J5ICJNb2RpZmljYXRpb25IaXN0b3J5Q29tcG9uZW50VmlldyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGVucm9sbG1lbnRzLmRhdGFiYXNlICJEYXRhYmFzZUNvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5hcGkgIkFQSUNvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5yb3V0ZXIgInJvdXRlckNvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgZW5yb2xsbWVudHMuYnJvd3NlciAiQnJvd3NlckNvbXBvbmVudFZpZXciIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBlbnJvbGxtZW50cy5yb3V0aW5nX3JlbGlhYmlsaXR5ICJyb3V0aW5nUmVsaWFiaWxpdHlDb21wb25lbnRWaWV3IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQgewogICAgICAgICAgICB0aXRsZSAiWsOhcGlzIHDFmWVkbcSbdHUgc3R1ZGVudGVtIgogICAgICAgICAgICBzdHVkZW50IC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIkNoY2Ugc2UgemFwc2F0IG5hIGzDrXN0ZWsiCiAgICAgICAgICAgICMgcHJvaGzDrcW+ZcSNIC0+IHNtxJtyb3ZhxI0KICAgICAgICAgICAgZW5yb2xsbWVudHMuYnJvd3NlciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlBvxb7DoWTDoSBvIHrDoXBpcyBwxZllZG3Em3R1IgogICAgICAgICAgICAjIHNtxJtyb3ZhxI0gLT4gemFwc2F0IHN0dWRlbnRhIG5hIGzDrXN0ZWsKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAiUG/FvsOhZMOhIG8gesOhcGlzIHDFmWVkbcSbdHUiCgogICAgICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgLT4gZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgIlBvxb7DoWTDoSBvIElEIHN0dWRlbnRhIgogICAgICAgICAgICAjIG5hxI3DrXTDoW7DrSBkYXQgdcW+aXZhdGVsxa8gLT4gcMWZaWhsYcWhb3ZhY8OtIHN5c3TDqW0KICAgICAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgLT4gbG9naW5fc3lzdGVtICJQb8W+w6Fkw6EgbyBJRCBzdHVkZW50YSIKICAgICAgICAgICAgIyBwxZlpaGxhxaFvdmFjw60gc3lzdMOpbSAtPiBuYcSNw610w6Fuw60gZGF0IHXFvml2YXRlbMWvCiAgICAgICAgICAgIGxvZ2luX3N5c3RlbSAtPiBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQudXNlcl9kYXRhX2xvYWRlciAiUG/FoWxlIElEIHN0dWRlbnRhIgogICAgICAgICAgICAjIG5hxI3DrXTDoW7DrSBkYXQgdcW+aXZhdGVsxa8gLT4gemFwc2F0IHN0dWRlbnRhIG5hIGzDrXN0ZWsKICAgICAgICAgICAgZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LnVzZXJfZGF0YV9sb2FkZXIgLT4gZW5yb2xsbWVudHMudXNlcl9lbnJvbGxtZW50LmV2ZW50X2Vucm9sbGVyICJQxZllZMOhIElEIHN0dWRlbnRhIgogICAgICAgICAgICAjIHphcHNhdCBzdHVkZW50YSBuYSBsw61zdGVrIC0+IGRhdGFiw6F6ZQogICAgICAgICAgICBlbnJvbGxtZW50cy51c2VyX2Vucm9sbG1lbnQuZXZlbnRfZW5yb2xsZXIgLT4gZW5yb2xsbWVudHMuZGF0YWJhc2UgIlphcHPDoW7DrSBub3bDqWhvIHrDoXBpc3Ugc3R1ZGVudGEgbmEgbMOtc3RlayIKICAgICAgICAgICAgIyB6YXBzYXQgc3R1ZGVudGEgbmEgbMOtc3RlayAtPiBkYXRhIGhhbmRsaW5nCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLm1vZGlmaWNhdGlvbl9oYW5kbGVyICJQb8WhbGUgaW5mb3JtYWNlIG8gesOhcGlzdSBsw61zdGt1IHBybyB6w6FwaXN1IGRvIGhpc3RvcmllIHptxJtuIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLm1vZGlmaWNhdGlvbl9oYW5kbGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcudmFsaWRhdG9yCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcudmFsaWRhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcucnVsZXMKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy52YWxpZGF0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uX2NoYW5nZXMKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uX2NoYW5nZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaQogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmNoYW5nZXNfYXBpIC0+IGVucm9sbG1lbnRzLm1vZGlmaWNhdGlvbl9oaXN0b3J5ICJaYXDDrcWhZSBpbmZvcm1hY2kgbyB6w6FwaXN1IGzDrXN0a3UgZG8gZGF0YWLDoXplIHptxJtuIgoKICAgICAgICAgICAgIyB6YXBzYXQgc3R1ZGVudGEgbmEgbMOtc3RlayAtPiBzbcSbcm92YcSNCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnVzZXJfZW5yb2xsbWVudC5ldmVudF9lbnJvbGxlciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlBvxaFsZSBpbmZvcm1hY2kgbyB2w71zbGVka3UgesOhcGlzdSIKICAgICAgICAgICAgIyBzbcSbcm92YcSNIHpvYnJhesOtIHN0dWRlbnRvdmkKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIlDFmWVkw6EgaW5mb3JtYWNpIG8gdsO9c2xlZGt1IHrDoXBpc3UiCgoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nIHsKICAgICAgICAgICAgdGl0bGUgIlpvYnJhemVuw60gaGlzdG9yaWUgcHJvIG1hbmHFvmVyYSIKICAgICAgICAgICAgbWFuYWdlciAtPiBlbnJvbGxtZW50cy5icm93c2VyICJDaGNlIHNpIHpvYnJhemnFpSBoaXN0w7NyaXUgem1pZW4iCgogICAgICAgICAgICBlbnJvbGxtZW50cy5icm93c2VyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZQogICAgICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLm1hbmFnZXJfZGlzcGxheWVyICJQb8W+w6Fkw6EgbyB6b2JyYXplbsOtIHBybyBtYW5hxb5lcmEiCgogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIubWFuYWdlcl9kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uICJWecW+aWFkYSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJQb8WhbGUgcG/FvmlhZGF2b2sgbmEgbmHEjcOtdGFuaWUgZMOhdCIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJQb8WhbGUgcG/FvmlhZGF2b2sgbmEgb3ZlcmVuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcucnVsZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJaw61za2EgcHJhdmlkbMOhIG5hIG92ZXJlbmllIHNwcsOhdm5vc3RpIHBvxb5pYWRhdmt1IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIkluZm9ybXVqZSBvIHNwcsOhdm5vc3RpIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmNoYW5nZXNfYXBpICJQb8WhbGUgcmVxdWVzdCBuYSBuYcSNw610YW5pZSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5jaGFuZ2VzX2FwaSAtPiBlbnJvbGxtZW50cy5tb2RpZmljYXRpb25faGlzdG9yeSAiUmVxdWVzdCB6bWVuw60gbmEgU1FMIGEgcG/FoWxlIGhvIgogICAgICAgICAgICBlbnJvbGxtZW50cy5tb2RpZmljYXRpb25faGlzdG9yeSAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmNoYW5nZXNfYXBpICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmNoYW5nZXNfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSB6w61za2Fuw6kgZMOhdGEgbmEgb3ZlcmVuaWUiCgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlBvxaFsZSBpbmZvcm3DoWNpdSBvIHNwcsOhdm5vc3RpIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAiUG/FoWxlIG5hIHByw61wcmF2dSBwcmVkIHpvYnJhemVuw61tIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAiUG9za3l0bmUgZMOhdGEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5tYW5hZ2VyX2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6Egem9icmF6ZW7DrSIKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnVpX3RlbXBsYXRvciAtPiBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgIlDFmWVkw6EgdGVtcGxhdGUgcHJvIHZ5dHZvxZllbsOtIHN0csOhbmt5IgogICAgICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIucm91dGluZ19lbmdpbmUgLT4gZW5yb2xsbWVudHMuYnJvd3NlciAiUMWZZWTDoSBzdHLDoW5rdSIKCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgZW5yb2xsbWVudHMuZGlzcGxheWVyIHsKICAgICAgICAgICAgdGl0bGUgIlpvYnJhemVuaWUgemFww61zYW7DvWNoIMWhdHVkZW50b3YgcHJlIHXEjWl0ZcS+YSIKICAgICAgICAgICAgdGVhY2hlciAtPiBlbnJvbGxtZW50cy5icm93c2VyICJDaGNlIHNpIHpvYnJhemnFpSBkZXRhaWwgbyBsw61zdGt1IHNvIHphcMOtc2Fuw71taSDFoXR1ZGVudG1pIgogICAgICAgICAgICBlbnJvbGxtZW50cy5icm93c2VyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG/FvmlhZGEgbyBwcmVzbWVyb3ZhbmllIG5hIHpvYnJhemVuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJQcmVkw6EgcG/FvmlhZGF2b2sgbmEgem9icmF6ZW5pZSBsw61zdGtvdiIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiUG/FvmlhZGEgbyB6b2JyYXplbmllIGRldGFpbHUgbMOtc3RrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uICJWecW+aWFkYSBkw6F0YSBvIGRldGFpbGUgbMOtc3RrdSIKCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG/FoWxlIHBvxb5pYWRhdm9rIG5hIG5hxI3DrXRhbmllIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiUG/FoWxlIHBvxb5pYWRhdm9rIG5hIG92ZXJlbmllIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBwb8W+aWFkYXZrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJJbmZvcm11amUgbyBzcHLDoXZub3N0aSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpICJQb8WhbGUgcmVxdWVzdCBuYSBuYcSNw610YW5pZSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFiYXNlICJSZXF1ZXN0IHptZW7DrSBuYSBTUUwgYSBwb8WhbGUgaG8iCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFiYXNlIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAiVnLDoXRpIHrDrXNrYW7DqSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSB6w61za2Fuw6kgZMOhdGEgbmEgb3ZlcmVuaWUiCgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLnJ1bGVzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiWsOtc2thIHByYXZpZGzDoSBuYSBvdmVyZW5pZSBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlBvxaFsZSBpbmZvcm3DoWNpdSBvIHNwcsOhdm5vc3RpIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAiUG/FoWxlIG5hIHByw61wcmF2dSBwcmVkIHpvYnJhemVuw61tIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzICJPZG/FoWxlIGTDoXRhIG8gbMOtc3RrdSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAiVnLDoXRpIG5hIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiVnLDoXRpIHpvYnJhemVuaWUgbMOtc3Rrb3YiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci51aV90ZW1wbGF0b3IgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQcmVkw6EgdGVtcGxhdGUgbmEgdnl0dm9yZW5pZSBzdHLDoW5reSIKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIlByZWTDoSBzdHLDoW5rdSIKCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGR5bmFtaWMgZW5yb2xsbWVudHMuZGlzcGxheWVyIHsKICAgICAgICAgICAgdGl0bGUgIlpvYnJhemVuaWUgemFww61zYW7DvWNoIHByZWRtZXRvdiBwcmUgxaF0dWRlbnRhIgogICAgICAgICAgICBzdHVkZW50IC0+IGVucm9sbG1lbnRzLmJyb3dzZXIgIkNoY2Ugc2kgem9icmF6acWlIHphcMOtc2Fuw6kgcHJlZG1ldHkiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmJyb3dzZXIgLT4gZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lICJQb8W+aWFkYSBvIHByZXNtZXJvdmFuaWUgbmEgem9icmF6ZW5pZSBwcmVkbWV0b3YiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyICJQb8W+aWFkYSBvIHpvYnJhemVuaWUgbMOtc3Rrb3YiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgIlZ5xb5pYWRhIGRldGFpbHkgbMOtc3Rrb3YiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kZXRhaWxzIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAiVnnFvmlhZGEgZMOhdGEgbyBsw61zdGtvY2giCgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlBvxaFsZSBwb8W+aWFkYXZrdSBuYSBuYcSNw610YW5pZSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlBvxaFsZSBwb8W+aWFkYXZrdSBuYSBvdmVyZW5pZSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5ydWxlcyAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlrDrXNrYSBwcmF2aWRsw6EgbmEgb3ZlcmVuaWUgc3Byw6F2bm9zdGkgcG/FvmlhZGF2a3UiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiSW5mb3JtdWplIG8gc3Byw6F2bm9zdGkiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAiUG/FoWxlIHJlcXVlc3QgbmEgbmHEjcOtdGFuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAtPiBlbnJvbGxtZW50cy5kYXRhYmFzZSAiUmVxdWVzdCB6bWVuw60gbmEgU1FMIGEgcG/FoWxlIGhvIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhYmFzZSAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgIlZyw6F0aSB6w61za2Fuw6kgZMOhdGEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubGlzdGt5X2FwaSAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiVnLDoXRpIHrDrXNrYW7DqSBkw6F0YSIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJQb8WhbGUgesOtc2thbsOpIGTDoXRhIG5hIG92ZXJlbmllIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5ydWxlcyAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgIlrDrXNrYSBwcmF2aWRsw6EgbmEgb3ZlcmVuaWUgc3Byw6F2bm9zdGkgZMOhdCIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJQb8WhbGUgaW5mb3Jtw6FjaXUgbyBzcHLDoXZub3N0aSBkw6F0IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlBvxaFsZSBuYSBwcsOtcHJhdnUgcHJlZCB6b2JyYXplbsOtbSIKCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiT2RvxaFsZSBkw6F0YSBvIGzDrXN0a29jaCIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2Rpc3BsYXllciAiVnLDoXRpIG5hIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGlzcGxheWVyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiVnLDoXRpIHpvYnJhemVuaWUgcHJlZG1ldG92IgogICAgICAgICAgICBlbnJvbGxtZW50cy5yb3V0ZXIudWlfdGVtcGxhdG9yIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUHJlZMOhIHRlbXBsYXRlIG5hIHZ5dHZvcmVuaWUgc3Ryw6Fua3kiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAtPiBlbnJvbGxtZW50cy5icm93c2VyICJQcmVkw6Egc3Ryw6Fua3UiCgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgICAgICBkeW5hbWljIGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UgewogICAgICAgICAgICB0aXRsZSAiS29tdW5pa2FjZSB1xI1pdGVsZSBzZSBzdHVkZW50eSIKICAgICAgICAgICAgdGVhY2hlciAtPiBlbnJvbGxtZW50cy5icm93c2VyICJDaGNlIG9kZXNsYXQgZW1haWwgc3R1ZGVudMWvbSIKICAgICAgICAgICAgIyBwcm9obMOtxb5lxI0gLT4gc23Em3JvdmHEjQogICAgICAgICAgICBlbnJvbGxtZW50cy5icm93c2VyIC0+IGVucm9sbG1lbnRzLnJvdXRlci5yb3V0aW5nX2VuZ2luZSAiUG/FvsOhZMOhIG8gcHJlc23Em3JvdsOhbsOtIG5hIHpvYnJhemVuw60iCiAgICAgICAgICAgICMgc23Em3JvdmHEjSAtPiB6b2JyYXplbsOtIGzDrXN0a3UKICAgICAgICAgICAgZW5yb2xsbWVudHMucm91dGVyLnJvdXRpbmdfZW5naW5lIC0+IGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgIlBvxb7DoWTDoSBvIHpvYnJhemVuw60gc3bDvWNoIGzDrXN0a8WvIgogICAgICAgICAgICAjIHpvYnJhemVuw60gbMOtc3RrdSAtPiB6b2JyYXplbsOtIGRldGFpbHUgbyBsw61zdGt1CiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRpc3BsYXllci5ldmVudF9kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgIlBvxb7DoWTDoSBvIHpvYnJhemVuw60gZGV0YWlsdSBvIGzDrXN0a3UiCgogICAgICAgICAgICBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlZ5xb5pYWRhIGTDoXRhIG8gbMOtc3Rrb2NoIgoKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ByZXBhcmF0aW9uIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyICJQb8WhbGUgcG/FvmlhZGF2a3UgbmEgbmHEjcOtdGFuaWUgZMOhdCIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJQb8WhbGUgcG/FvmlhZGF2a3UgbmEgb3ZlcmVuaWUiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcucnVsZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJaw61za2EgcHJhdmlkbMOhIG5hIG92ZXJlbmllIHNwcsOhdm5vc3RpIHBvxb5pYWRhdmt1IgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfdmVyaWZpY2F0b3IgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIkluZm9ybXVqZSBvIHNwcsOhdm5vc3RpIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgIlBvxaFsZSByZXF1ZXN0IG5hIG5hxI3DrXRhbmllIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgLT4gZW5yb2xsbWVudHMuZGF0YWJhc2UgIlJlcXVlc3Qgem1lbsOtIG5hIFNRTCBhIHBvxaFsZSBobyIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGF0YWJhc2UgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5saXN0a3lfYXBpICJWcsOhdGkgesOtc2thbsOpIGTDoXRhIgogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxpc3RreV9hcGkgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5sb2FkZXIgIlZyw6F0aSB6w61za2Fuw6kgZMOhdGEiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcubG9hZGVyIC0+IGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAiUG/FoWxlIHrDrXNrYW7DqSBkw6F0YSBuYSBvdmVyZW5pZSIKCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcucnVsZXMgLT4gZW5yb2xsbWVudHMuZGF0YV9oYW5kbGluZy5kYXRhX3ZlcmlmaWNhdG9yICJaw61za2EgcHJhdmlkbMOhIG5hIG92ZXJlbmllIHNwcsOhdm5vc3RpIGTDoXQiCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV92ZXJpZmljYXRvciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAiUG/FoWxlIGluZm9ybcOhY2l1IG8gc3Byw6F2bm9zdGkgZMOhdAogICAgICAgICAgICBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmxvYWRlciAtPiBlbnJvbGxtZW50cy5kYXRhX2hhbmRsaW5nLmRhdGFfcHJlcGFyYXRpb24gIlBvxaFsZSBuYSBwcsOtcHJhdnUgcHJlZCB6b2JyYXplbsOtbSIKCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmRhdGFfaGFuZGxpbmcuZGF0YV9wcmVwYXJhdGlvbiAtPiBlbnJvbGxtZW50cy5kaXNwbGF5ZXIuZXZlbnRfZGV0YWlscyAiT2RvxaFsZSBkw6F0YSBvIGzDrXN0a29jaCIKCiAgICAgICAgICAgICMgem9icmF6ZW7DrSBkZXRhaWx1IG8gbMOtc3RrdSAtPiB6b2JyYXplbsOtIG9rbmEgcHJvIHR2b3JidSBlbWFpbHUKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmV2ZW50X2RldGFpbHMgLT4gZW5yb2xsbWVudHMuZGlzcGxheWVyLmVtYWlsX3dpbmRvd19kaXNwbGF5ZXIgIlBvxb7DoWTDoSBvIHpvYnJhemVuw60gb2tuYSBwcm8gdnlwbG7Em27DrSBlbWFpbHUiCiAgICAgICAgICAgICMgb2tubyBwcm8gdHZvcmJ1IGVtYWlsdSAtPiBlbWFpbCBnZW5lcmF0b3IKICAgICAgICAgICAgZW5yb2xsbWVudHMuZGlzcGxheWVyLmVtYWlsX3dpbmRvd19kaXNwbGF5ZXIgLT4gZW5yb2xsbWVudHMuZW1haWxfc2VydmljZS5lbWFpbF9nZW5lcmF0b3IgIlBvxb7DoWTDoSBvIHZ5Z2VuZXJvdsOhbsOtIGVtYWlsdSIKICAgICAgICAgICAgIyBlbWFpbCBnZW5lcmF0b3IgLT4gZW1haWwgc2VuZGVyCiAgICAgICAgICAgIGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfZ2VuZXJhdG9yIC0+IGVucm9sbG1lbnRzLmVtYWlsX3NlcnZpY2UuZW1haWxfc2VuZGVyICJQb8W+w6Fkw6EgbyBvZGVzbMOhbsOtIGVtYWlsdSIKICAgICAgICAgICAgIyBlbWFpbCBzZW5kZXIgLT4gbWFpbCByb3V0ZXIKICAgICAgICAgICAgZW5yb2xsbWVudHMuZW1haWxfc2VydmljZS5lbWFpbF9zZW5kZXIgLT4gbWFpbF9yb3V0ZXIgIk9kZcWhbGUgZW1haWwiCgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgIH0KfQ=="
   },
   "views" : {
     "componentViews" : [ {
-      "containerId" : "7",
+      "containerId" : "10",
       "dimensions" : {
         "height" : 3102,
         "width" : 2876
@@ -1023,35 +1090,35 @@
         "x" : 970,
         "y" : 200
       }, {
-        "id" : "8",
+        "id" : "11",
         "x" : 219,
         "y" : 800
       }, {
-        "id" : "9",
+        "id" : "12",
         "x" : 960,
         "y" : 802
       }, {
-        "id" : "10",
+        "id" : "13",
         "x" : 960,
         "y" : 1402
       }, {
-        "id" : "11",
+        "id" : "14",
         "x" : 960,
         "y" : 2002
       }, {
-        "id" : "12",
+        "id" : "15",
         "x" : 1665,
         "y" : 807
       }, {
-        "id" : "13",
+        "id" : "16",
         "x" : 960,
         "y" : 2602
       }, {
-        "id" : "16",
+        "id" : "19",
         "x" : 2270,
         "y" : 1405
       }, {
-        "id" : "27",
+        "id" : "30",
         "x" : 1720,
         "y" : 195
       } ],
@@ -1059,13 +1126,19 @@
       "key" : "NavigationComponentView",
       "order" : 3,
       "relationships" : [ {
-        "id" : "109"
+        "id" : "101",
+        "vertices" : [ {
+          "x" : 1580,
+          "y" : 450
+        } ]
       }, {
         "id" : "112"
       }, {
-        "id" : "114"
+        "id" : "115"
       }, {
-        "id" : "133",
+        "id" : "117"
+      }, {
+        "id" : "136",
         "vertices" : [ {
           "x" : 1950,
           "y" : 90
@@ -1074,198 +1147,218 @@
           "y" : 75
         } ]
       }, {
-        "id" : "138",
+        "id" : "141",
         "vertices" : [ {
           "x" : 2310,
           "y" : 600
         } ]
       }, {
-        "id" : "142",
+        "id" : "145",
         "vertices" : [ {
           "x" : 1570,
           "y" : 250
         } ]
       }, {
-        "id" : "46"
+        "id" : "49"
       }, {
-        "id" : "76"
+        "id" : "79"
       }, {
-        "id" : "77"
+        "id" : "80"
       }, {
-        "id" : "80",
+        "id" : "83",
         "vertices" : [ {
           "x" : 1305,
           "y" : 665
         } ]
       }, {
-        "id" : "84",
+        "id" : "87",
         "vertices" : [ {
           "x" : 870,
           "y" : 725
         } ]
       }, {
-        "id" : "86",
+        "id" : "89",
         "vertices" : [ {
           "x" : 1685,
           "y" : 615
         } ]
       }, {
-        "id" : "89",
+        "id" : "92",
         "vertices" : [ {
           "x" : 1105,
           "y" : 660
         } ]
       }, {
-        "id" : "92",
+        "id" : "95",
         "vertices" : [ {
           "x" : 720,
           "y" : 570
         } ]
       }, {
-        "id" : "94",
+        "id" : "97",
         "vertices" : [ {
           "x" : 1510,
           "y" : 685
         } ]
-      }, {
-        "id" : "98",
-        "vertices" : [ {
-          "x" : 1580,
-          "y" : 450
-        } ]
       } ]
     }, {
-      "containerId" : "16",
+      "containerId" : "19",
       "dimensions" : {
-        "height" : 3605,
-        "width" : 2759
+        "height" : 3820,
+        "width" : 5720
       },
       "elements" : [ {
-        "id" : "7",
-        "x" : 554,
-        "y" : 199
-      }, {
-        "id" : "17",
-        "x" : 554,
-        "y" : 779
-      }, {
-        "id" : "18",
-        "x" : 554,
-        "y" : 1334
-      }, {
-        "id" : "19",
-        "x" : 569,
-        "y" : 1974
+        "id" : "10",
+        "x" : 3879,
+        "y" : 2008
       }, {
         "id" : "20",
-        "x" : 574,
-        "y" : 2539
+        "x" : 2137,
+        "y" : 1408
       }, {
         "id" : "21",
-        "x" : 2089,
-        "y" : 759
+        "x" : 637,
+        "y" : 2608
       }, {
         "id" : "22",
-        "x" : 2069,
-        "y" : 1379
+        "x" : 2137,
+        "y" : 2008
       }, {
         "id" : "23",
-        "x" : 2049,
-        "y" : 1984
+        "x" : 2137,
+        "y" : 2608
       }, {
         "id" : "24",
-        "x" : 2054,
-        "y" : 2539
+        "x" : 2137,
+        "y" : 808
       }, {
         "id" : "25",
-        "x" : 1319,
-        "y" : 1359
+        "x" : 1387,
+        "y" : 1408
       }, {
         "id" : "26",
-        "x" : 0,
-        "y" : 0
+        "x" : 1387,
+        "y" : 2008
       }, {
         "id" : "27",
-        "x" : 2085,
-        "y" : 190
+        "x" : 1387,
+        "y" : 2608
+      }, {
+        "id" : "28",
+        "x" : 483,
+        "y" : 3208
+      }, {
+        "id" : "29",
+        "x" : 2887,
+        "y" : 2608
       }, {
         "id" : "30",
-        "x" : 2059,
-        "y" : 3099
+        "x" : 4491,
+        "y" : 208
       }, {
-        "id" : "31",
-        "x" : 0,
-        "y" : 0
+        "id" : "33",
+        "x" : 3545,
+        "y" : 3208
       }, {
         "id" : "34",
-        "x" : 554,
-        "y" : 3104
+        "x" : 5045,
+        "y" : 3208
+      }, {
+        "id" : "37",
+        "x" : 4295,
+        "y" : 3208
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "DataHandlingComponentView",
       "order" : 4,
+      "paperSize" : "A2_Landscape",
       "relationships" : [ {
-        "id" : "108"
+        "id" : "111"
       }, {
-        "id" : "115"
-      }, {
-        "id" : "116"
-      }, {
-        "id" : "117"
-      }, {
-        "id" : "118",
-        "vertices" : [ {
-          "x" : 1509,
-          "y" : 2699
-        } ]
+        "id" : "118"
       }, {
         "id" : "119"
       }, {
-        "id" : "120"
+        "id" : "120",
+        "vertices" : [ {
+          "x" : 1020,
+          "y" : 2008
+        }, {
+          "x" : 487,
+          "y" : 2608
+        }, {
+          "x" : 487,
+          "y" : 2908
+        } ]
       }, {
         "id" : "121"
       }, {
         "id" : "122"
       }, {
-        "id" : "123"
-      }, {
-        "id" : "124",
+        "id" : "123",
         "vertices" : [ {
-          "x" : 549,
-          "y" : 939
-        }, {
-          "x" : 304,
-          "y" : 1094
-        }, {
-          "x" : 289,
-          "y" : 1704
+          "x" : 1237,
+          "y" : 2008
         } ]
       }, {
-        "id" : "125",
-        "vertices" : [ {
-          "x" : 1449,
-          "y" : 2144
-        } ]
+        "id" : "124"
+      }, {
+        "id" : "125"
       }, {
         "id" : "126"
       }, {
         "id" : "127"
       }, {
-        "id" : "134"
+        "id" : "128"
+      }, {
+        "id" : "129"
+      }, {
+        "id" : "130",
+        "vertices" : [ {
+          "x" : 4895,
+          "y" : 3208
+        } ]
       }, {
         "id" : "137"
       }, {
-        "id" : "38"
+        "id" : "140"
       }, {
-        "id" : "40"
+        "id" : "41",
+        "vertices" : [ {
+          "x" : 5250,
+          "y" : 2162
+        }, {
+          "x" : 5250,
+          "y" : 1554
+        } ]
       }, {
-        "id" : "50"
+        "id" : "43",
+        "vertices" : [ {
+          "x" : 4950,
+          "y" : 1554
+        }, {
+          "x" : 4950,
+          "y" : 2162
+        } ]
       }, {
-        "id" : "55"
+        "id" : "53",
+        "vertices" : [ {
+          "x" : 2737,
+          "y" : 2908
+        }, {
+          "x" : 4145,
+          "y" : 3208
+        } ]
+      }, {
+        "id" : "58",
+        "vertices" : [ {
+          "x" : 1987,
+          "y" : 2908
+        } ]
       } ]
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1273,36 +1366,40 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "containerId" : "13",
+      "containerId" : "16",
+      "dimensions" : {
+        "height" : 2500,
+        "width" : 890
+      },
       "elements" : [ {
-        "id" : "7",
-        "x" : 0,
-        "y" : 0
+        "id" : "10",
+        "x" : 219,
+        "y" : 200
       }, {
-        "id" : "14",
-        "x" : 0,
-        "y" : 0
+        "id" : "17",
+        "x" : 219,
+        "y" : 800
       }, {
-        "id" : "15",
-        "x" : 0,
-        "y" : 0
+        "id" : "18",
+        "x" : 219,
+        "y" : 1400
       }, {
-        "id" : "33",
-        "x" : 0,
-        "y" : 0
+        "id" : "36",
+        "x" : 219,
+        "y" : 2000
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "EmailServiceComponentView",
       "order" : 5,
       "relationships" : [ {
-        "id" : "41"
-      }, {
         "id" : "44"
       }, {
         "id" : "47"
+      }, {
+        "id" : "50"
       } ]
     }, {
-      "containerId" : "27",
+      "containerId" : "30",
       "dimensions" : {
         "height" : 2501,
         "width" : 2532
@@ -1312,27 +1409,27 @@
         "x" : 392,
         "y" : 1415
       }, {
-        "id" : "7",
+        "id" : "10",
         "x" : 402,
         "y" : 805
       }, {
-        "id" : "16",
+        "id" : "19",
         "x" : 1187,
         "y" : 2000
       }, {
-        "id" : "28",
+        "id" : "31",
         "x" : 1176,
         "y" : 799
       }, {
-        "id" : "29",
+        "id" : "32",
         "x" : 1176,
         "y" : 1399
       }, {
-        "id" : "31",
+        "id" : "34",
         "x" : 1880,
         "y" : 1410
       }, {
-        "id" : "58",
+        "id" : "61",
         "x" : 1176,
         "y" : 199
       } ],
@@ -1340,7 +1437,13 @@
       "key" : "UserEnrollmentComponentView",
       "order" : 6,
       "relationships" : [ {
-        "id" : "110",
+        "id" : "100",
+        "vertices" : [ {
+          "x" : 1012,
+          "y" : 1706
+        } ]
+      }, {
+        "id" : "113",
         "vertices" : [ {
           "x" : 237,
           "y" : 1870
@@ -1349,59 +1452,61 @@
           "y" : 1240
         } ]
       }, {
-        "id" : "128"
+        "id" : "131"
       }, {
-        "id" : "129",
+        "id" : "132",
         "vertices" : [ {
           "x" : 1251,
           "y" : 1249
         } ]
       }, {
-        "id" : "130",
+        "id" : "133",
         "vertices" : [ {
           "x" : 1551,
           "y" : 1249
         } ]
       }, {
-        "id" : "132"
+        "id" : "135"
       }, {
-        "id" : "136"
+        "id" : "139"
       }, {
-        "id" : "140",
+        "id" : "143",
         "vertices" : [ {
           "x" : 1005,
           "y" : 1407
         } ]
       }, {
-        "id" : "37"
+        "id" : "40"
       }, {
-        "id" : "39"
+        "id" : "42"
       }, {
-        "id" : "68",
+        "id" : "71",
         "vertices" : [ {
           "x" : 1551,
           "y" : 649
         } ]
       }, {
-        "id" : "71",
+        "id" : "74",
         "vertices" : [ {
           "x" : 1251,
           "y" : 649
         } ]
       }, {
-        "id" : "82"
-      }, {
-        "id" : "90"
-      }, {
-        "id" : "97",
+        "id" : "85",
         "vertices" : [ {
-          "x" : 1012,
-          "y" : 1706
+          "x" : 472,
+          "y" : 1257
+        } ]
+      }, {
+        "id" : "93",
+        "vertices" : [ {
+          "x" : 771,
+          "y" : 1262
         } ]
       } ]
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1409,13 +1514,17 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "containerId" : "30",
+      "containerId" : "33",
+      "dimensions" : {
+        "height" : 400,
+        "width" : 929
+      },
       "externalContainerBoundariesVisible" : false,
       "key" : "ModificationHistoryComponentView",
       "order" : 7
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1423,13 +1532,17 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "containerId" : "31",
+      "containerId" : "34",
+      "dimensions" : {
+        "height" : 400,
+        "width" : 871
+      },
       "externalContainerBoundariesVisible" : false,
       "key" : "DatabaseComponentView",
       "order" : 8
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1437,84 +1550,95 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "containerId" : "32",
+      "containerId" : "35",
+      "dimensions" : {
+        "height" : 400,
+        "width" : 871
+      },
       "externalContainerBoundariesVisible" : false,
       "key" : "APIComponentView",
       "order" : 9
     }, {
       "containerId" : "4",
       "dimensions" : {
-        "height" : 1920,
-        "width" : 1620
+        "height" : 2054,
+        "width" : 2366
       },
       "elements" : [ {
         "id" : "2",
-        "x" : 949,
-        "y" : 1419
+        "x" : 958,
+        "y" : 1529
       }, {
         "id" : "5",
-        "x" : 949,
-        "y" : 819
+        "x" : 958,
+        "y" : 929
       }, {
         "id" : "6",
-        "x" : 949,
-        "y" : 219
+        "x" : 958,
+        "y" : 329
       }, {
         "id" : "7",
-        "x" : 200,
-        "y" : 1420
+        "x" : 1708,
+        "y" : 329
       }, {
-        "id" : "27",
-        "x" : 199,
-        "y" : 819
+        "id" : "10",
+        "x" : 208,
+        "y" : 1529
+      }, {
+        "id" : "30",
+        "x" : 208,
+        "y" : 929
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "routerComponentView",
       "order" : 10,
+      "paperSize" : "A4_Landscape",
       "relationships" : [ {
-        "id" : "100",
+        "id" : "103",
         "vertices" : [ {
-          "x" : 1024,
-          "y" : 1269
+          "x" : 1033,
+          "y" : 1379
         } ]
       }, {
-        "id" : "105",
+        "id" : "108",
         "vertices" : [ {
-          "x" : 1324,
-          "y" : 1269
+          "x" : 1333,
+          "y" : 1379
         } ]
       }, {
-        "id" : "134"
+        "id" : "137"
       }, {
-        "id" : "141",
+        "id" : "144",
         "vertices" : [ {
-          "x" : 800,
-          "y" : 1035
+          "x" : 683,
+          "y" : 1079
         } ]
       }, {
-        "id" : "78"
+        "id" : "149"
       }, {
-        "id" : "81",
+        "id" : "81"
+      }, {
+        "id" : "84",
         "vertices" : [ {
-          "x" : 893,
-          "y" : 1386
+          "x" : 901,
+          "y" : 1496
         } ]
       }, {
-        "id" : "88",
+        "id" : "91",
         "vertices" : [ {
-          "x" : 705,
-          "y" : 1152
+          "x" : 714,
+          "y" : 1261
         } ]
       }, {
-        "id" : "96",
+        "id" : "99",
         "vertices" : [ {
-          "x" : 810,
-          "y" : 890
+          "x" : 933,
+          "y" : 1079
         } ]
       } ]
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1523,29 +1647,90 @@
         "vertices" : false
       },
       "containerId" : "2",
+      "dimensions" : {
+        "height" : 1391,
+        "width" : 890
+      },
       "elements" : [ {
         "id" : "3",
-        "x" : 0,
-        "y" : 0
+        "x" : 219,
+        "y" : 799
       }, {
         "id" : "4",
-        "x" : 0,
-        "y" : 0
+        "x" : 219,
+        "y" : 199
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "BrowserComponentView",
       "order" : 11,
       "relationships" : [ {
-        "id" : "101"
+        "id" : "104",
+        "vertices" : [ {
+          "x" : 294,
+          "y" : 649
+        } ]
       }, {
-        "id" : "104"
+        "id" : "107",
+        "vertices" : [ {
+          "x" : 594,
+          "y" : 649
+        } ]
+      } ]
+    }, {
+      "containerId" : "7",
+      "dimensions" : {
+        "height" : 2054,
+        "width" : 1341
+      },
+      "elements" : [ {
+        "id" : "4",
+        "x" : 666,
+        "y" : 1529
+      }, {
+        "id" : "8",
+        "x" : 329,
+        "y" : 329
+      }, {
+        "id" : "9",
+        "x" : 329,
+        "y" : 929
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "routingReliabilityComponentView",
+      "order" : 12,
+      "paperSize" : "A5_Portrait",
+      "relationships" : [ {
+        "id" : "146"
+      }, {
+        "id" : "148",
+        "vertices" : [ {
+          "x" : 929,
+          "y" : 929
+        }, {
+          "x" : 929,
+          "y" : 1333
+        } ]
+      }, {
+        "id" : "151"
       } ]
     } ],
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "NavigationComponentView",
+      "lastSavedView" : "Dynamic-001",
       "metadataSymbols" : "SquareBrackets",
-      "styles" : { },
+      "styles" : {
+        "elements" : [ {
+          "background" : "#bd6811",
+          "tag" : "quality container"
+        }, {
+          "background" : "#f0bb85",
+          "tag" : "quality component"
+        } ],
+        "relationships" : [ {
+          "color" : "#dd7711",
+          "tag" : "quality"
+        } ]
+      },
       "terminology" : { },
       "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
     },
@@ -1564,54 +1749,58 @@
         "y" : 765
       }, {
         "id" : "7",
-        "x" : 1585,
-        "y" : 1415
-      }, {
-        "id" : "13",
         "x" : 899,
+        "y" : 765
+      }, {
+        "id" : "10",
+        "x" : 1569,
         "y" : 1409
       }, {
         "id" : "16",
+        "x" : 899,
+        "y" : 1409
+      }, {
+        "id" : "19",
         "x" : 1569,
         "y" : 2019
       }, {
-        "id" : "27",
+        "id" : "30",
         "x" : 2504,
         "y" : 1439
       }, {
-        "id" : "30",
+        "id" : "33",
         "x" : 1565,
         "y" : 2605
       }, {
-        "id" : "31",
+        "id" : "34",
         "x" : 2509,
         "y" : 2049
       }, {
-        "id" : "32",
+        "id" : "35",
         "x" : 2509,
         "y" : 2604
       }, {
-        "id" : "33",
+        "id" : "36",
         "x" : 199,
         "y" : 1414
       }, {
-        "id" : "34",
+        "id" : "37",
         "x" : 209,
         "y" : 2019
       }, {
-        "id" : "58",
+        "id" : "61",
         "x" : 3294,
         "y" : 1414
       }, {
-        "id" : "59",
+        "id" : "62",
         "x" : 3109,
         "y" : 214
       }, {
-        "id" : "60",
+        "id" : "63",
         "x" : 3619,
         "y" : 199
       }, {
-        "id" : "61",
+        "id" : "64",
         "x" : 2572,
         "y" : 228
       } ],
@@ -1619,99 +1808,97 @@
       "key" : "ContainerView",
       "order" : 2,
       "relationships" : [ {
-        "id" : "102",
+        "id" : "101",
+        "vertices" : [ {
+          "x" : 2185,
+          "y" : 1371
+        } ]
+      }, {
+        "id" : "105",
         "vertices" : [ {
           "x" : 2284,
           "y" : 1014
         } ]
       }, {
-        "id" : "106",
+        "id" : "109",
         "vertices" : [ {
           "x" : 2289,
           "y" : 834
         } ]
       }, {
-        "id" : "110"
+        "id" : "113"
       }, {
-        "id" : "128"
+        "id" : "131"
       }, {
-        "id" : "134"
+        "id" : "137"
       }, {
-        "id" : "138"
+        "id" : "141"
       }, {
-        "id" : "142",
-        "vertices" : [ {
-          "x" : 2365,
-          "y" : 1130
-        } ]
+        "id" : "145"
       }, {
-        "id" : "36"
+        "id" : "150"
       }, {
-        "id" : "38",
+        "id" : "39"
+      }, {
+        "id" : "41",
         "vertices" : [ {
           "x" : 2639,
           "y" : 1904
         } ]
       }, {
-        "id" : "40",
+        "id" : "43",
         "vertices" : [ {
           "x" : 2834,
           "y" : 1884
         } ]
       }, {
-        "id" : "42"
+        "id" : "45"
       }, {
-        "id" : "48"
+        "id" : "51"
       }, {
-        "id" : "52"
+        "id" : "55"
       }, {
-        "id" : "56"
+        "id" : "59"
       }, {
-        "id" : "69",
+        "id" : "72",
         "vertices" : [ {
           "x" : 3119,
           "y" : 1689
         } ]
       }, {
-        "id" : "72",
+        "id" : "75",
         "vertices" : [ {
           "x" : 3124,
           "y" : 1469
         } ]
       }, {
-        "id" : "73",
+        "id" : "76",
         "vertices" : [ {
           "x" : 3459,
           "y" : 744
         } ]
       }, {
-        "id" : "74"
+        "id" : "77"
       }, {
-        "id" : "75"
+        "id" : "78"
       }, {
-        "id" : "82",
+        "id" : "85",
         "vertices" : [ {
           "x" : 1964,
           "y" : 1242
         } ]
       }, {
-        "id" : "90",
+        "id" : "93",
         "vertices" : [ {
           "x" : 1664,
           "y" : 1236
-        } ]
-      }, {
-        "id" : "98",
-        "vertices" : [ {
-          "x" : 2185,
-          "y" : 1371
         } ]
       } ],
       "softwareSystemId" : "1"
     } ],
     "dynamicViews" : [ {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1719,145 +1906,188 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "elementId" : "27",
+      "dimensions" : {
+        "height" : 4320,
+        "width" : 2974
+      },
+      "elementId" : "30",
       "elements" : [ {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 224,
+        "y" : 820
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "21",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "22",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "23",
-        "x" : 0,
-        "y" : 0
+        "x" : 224,
+        "y" : 1420
       }, {
         "id" : "24",
-        "x" : 0,
-        "y" : 0
+        "x" : 1274,
+        "y" : 1420
       }, {
         "id" : "25",
-        "x" : 0,
-        "y" : 0
+        "x" : 1274,
+        "y" : 2020
+      }, {
+        "id" : "26",
+        "x" : 915,
+        "y" : 2620
+      }, {
+        "id" : "27",
+        "x" : 915,
+        "y" : 3220
       }, {
         "id" : "28",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "29",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "30",
-        "x" : 0,
-        "y" : 0
+        "x" : 1665,
+        "y" : 2620
       }, {
         "id" : "31",
-        "x" : 0,
-        "y" : 0
+        "x" : 1274,
+        "y" : 220
       }, {
-        "id" : "58",
-        "x" : 0,
-        "y" : 0
+        "id" : "32",
+        "x" : 1274,
+        "y" : 820
       }, {
-        "id" : "60",
-        "x" : 0,
-        "y" : 0
+        "id" : "33",
+        "x" : 915,
+        "y" : 3820
+      }, {
+        "id" : "34",
+        "x" : 2324,
+        "y" : 1420
+      }, {
+        "id" : "61",
+        "x" : 2024,
+        "y" : 820
+      }, {
+        "id" : "63",
+        "x" : 224,
+        "y" : 220
       } ],
       "externalBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Dynamic-001",
-      "order" : 12,
+      "order" : 13,
       "relationships" : [ {
         "description" : "Chce se zapsat na lístek",
-        "id" : "73",
+        "id" : "76",
         "order" : "1",
         "response" : false
       }, {
         "description" : "Požádá o zápis předmětu",
-        "id" : "105",
+        "id" : "108",
         "order" : "2",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 299,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Požádá o zápis předmětu",
-        "id" : "95",
+        "id" : "98",
         "order" : "3",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 586,
+          "y" : 1316
+        } ]
       }, {
         "description" : "Požádá o ID studenta",
-        "id" : "130",
+        "id" : "133",
         "order" : "4",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1649,
+          "y" : 670
+        } ]
       }, {
         "description" : "Požádá o ID studenta",
-        "id" : "68",
+        "id" : "71",
         "order" : "5",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1780,
+          "y" : 787
+        } ]
       }, {
         "description" : "Pošle ID studenta",
-        "id" : "71",
+        "id" : "74",
         "order" : "6",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1967,
+          "y" : 552
+        } ]
       }, {
         "description" : "Předá ID studenta",
-        "id" : "129",
+        "id" : "132",
         "order" : "7",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1349,
+          "y" : 670
+        } ]
       }, {
         "description" : "Zapsání nového zápisu studenta na lístek",
-        "id" : "39",
+        "id" : "42",
         "order" : "8",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1874,
+          "y" : 1224
+        }, {
+          "x" : 2295,
+          "y" : 1316
+        } ]
       }, {
         "description" : "Pošle informace o zápisu lístku pro zápisu do historie změn",
-        "id" : "135",
+        "id" : "138",
         "order" : "9",
         "response" : false
       }, {
-        "id" : "115",
+        "id" : "118",
         "order" : "10",
         "response" : false
       }, {
-        "id" : "117",
+        "id" : "120",
         "order" : "11",
         "response" : false
       }, {
-        "id" : "116",
+        "id" : "119",
         "order" : "12",
         "response" : false
       }, {
-        "id" : "119",
+        "id" : "122",
         "order" : "13",
         "response" : false
       }, {
         "description" : "Zapíše informaci o zápisu lístku do databáze změn",
-        "id" : "55",
+        "id" : "58",
         "order" : "14",
         "response" : false
       }, {
         "description" : "Pošle informaci o výsledku zápisu",
-        "id" : "139",
+        "id" : "142",
         "order" : "15",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 886,
+          "y" : 1316
+        } ]
       }, {
         "description" : "Předá informaci o výsledku zápisu",
-        "id" : "100",
+        "id" : "103",
         "order" : "16",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 599,
+          "y" : 1270
+        } ]
       } ],
       "title" : "Zápis předmětu studentem"
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -1865,160 +2095,236 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "elementId" : "16",
+      "dimensions" : {
+        "height" : 4320,
+        "width" : 1645
+      },
+      "elementId" : "19",
       "elements" : [ {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 219,
+        "y" : 1420
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
+        "x" : 969,
+        "y" : 820
       }, {
         "id" : "6",
-        "x" : 0,
-        "y" : 0
+        "x" : 969,
+        "y" : 220
       }, {
-        "id" : "12",
-        "x" : 0,
-        "y" : 0
+        "id" : "15",
+        "x" : 969,
+        "y" : 1420
       }, {
-        "id" : "17",
-        "x" : 0,
-        "y" : 0
+        "id" : "20",
+        "x" : 969,
+        "y" : 2020
       }, {
-        "id" : "18",
-        "x" : 0,
-        "y" : 0
+        "id" : "21",
+        "x" : 219,
+        "y" : 3220
       }, {
-        "id" : "19",
-        "x" : 0,
-        "y" : 0
+        "id" : "22",
+        "x" : 969,
+        "y" : 2620
       }, {
-        "id" : "24",
-        "x" : 0,
-        "y" : 0
+        "id" : "27",
+        "x" : 969,
+        "y" : 3220
       }, {
-        "id" : "25",
-        "x" : 0,
-        "y" : 0
+        "id" : "28",
+        "x" : 219,
+        "y" : 2620
       }, {
-        "id" : "30",
-        "x" : 0,
-        "y" : 0
+        "id" : "33",
+        "x" : 969,
+        "y" : 3820
       }, {
-        "id" : "59",
-        "x" : 0,
-        "y" : 0
+        "id" : "62",
+        "x" : 219,
+        "y" : 820
       } ],
       "externalBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Dynamic-002",
-      "order" : 13,
+      "order" : 14,
       "relationships" : [ {
         "description" : "Chce si zobraziť históriu zmien",
-        "id" : "75",
+        "id" : "78",
         "order" : "1",
         "response" : false
       }, {
-        "id" : "105",
+        "id" : "108",
         "order" : "2",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 912,
+          "y" : 1387
+        } ]
       }, {
         "description" : "Požádá o zobrazení pro manažera",
-        "id" : "93",
+        "id" : "96",
         "order" : "3",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Vyžiada dáta",
-        "id" : "111",
+        "id" : "114",
         "order" : "4",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 1870
+        } ]
       }, {
         "description" : "Pošle požiadavok na načítanie dát",
-        "id" : "124",
+        "id" : "127",
         "order" : "5",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 2470
+        } ]
       }, {
         "description" : "Pošle požiadavok na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "6",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 725,
+          "y" : 2952
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti požiadavku",
-        "id" : "121",
+        "id" : "124",
         "order" : "7",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 294,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Informuje o správnosti",
-        "id" : "122",
+        "id" : "125",
         "order" : "8",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 912,
+          "y" : 3187
+        } ]
       }, {
         "description" : "Pošle request na načítanie",
-        "id" : "125",
+        "id" : "128",
         "order" : "9",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Request zmení na SQL a pošle ho",
-        "id" : "55",
+        "id" : "58",
         "order" : "10",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "55",
+        "id" : "58",
         "order" : "11",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "125",
+        "id" : "128",
         "order" : "12",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Pošle získané dáta na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "13",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 631,
+          "y" : 2835
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti dát",
-        "id" : "121",
+        "id" : "124",
         "order" : "14",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 594,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Pošle informáciu o správnosti dát",
-        "id" : "122",
+        "id" : "125",
         "order" : "15",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1006,
+          "y" : 3304
+        } ]
       }, {
         "description" : "Pošle na prípravu pred zobrazením",
-        "id" : "124",
+        "id" : "127",
         "order" : "16",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 2470
+        } ]
       }, {
         "description" : "Poskytne dáta",
-        "id" : "111",
+        "id" : "114",
         "order" : "17",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 1870
+        } ]
       }, {
         "description" : "Předá zobrazení",
-        "id" : "85",
+        "id" : "88",
         "order" : "18",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Předá template pro vytvoření stránky",
-        "id" : "78",
+        "id" : "81",
         "order" : "19",
         "response" : false
       }, {
         "description" : "Předá stránku",
-        "id" : "100",
+        "id" : "103",
         "order" : "20",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 725,
+          "y" : 1152
+        } ]
       } ],
       "title" : "Zobrazení historie pro manažera"
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -2026,175 +2332,259 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "elementId" : "7",
+      "dimensions" : {
+        "height" : 4411,
+        "width" : 2373
+      },
+      "elementId" : "10",
       "elements" : [ {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 199,
+        "y" : 1420
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
+        "x" : 949,
+        "y" : 820
       }, {
         "id" : "6",
-        "x" : 0,
-        "y" : 0
+        "x" : 949,
+        "y" : 220
       }, {
-        "id" : "9",
-        "x" : 0,
-        "y" : 0
+        "id" : "12",
+        "x" : 949,
+        "y" : 1420
       }, {
-        "id" : "10",
-        "x" : 0,
-        "y" : 0
+        "id" : "13",
+        "x" : 949,
+        "y" : 2020
       }, {
-        "id" : "17",
-        "x" : 0,
-        "y" : 0
+        "id" : "20",
+        "x" : 949,
+        "y" : 2620
       }, {
-        "id" : "18",
-        "x" : 0,
-        "y" : 0
+        "id" : "21",
+        "x" : 1699,
+        "y" : 3820
       }, {
-        "id" : "19",
-        "x" : 0,
-        "y" : 0
+        "id" : "22",
+        "x" : 949,
+        "y" : 3220
       }, {
-        "id" : "25",
-        "x" : 0,
-        "y" : 0
+        "id" : "28",
+        "x" : 1699,
+        "y" : 3220
       }, {
-        "id" : "26",
-        "x" : 0,
-        "y" : 0
+        "id" : "29",
+        "x" : 949,
+        "y" : 3820
       }, {
-        "id" : "31",
-        "x" : 0,
-        "y" : 0
+        "id" : "34",
+        "x" : 199,
+        "y" : 3220
       }, {
-        "id" : "61",
-        "x" : 0,
-        "y" : 0
+        "id" : "64",
+        "x" : 199,
+        "y" : 820
       } ],
       "externalBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Dynamic-003",
-      "order" : 14,
+      "order" : 15,
       "relationships" : [ {
         "description" : "Chce si zobraziť detail o lístku so zapísanými študentmi",
-        "id" : "74",
+        "id" : "77",
         "order" : "1",
         "response" : false
       }, {
         "description" : "Požiada o presmerovanie na zobrazenie",
-        "id" : "105",
+        "id" : "108",
         "order" : "2",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 892,
+          "y" : 1387
+        } ]
       }, {
         "description" : "Predá požiadavok na zobrazenie lístkov",
-        "id" : "87",
+        "id" : "90",
         "order" : "3",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Požiada o zobrazenie detailu lístku",
-        "id" : "76",
+        "id" : "79",
         "order" : "4",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 1870
+        } ]
       }, {
         "description" : "Vyžiada dáta o detaile lístku",
-        "id" : "113",
+        "id" : "116",
         "order" : "5",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 2470
+        } ]
       }, {
         "description" : "Pošle požiadavok na načítanie dát",
-        "id" : "124",
+        "id" : "127",
         "order" : "6",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Pošle požiadavok na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "7",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1455,
+          "y" : 3787
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti požiadavku",
-        "id" : "121",
+        "id" : "124",
         "order" : "8",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1774,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Informuje o správnosti",
-        "id" : "122",
+        "id" : "125",
         "order" : "9",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1642,
+          "y" : 3552
+        } ]
       }, {
         "description" : "Pošle request na načítanie",
-        "id" : "126",
+        "id" : "129",
         "order" : "10",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Request zmení na SQL a pošle ho",
-        "id" : "127",
+        "id" : "130",
         "order" : "11",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 892,
+          "y" : 3552
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "127",
+        "id" : "130",
         "order" : "12",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 705,
+          "y" : 3787
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "126",
+        "id" : "129",
         "order" : "13",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Pošle získané dáta na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "14",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1361,
+          "y" : 3904
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti dát",
-        "id" : "121",
+        "id" : "124",
         "order" : "15",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 2074,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Pošle informáciu o správnosti dát",
-        "id" : "122",
+        "id" : "125",
         "order" : "16",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1736,
+          "y" : 3435
+        } ]
       }, {
         "description" : "Pošle na prípravu pred zobrazením",
-        "id" : "124",
+        "id" : "127",
         "order" : "17",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Odošle dáta o lístku",
-        "id" : "113",
+        "id" : "116",
         "order" : "18",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 2470
+        } ]
       }, {
         "description" : "Vráti na",
-        "id" : "76",
+        "id" : "79",
         "order" : "19",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 1870
+        } ]
       }, {
         "description" : "Vráti zobrazenie lístkov",
-        "id" : "79",
+        "id" : "82",
         "order" : "20",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Predá template na vytvorenie stránky",
-        "id" : "78",
+        "id" : "81",
         "order" : "21",
         "response" : false
       }, {
         "description" : "Predá stránku",
-        "id" : "100",
+        "id" : "103",
         "order" : "22",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 705,
+          "y" : 1152
+        } ]
       } ],
       "title" : "Zobrazenie zapísaných študentov pre učiteľa"
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -2202,175 +2592,259 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "elementId" : "7",
+      "dimensions" : {
+        "height" : 4411,
+        "width" : 2373
+      },
+      "elementId" : "10",
       "elements" : [ {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 199,
+        "y" : 1420
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
+        "x" : 949,
+        "y" : 820
       }, {
         "id" : "6",
-        "x" : 0,
-        "y" : 0
+        "x" : 949,
+        "y" : 220
       }, {
-        "id" : "9",
-        "x" : 0,
-        "y" : 0
+        "id" : "12",
+        "x" : 949,
+        "y" : 1420
       }, {
-        "id" : "10",
-        "x" : 0,
-        "y" : 0
+        "id" : "13",
+        "x" : 949,
+        "y" : 2020
       }, {
-        "id" : "17",
-        "x" : 0,
-        "y" : 0
+        "id" : "20",
+        "x" : 949,
+        "y" : 2620
       }, {
-        "id" : "18",
-        "x" : 0,
-        "y" : 0
+        "id" : "21",
+        "x" : 1699,
+        "y" : 3820
       }, {
-        "id" : "19",
-        "x" : 0,
-        "y" : 0
+        "id" : "22",
+        "x" : 949,
+        "y" : 3220
       }, {
-        "id" : "25",
-        "x" : 0,
-        "y" : 0
+        "id" : "28",
+        "x" : 1699,
+        "y" : 3220
       }, {
-        "id" : "26",
-        "x" : 0,
-        "y" : 0
+        "id" : "29",
+        "x" : 949,
+        "y" : 3820
       }, {
-        "id" : "31",
-        "x" : 0,
-        "y" : 0
+        "id" : "34",
+        "x" : 199,
+        "y" : 3220
       }, {
-        "id" : "60",
-        "x" : 0,
-        "y" : 0
+        "id" : "63",
+        "x" : 199,
+        "y" : 820
       } ],
       "externalBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Dynamic-004",
-      "order" : 15,
+      "order" : 16,
       "relationships" : [ {
         "description" : "Chce si zobraziť zapísané predmety",
-        "id" : "73",
+        "id" : "76",
         "order" : "1",
         "response" : false
       }, {
         "description" : "Požiada o presmerovanie na zobrazenie predmetov",
-        "id" : "105",
+        "id" : "108",
         "order" : "2",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 892,
+          "y" : 1387
+        } ]
       }, {
         "description" : "Požiada o zobrazenie lístkov",
-        "id" : "87",
+        "id" : "90",
         "order" : "3",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Vyžiada detaily lístkov",
-        "id" : "76",
+        "id" : "79",
         "order" : "4",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 1870
+        } ]
       }, {
         "description" : "Vyžiada dáta o lístkoch",
-        "id" : "113",
+        "id" : "116",
         "order" : "5",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 2470
+        } ]
       }, {
         "description" : "Pošle požiadavku na načítanie dát",
-        "id" : "124",
+        "id" : "127",
         "order" : "6",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Pošle požiadavku na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "7",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1455,
+          "y" : 3787
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti požiadavku",
-        "id" : "121",
+        "id" : "124",
         "order" : "8",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1774,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Informuje o správnosti",
-        "id" : "122",
+        "id" : "125",
         "order" : "9",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1642,
+          "y" : 3552
+        } ]
       }, {
         "description" : "Pošle request na načítanie",
-        "id" : "126",
+        "id" : "129",
         "order" : "10",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1024,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Request zmení na SQL a pošle ho",
-        "id" : "127",
+        "id" : "130",
         "order" : "11",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 892,
+          "y" : 3552
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "127",
+        "id" : "130",
         "order" : "12",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 705,
+          "y" : 3787
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "126",
+        "id" : "129",
         "order" : "13",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Pošle získané dáta na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "14",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1361,
+          "y" : 3904
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti dát",
-        "id" : "121",
+        "id" : "124",
         "order" : "15",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 2074,
+          "y" : 3670
+        } ]
       }, {
         "description" : "Pošle informáciu o správnosti dát",
-        "id" : "122",
+        "id" : "125",
         "order" : "16",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1736,
+          "y" : 3435
+        } ]
       }, {
         "description" : "Pošle na prípravu pred zobrazením",
-        "id" : "124",
+        "id" : "127",
         "order" : "17",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 3070
+        } ]
       }, {
         "description" : "Odošle dáta o lístkoch",
-        "id" : "113",
+        "id" : "116",
         "order" : "18",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 2470
+        } ]
       }, {
         "description" : "Vráti na",
-        "id" : "76",
+        "id" : "79",
         "order" : "19",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 1870
+        } ]
       }, {
         "description" : "Vráti zobrazenie predmetov",
-        "id" : "79",
+        "id" : "82",
         "order" : "20",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1324,
+          "y" : 1270
+        } ]
       }, {
         "description" : "Predá template na vytvorenie stránky",
-        "id" : "78",
+        "id" : "81",
         "order" : "21",
         "response" : false
       }, {
         "description" : "Predá stránku",
-        "id" : "100",
+        "id" : "103",
         "order" : "22",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 705,
+          "y" : 1152
+        } ]
       } ],
       "title" : "Zobrazenie zapísaných predmetov pre študenta"
     }, {
       "automaticLayout" : {
-        "applied" : false,
+        "applied" : true,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -2378,180 +2852,240 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "elementId" : "13",
+      "dimensions" : {
+        "height" : 5500,
+        "width" : 2390
+      },
+      "elementId" : "16",
       "elements" : [ {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 1719,
+        "y" : 799
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
+        "x" : 1719,
+        "y" : 1399
       }, {
-        "id" : "9",
-        "x" : 0,
-        "y" : 0
+        "id" : "12",
+        "x" : 1719,
+        "y" : 1999
       }, {
-        "id" : "10",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "11",
-        "x" : 0,
-        "y" : 0
+        "id" : "13",
+        "x" : 1719,
+        "y" : 2599
       }, {
         "id" : "14",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "15",
-        "x" : 0,
-        "y" : 0
+        "x" : 1719,
+        "y" : 3199
       }, {
         "id" : "17",
-        "x" : 0,
-        "y" : 0
+        "x" : 1719,
+        "y" : 3799
       }, {
         "id" : "18",
-        "x" : 0,
-        "y" : 0
+        "x" : 1719,
+        "y" : 4399
       }, {
-        "id" : "19",
-        "x" : 0,
-        "y" : 0
+        "id" : "20",
+        "x" : 969,
+        "y" : 3199
       }, {
-        "id" : "25",
-        "x" : 0,
-        "y" : 0
+        "id" : "21",
+        "x" : 219,
+        "y" : 4399
       }, {
-        "id" : "26",
-        "x" : 0,
-        "y" : 0
+        "id" : "22",
+        "x" : 969,
+        "y" : 3799
       }, {
-        "id" : "31",
-        "x" : 0,
-        "y" : 0
+        "id" : "28",
+        "x" : 219,
+        "y" : 3799
       }, {
-        "id" : "33",
-        "x" : 0,
-        "y" : 0
+        "id" : "29",
+        "x" : 969,
+        "y" : 4399
       }, {
-        "id" : "61",
-        "x" : 0,
-        "y" : 0
+        "id" : "34",
+        "x" : 969,
+        "y" : 4999
+      }, {
+        "id" : "36",
+        "x" : 1719,
+        "y" : 4999
+      }, {
+        "id" : "64",
+        "x" : 1719,
+        "y" : 199
       } ],
       "externalBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Dynamic-005",
-      "order" : 16,
+      "order" : 17,
       "relationships" : [ {
         "description" : "Chce odeslat email studentům",
-        "id" : "74",
+        "id" : "77",
         "order" : "1",
         "response" : false
       }, {
         "description" : "Požádá o presměrování na zobrazení",
-        "id" : "105",
+        "id" : "108",
         "order" : "2",
         "response" : false
       }, {
         "description" : "Požádá o zobrazení svých lístků",
-        "id" : "87",
+        "id" : "90",
         "order" : "3",
         "response" : false
       }, {
         "description" : "Požádá o zobrazení detailu o lístku",
-        "id" : "76",
+        "id" : "79",
         "order" : "4",
         "response" : false
       }, {
         "description" : "Vyžiada dáta o lístkoch",
-        "id" : "113",
+        "id" : "116",
         "order" : "5",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1475,
+          "y" : 2931
+        } ]
       }, {
         "description" : "Pošle požiadavku na načítanie dát",
-        "id" : "124",
+        "id" : "127",
         "order" : "6",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 3649
+        } ]
       }, {
         "description" : "Pošle požiadavku na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "7",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 725,
+          "y" : 4131
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti požiadavku",
-        "id" : "121",
+        "id" : "124",
         "order" : "8",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 294,
+          "y" : 4249
+        } ]
       }, {
         "description" : "Informuje o správnosti",
-        "id" : "122",
+        "id" : "125",
         "order" : "9",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 912,
+          "y" : 4366
+        } ]
       }, {
         "description" : "Pošle request na načítanie",
-        "id" : "126",
+        "id" : "129",
         "order" : "10",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 4249
+        } ]
       }, {
         "description" : "Request zmení na SQL a pošle ho",
-        "id" : "127",
+        "id" : "130",
         "order" : "11",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1044,
+          "y" : 4849
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "127",
+        "id" : "130",
         "order" : "12",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 4849
+        } ]
       }, {
         "description" : "Vráti získané dáta",
-        "id" : "126",
+        "id" : "129",
         "order" : "13",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 4249
+        } ]
       }, {
         "description" : "Pošle získané dáta na overenie",
-        "id" : "122",
+        "id" : "125",
         "order" : "14",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 631,
+          "y" : 4014
+        } ]
       }, {
         "description" : "Získa pravidlá na overenie správnosti dát",
-        "id" : "121",
+        "id" : "124",
         "order" : "15",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 594,
+          "y" : 4249
+        } ]
       }, {
         "description" : "Pošle informáciu o správnosti dát",
-        "id" : "122",
+        "id" : "125",
         "order" : "16",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1006,
+          "y" : 4483
+        } ]
       }, {
         "description" : "Pošle na prípravu pred zobrazením",
-        "id" : "124",
+        "id" : "127",
         "order" : "17",
-        "response" : true
+        "response" : true,
+        "vertices" : [ {
+          "x" : 1344,
+          "y" : 3649
+        } ]
       }, {
         "description" : "Odošle dáta o lístkoch",
-        "id" : "113",
+        "id" : "116",
         "order" : "18",
-        "response" : false
+        "response" : false,
+        "vertices" : [ {
+          "x" : 1662,
+          "y" : 3166
+        } ]
       }, {
         "description" : "Požádá o zobrazení okna pro vyplnění emailu",
-        "id" : "77",
+        "id" : "80",
         "order" : "19",
         "response" : false
       }, {
         "description" : "Požádá o vygenerování emailu",
-        "id" : "45",
+        "id" : "48",
         "order" : "20",
         "response" : false
       }, {
         "description" : "Požádá o odeslání emailu",
-        "id" : "44",
+        "id" : "47",
         "order" : "21",
         "response" : false
       }, {
         "description" : "Odešle email",
-        "id" : "41",
+        "id" : "44",
         "order" : "22",
         "response" : false
       } ],
@@ -2576,31 +3110,31 @@
         "x" : 1324,
         "y" : 800
       }, {
-        "id" : "33",
+        "id" : "36",
         "x" : 199,
         "y" : 1400
       }, {
-        "id" : "34",
+        "id" : "37",
         "x" : 949,
         "y" : 1400
       }, {
-        "id" : "57",
+        "id" : "60",
         "x" : 1699,
         "y" : 1400
       }, {
-        "id" : "58",
+        "id" : "61",
         "x" : 2449,
         "y" : 1400
       }, {
-        "id" : "59",
+        "id" : "62",
         "x" : 574,
         "y" : 200
       }, {
-        "id" : "60",
+        "id" : "63",
         "x" : 1324,
         "y" : 200
       }, {
-        "id" : "61",
+        "id" : "64",
         "x" : 2074,
         "y" : 200
       } ],
@@ -2609,35 +3143,35 @@
       "key" : "SystemContext-001",
       "order" : 1,
       "relationships" : [ {
-        "id" : "43"
+        "id" : "46"
       }, {
-        "id" : "54",
+        "id" : "57",
         "vertices" : [ {
           "x" : 1234,
           "y" : 1170
         } ]
       }, {
-        "id" : "62"
+        "id" : "65"
       }, {
-        "id" : "63"
+        "id" : "66"
       }, {
-        "id" : "64"
+        "id" : "67"
       }, {
-        "id" : "65",
+        "id" : "68",
         "vertices" : [ {
           "x" : 2182,
           "y" : 1117
         } ]
       }, {
-        "id" : "66",
+        "id" : "69",
         "vertices" : [ {
           "x" : 1488,
           "y" : 1329
         } ]
       }, {
-        "id" : "67"
+        "id" : "70"
       }, {
-        "id" : "70",
+        "id" : "73",
         "vertices" : [ {
           "x" : 2040,
           "y" : 1382
