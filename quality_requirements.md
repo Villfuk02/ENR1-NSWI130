@@ -47,3 +47,36 @@
 
 - **Testování a ověření odolnosti:**  
   Pravidelně testovat mechanismy přepnutí a proces obnovy za účelem ověření spolehlivosti v různých scénářích selhání.
+
+## Bezpečnost
+
+### Detekce nedostatečných opravnění pro zobrazení lístků
+
+- **Aktér:** Neznámý útočník
+- **Událost:** Požadavek přistoupit k soukromým lístkům jiného uživatele
+- **Zasažená komponenta:** **Zobrazenie lístkov** v kontejneru  **Zobrazení**
+- **Očekávané měření:** Systém požadavek odmítne.
+
+**Navrhovaná řešení:**
+
+- **Kontrolovat auth**
+  Kontrolovat, zda je daný požadavek od authentifikovaného a autorizovaného uživatele.
+- **Testovaní**
+  Otestovat, využít externího auditu ve snaze odhalit exploits, které by mohly být využity k neautorizovanému čtení uživatelových lístků.
+- **Udržovat log**
+  Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
+
+## Interopabilita
+
+### Interopabilita email service a mail routeru
+
+- **Aktér:** Zobrazení
+- **Událost:** Zobrazení vyžádá odeslání mailů.
+- **Zasažené kontejnery:** **Email service**
+- **Očekávané měření:** 100% je zpracováno **Mail routerem** a vzniklé maily nejsou poškozené.
+
+**Navrhovaná řešení:**
+- **Testovaní**
+  Otestovat, že **Email service** splňuje API **Mail router**, že **Mail router** nepřebírá malformed požadavky, že odeslané maily nejsou poškozené (správné kódování, speciální znaky).
+- **Standardní formát**
+  Použít standartní formát pro mail zprávy, s kterými **Mail router** bude schopný pracovat.
