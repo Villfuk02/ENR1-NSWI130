@@ -86,6 +86,22 @@
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
+### Detekce nedostatečných opravnění pro odesílání emailů
+
+- **Aktér:** Neznámý přihlášený útočník
+- **Událost:** Požadavek přistoupit k spamování ostatních uživatelů
+- **Zasažená komponenta:** **Zobrazenie emailového okna** v kontejneru  **Zobrazení**
+- **Očekávané měření:** Systém verifikuje uživatele a zamezí mu velký množství dotazů
+
+**Navrhovaná řešení:**
+
+- **Kontrolovat auth**
+  Kontrolovat, zda je daný požadavek od authentifikovaného a autorizovaného uživatele.
+- **Testovaní**
+  Otestovat, využít externího auditu ve snaze odhalit exploits, které by mohly být využity k neautorizovanému čtení uživatelových lístků.
+- **Udržovat log**
+  Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
+
 ## Interopabilita
 
 ### Interopabilita email service a mail routeru
@@ -101,3 +117,15 @@
   Otestovat, že **Email service** splňuje API **Mail router**, že **Mail router** nepřebírá malformed požadavky, že odeslané maily nejsou poškozené (správné kódování, speciální znaky).
 - **Standardní formát**
   Použít standartní formát pro mail zprávy, s kterými **Mail router** bude schopný pracovat.
+
+  ## Korektnost
+
+  ### Odosielanie naformátovaného html namiesto raw dát
+
+- **Aktér:** Zobrazení
+- **Událost:** Zobrazení vyžádá zobrazení stránek
+- **Zasažené kontejnery:** **Zobrazení**, **Smerovač stránek**
+- **Očekávané měření:** Pokial sa s datami pracuje tak sa z nich nerobí html. Šablona sa používa nesrpávnym spôsobom.
+
+**Navrhovaná řešení:**
+- príklad MVC
