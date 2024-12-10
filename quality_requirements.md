@@ -102,6 +102,26 @@
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
+### Detekce a řešení DDOS
+
+- **Aktér:** Neznámý útočník / botnet
+- **Událost:** High volume traffic z několika IP adres
+- **Zasažená komponenta:** **Směrovací Engine** v kontejneru **Směrovač stránek**
+- **Očekávané měření:** Útok bude evidován a provoz systému jím nebude ovlivněn
+
+**Navrhovaná řešení:**
+
+- **Detekce a blokování IP adres**
+  Nová komponenta **DDOS detektor** analyzuje IP adresy a přidává je na blacklist
+- **Geoblokace**
+  Při detekci útoku zablokuji IP adresy pro danou geografickou oblast
+- **Logova**
+  Pro pozdější analýzu
+- **Volavka**
+  Nastartovat nový kontejner **Směrovače stránek** s mock API na ostatní komponenty.
+  Dotazy označené jako DDOS přesměrovat na něj.
+
+
 ## Interopabilita
 
 ### Interopabilita email service a mail routeru
