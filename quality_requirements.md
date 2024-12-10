@@ -6,18 +6,18 @@
 
 **Scénář:**
 
-- **Aktér:** Student pokoušející se zapsat do kurzu.  
-- **Událost:** Student odešle žádost o zápis prostřednictvím komponenty **Zapsat studenta na lístek**, zatímco tisíce dalších uživatelů podávají podobné žádosti současně.  
-- **Zasažená komponenta:** **Zapsat studenta na lístek** v kontejneru **Zápisy uživatele**.  
+- **Aktér:** Student pokoušející se zapsat do kurzu.
+- **Událost:** Student odešle žádost o zápis prostřednictvím komponenty **Zapsat studenta na lístek**, zatímco tisíce dalších uživatelů podávají podobné žádosti současně.
+- **Zasažená komponenta:** **Zapsat studenta na lístek** v kontejneru **Zápisy uživatele**.
 - **Očekávané měření:** 99 % transakcí zápisů by mělo být úspěšně dokončeno do 2 sekund, i při 5 000 požadavcích za minutu. **Každý** požadavek musí doručit uživateli zpětnou vazbu zda byla transakce úspěšná, a to do 2 sekund.
 
-**Navrhované řešení:**  
+**Navrhované řešení:**
 
 - **Optimalizace databázových transakcí:**  
-  Použití optimalizovaných neblokujících dotazů ke snížení zátěže na databáze.  
+  Použití optimalizovaných neblokujících dotazů ke snížení zátěže na databáze.
 
 - **Kešování:**  
-  Kešování často přistupovaných dat ke snížení zátěže databází.  
+  Kešování často přistupovaných dat ke snížení zátěže databází.
 
 - **Horizontální škálování:**  
   Nasadit více instancí kontejneru **Zápisy uživatele** pro efektivní rozložení zátěže.  
@@ -29,12 +29,12 @@
 
 **Scénář:**
 
-- **Aktér:** Student pokoušející se přejít na stránku zápisů.  
-- **Událost:** Komponenta **Smerovací engine** selže během zpracování požadavku kvůli neočekávané chybě nebo přetížení.  
-- **Zasažená komponenta:** **Smerovací engine** v kontejneru **Směrovač stránek**.  
+- **Aktér:** Student pokoušející se přejít na stránku zápisů.
+- **Událost:** Komponenta **Smerovací engine** selže během zpracování požadavku kvůli neočekávané chybě nebo přetížení.
+- **Zasažená komponenta:** **Smerovací engine** v kontejneru **Směrovač stránek**.
 - **Očekávané měření:** Systém musí detekovat a obnovit funkčnost do 10 sekund.
 
-**Navrhované řešení:**  
+**Navrhované řešení:**
 
 - **Automatická detekce selhání:**  
   Integrace health-check mechanismů prostřednictvím pravidelných pingů pro sledování stavu komponenty **Smerovací engine**.  
@@ -48,14 +48,34 @@
 - **Testování a ověření odolnosti:**  
   Pravidelně testovat mechanismy přepnutí a proces obnovy za účelem ověření spolehlivosti v různých scénářích selhání.
 
+### Zotavení se z výpadku databáze
+
+**Scénář:**
+
+- **Aktér:** **Zápisy uživatele** nebo **Data Handling** se pokouší číst nebo zapisovat do **Databáze**
+- **Událost:** Komponenta **Databáze** není částečně nebo zcela dostupná kvůli chybě připojení, nefungujícímu HW, neodpovídajícímu containeru, ...
+- **Zasažená komponenta:** **Databáze**
+- **Očekávané měření:** Systém musí bufferovat dotazy po dobu nedostupnosti přístupu k **Databázi**
+
+**Navrhované řešení:**
+
+- **DB proxy:**  
+  Nová komponenta **DB proxy**, která přijímá asynchronní dotazy na zápis a čtení z **Databáze**.
+  V případě její nedostupnosti, zaloguje fault, bufferuje dotazy a opakovaně je posílá, dokud nebudou vyřízeny
+
+- **Warm spare:**  
+  Pořídit si záložní container **Databáze** jako passive redundancy. **DB proxy** jednou za čas propíše provedené změny do záložní **Databáze**
+  **DB proxy** posílá ping na hlavní **Databázi**. V případě výpadku začnw směrovat dotazy na záložní **Databázi**
+  Po obnovení provozu obě **Databáze** uvede do konzistentního stavu
+
 ## Bezpečnost
 
 ### Detekce nedostatečných opravnění pro zobrazení lístků
 
 - **Aktér:** Neznámý útočník
 - **Událost:** Požadavek přistoupit k soukromým lístkům jiného uživatele
-- **Zasažená komponenta:** **Zobrazenie lístkov** v kontejneru  **Zobrazení**
-- **Očekávané měření:** Systém požadavek odmítne.
+- **Zasažená komponenta:** **Zobrazenie lístkov** v kontejneru **Zobrazení**
+- **Očekávané měření:** Systém požadavek odmítne a zaloguje.
 
 **Navrhovaná řešení:**
 
@@ -76,6 +96,7 @@
 - **Očekávané měření:** 100% je zpracováno **Mail routerem** a vzniklé maily nejsou poškozené.
 
 **Navrhovaná řešení:**
+
 - **Testovaní**
   Otestovat, že **Email service** splňuje API **Mail router**, že **Mail router** nepřebírá malformed požadavky, že odeslané maily nejsou poškozené (správné kódování, speciální znaky).
 - **Standardní formát**
