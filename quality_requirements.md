@@ -149,3 +149,49 @@
 
 **Navrhovaná řešení:**
 - príklad MVC
+
+
+## Dostupnost (Availability)
+
+### Zajištění vysoké dostupnosti UI Templatoru
+
+**Scénář:**
+
+- **Aktér:** Uživatel systému přistupující na stránku zápisů.
+- **Událost:** Komponenta **UI Templator** není dostupná kvůli neočekávanému výpadku.
+- **Zasažená komponenta:** **UI Templator** v kontejneru **Směrovač stránek**.
+- **Očekávané měření:** 99.9% požadavků musí být úspěšně zpracováno, i v případě, že dojde k výpadku jedné instance.
+
+**Navrhované řešení:**
+
+- **Load Balancing:**  
+  Použití balanceru pro rozdělení požadavků mezi redundantní instance komponenty **UI Templator**.
+
+- **Hot Standby:**  
+  Nasazení záložní instance, která převezme provoz při selhání hlavní instance.
+
+- **Monitoring a Alerting:**  
+  Zavedení monitorovacích nástrojů pro detekci stavu komponent a okamžitou notifikaci o selhání.
+
+
+## Škálovatelnost (Scalability)
+
+### Horizontální škálovatelnost směrovače stránek
+
+**Scénář:**
+
+- **Aktér:** Uživatel systému přistupující na různé stránky v systému.
+- **Událost:** Systém obdrží zvýšený počet požadavků na různé stránky.
+- **Zasažená komponenta:** **Směrovač stránek**.
+- **Očekávané měření:** Systém musí být schopen zvládnout nárůst požadavků o 100% během 5 minut bez snížení výkonu.
+
+**Navrhované řešení:**
+
+- **Dynamické škálování:**  
+  Nasazení škálovacích mechanismů, které automaticky přidají nové instance směrovače při detekci vysoké zátěže.
+
+- **Load Balancing:**  
+  Použití vyvážení zátěže pro efektivní rozdělení požadavků mezi všechny instance.
+
+- **Optimalizace zdrojů:**  
+  Zavedení metrik pro sledování využití zdrojů a odstranění nečinných instancí po poklesu zátěže.
