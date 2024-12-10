@@ -38,6 +38,10 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 email_sender = component "Odosielanie emailov"
             }
 
+            enlistment_hnadling = container "Sorts Enlistments" "Validates whether the student exceeded the meaximum number of enlistments / period of time." {
+                enlistment_filter = component "Enlistment Filter" "Filters enlistments based on whether the student exceeded the meaximum number of enlistments / period of time."
+            }
+
             data_handling = container "Data Handling" "Zaznamenává změny, komunikuje s Rozvrhy a vytváří jejich zobrazení" {
                 data_preparation = component "Príprava dát"
                 data_verificator = component "Data verificator" "Overenie správnosti dát"
@@ -183,6 +187,64 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.routing_reliability.routing_failover -> enrollments.router "Spravuje instance"{
                     tags "quality"
                 }
+
+        dep0 = deploymentEnvironment "Invlid Database Write"{
+
+            database  = deploymentNode "Database Server" "Database Server"{
+                userDatabaseInstance = containerInstance enrollments.database
+
+            }
+
+            zapisy = deploymentNode "Zapisy" "Server na kterem bezi zapisy vypracovany tymem ENR1" {
+                    enlistmentValidatorInstance = infrastructureNode "Enlistment Validator" "If an unregistered enlistment is performed sends a reparation request"
+                    userEnrollmentInstance = containerInstance enrollments.user_enrollment
+
+                    userEnrollmentInstance -> enlistmentValidatorInstance "Registers a request for enlistment"
+                    enlistmentValidatorInstance -> dep0.database.userDatabaseInstance "Write Enlistment"
+                    dep0.database.userDatabaseInstance -> enlistmentValidatorInstance "Sends write condirmation"
+                    enlistmentValidatorInstance -> userEnrollmentInstance "Confirms Enlistment Stored in Database"
+                }
+            
+            attacker = deploymentNode "Attacker" "Attacker"{
+                attackerInstance = infrastructureNode "Out Of System Request"
+
+                attackerInstance -> dep0.database.userDatabaseInstance "Sends Out of System Enlistment"
+            }
+        }
+
+        dep = deploymentEnvironment "Enlistment Queue"    {
+
+
+            zapisy = deploymentNode "Zapisy" "Server na kterem bezi zapisy vypracovany tymem ENR1" {
+                    userEnrollmentInstance = containerInstance enrollments.user_enrollment
+                    enrollmentsRouterInstance = containerInstance enrollments.router
+                }
+
+            deploymentNode "Enlistments Server" "" "Ubuntu 18.04 LTS"   {
+
+                enlistment_handling = deploymentNode "Enlistment Handling " "Validates the enlistment requests" {
+                    enlistmentHandlingInstance = containerInstance enrollments.enlistment_hnadling
+
+                }
+
+                kafka = deploymentNode "Queue Manager" "Maintains and manages queues with measured health indicators" "Apache Kafka" "performance"  {
+                    enlistmentProducer = infrastructureNode "Enlistment Producer" "Stores enlistments from the system on the queue" "Apache Kafka Producer" "performance"
+                    enlistmentQueue = infrastructureNode "Enlistments Queue" "Stores enlistments collected from the system" "Apache Kafka Topic" "performance"
+                    validatedEnlistmentsQueue = infrastructureNode "Validated Enlistments Queue" "Stores validated enlistments." "Apache Kafka Topic with Partitions" "performance"
+
+                    
+
+                    dep.zapisy.enrollmentsRouterInstance -> enlistmentProducer "sends enlistment requests"
+                    enlistmentProducer -> enlistmentQueue "queue incoming enlistments" "" "performance"
+                    enlistment_handling.enlistmentHandlingInstance -> enlistmentQueue "pick incoming enlistment from queue" "" "performance"
+                    enlistment_handling.enlistmentHandlingInstance -> validatedEnlistmentsQueue "queue validated enlistment' partition" "" "performance"
+
+                    validatedEnlistmentsQueue -> dep.zapisy.userEnrollmentInstance "sends validated enlistment requests"
+                }
+            }
+            
+        }
+        
 
     }
 
@@ -406,7 +468,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.data_handling.loader -> enrollments.data_handling.data_verificator "Pošle získané dáta na overenie"
 
             enrollments.data_handling.rules -> enrollments.data_handling.data_verificator "Získa pravidlá na overenie správnosti dát"
-            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát
+            enrollments.data_handling.data_verificator -> enrollments.data_handling.loader "Pošle informáciu o správnosti dát"
             enrollments.data_handling.loader -> enrollments.data_handling.data_preparation "Pošle na prípravu pred zobrazením"
 
             enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odošle dáta o lístkoch"
@@ -421,6 +483,18 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
             enrollments.email_service.email_sender -> mail_router "Odešle email"
 
             autoLayout
+        }
+
+        deployment enrollments "Enlistment Queue" "Enlistment_Queue"   {
+            include *
+            exclude "enrollments.router->enrollments.user_enrollment"
+            exclude "enrollments.user_enrollment->enrollments.router"
+        }
+
+        deployment enrollments "Invlid Database Write" "Invalid_Database_Write"   {
+            include *
+            exclude "enrollments.user_enrollment->enrollments.database"
+            exclude "enrollments.database->enrollments.user_enrollment"
         }
 
     }
