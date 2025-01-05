@@ -68,26 +68,6 @@
   **DB proxy** posílá ping na hlavní **Databázi**. V případě výpadku začnw směrovat dotazy na záložní **Databázi**
   Po obnovení provozu obě **Databáze** uvede do konzistentního stavu
 
-### Zajištění vysoké dostupnosti UI Templatoru [Povolná]
-
-**Scénář:**
-
-- **Zdroj stimulu:** Uživatel systému přistupující na stránku zápisů.
-- **Stimulus:** Komponenta **UI Templator** není dostupná kvůli neočekávanému výpadku.
-- **Artefakt:** **UI Templator** v kontejneru **Směrovač stránek**.
-- **Očekávané měření:** 99.9% požadavků musí být úspěšně zpracováno, i v případě, že dojde k výpadku jedné instance.
-
-**Navrhované řešení:**
-
-- **Load Balancing:**  
-  Použití balanceru pro rozdělení požadavků mezi redundantní instance komponenty **UI Templator**.
-
-- **Hot Standby:**  
-  Nasazení záložní instance, která převezme provoz při selhání hlavní instance.
-
-- **Monitoring a Alerting:**  
-  Zavedení monitorovacích nástrojů pro detekci stavu komponent a okamžitou notifikaci o selhání.
-
 ## Škálovatelnost
 
 ### Horizontální škálovatelnost směrovače stránek [Povolná]
@@ -181,6 +161,10 @@
   Otestovat, že **Email service** splňuje API **Mail router**, že **Mail router** nepřebírá malformed požadavky, že odeslané maily nejsou poškozené (správné kódování, speciální znaky).
 - **Standardní formát**
   Použít standartní formát pro mail zprávy, s kterými **Mail router** bude schopný pracovat.
+
+## Testovatelnost
+
+TODO
 
 # Nezařazené 
 
