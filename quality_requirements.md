@@ -1,14 +1,14 @@
-# Požadavky na Kvalitu
+# Run-time požadavky
 
-## Výkon (Performance)
+## Výkon
 
-### Efektivní zápis pod vysokým zatížením
+### Efektivní zápis pod vysokým zatížením [Gutvald]
 
 **Scénář:**
 
-- **Aktér:** Student pokoušející se zapsat do kurzu.
-- **Událost:** Student odešle žádost o zápis prostřednictvím komponenty **Zapsat studenta na lístek**, zatímco tisíce dalších uživatelů podávají podobné žádosti současně.
-- **Zasažená komponenta:** **Zapsat studenta na lístek** v kontejneru **Zápisy uživatele**.
+- **Zdroj stimulu:** Student pokoušející se zapsat do kurzu.
+- **Stimulus:** Student odešle žádost o zápis prostřednictvím komponenty **Zapsat studenta na lístek**, zatímco tisíce dalších uživatelů podávají podobné žádosti současně.
+- **Artefakt:** **Zapsat studenta na lístek** v kontejneru **Zápisy uživatele**.
 - **Očekávané měření:** 99 % transakcí zápisů by mělo být úspěšně dokončeno do 2 sekund, i při 5 000 požadavcích za minutu. **Každý** požadavek musí doručit uživateli zpětnou vazbu zda byla transakce úspěšná, a to do 2 sekund.
 
 **Navrhované řešení:**
@@ -23,15 +23,15 @@
   Nasadit více instancí kontejneru **Zápisy uživatele** pro efektivní rozložení zátěže.  
   Použití load balanceru pro rovnoměrné rozdělení požadavků mezi instance.
 
-## Spolehlivost (Reliability)
+## Dostupnost
 
-### Obnova po selhání Smerovacího engine
+### Obnova po selhání Smerovacího engine [Gutvald]
 
 **Scénář:**
 
-- **Aktér:** Student pokoušející se přejít na stránku zápisů.
-- **Událost:** Komponenta **Smerovací engine** selže během zpracování požadavku kvůli neočekávané chybě nebo přetížení.
-- **Zasažená komponenta:** **Smerovací engine** v kontejneru **Směrovač stránek**.
+- **Zdroj stimulu:** Student pokoušející se přejít na stránku zápisů.
+- **Stimulus:** Komponenta **Smerovací engine** selže během zpracování požadavku kvůli neočekávané chybě nebo přetížení.
+- **Artefakt:** **Smerovací engine** v kontejneru **Směrovač stránek**.
 - **Očekávané měření:** Systém musí detekovat a obnovit funkčnost do 10 sekund.
 
 **Navrhované řešení:**
@@ -48,13 +48,13 @@
 - **Testování a ověření odolnosti:**  
   Pravidelně testovat mechanismy přepnutí a proces obnovy za účelem ověření spolehlivosti v různých scénářích selhání.
 
-### Zotavení se z výpadku databáze
+### Zotavení se z výpadku databáze [Benda]
 
 **Scénář:**
 
-- **Aktér:** **Zápisy uživatele** nebo **Data Handling** se pokouší číst nebo zapisovat do **Databáze**
-- **Událost:** Komponenta **Databáze** není částečně nebo zcela dostupná kvůli chybě připojení, nefungujícímu HW, neodpovídajícímu containeru, ...
-- **Zasažená komponenta:** **Databáze**
+- **Zdroj stimulu:** **Zápisy uživatele** nebo **Data Handling** se pokouší číst nebo zapisovat do **Databáze**
+- **Stimulus:** Komponenta **Databáze** není částečně nebo zcela dostupná kvůli chybě připojení, nefungujícímu HW, neodpovídajícímu containeru, ...
+- **Artefakt:** **Databáze**
 - **Očekávané měření:** Systém musí bufferovat dotazy po dobu nedostupnosti přístupu k **Databázi**
 
 **Navrhované řešení:**
@@ -68,13 +68,56 @@
   **DB proxy** posílá ping na hlavní **Databázi**. V případě výpadku začnw směrovat dotazy na záložní **Databázi**
   Po obnovení provozu obě **Databáze** uvede do konzistentního stavu
 
+### Zajištění vysoké dostupnosti UI Templatoru [Povolná]
+
+**Scénář:**
+
+- **Zdroj stimulu:** Uživatel systému přistupující na stránku zápisů.
+- **Stimulus:** Komponenta **UI Templator** není dostupná kvůli neočekávanému výpadku.
+- **Artefakt:** **UI Templator** v kontejneru **Směrovač stránek**.
+- **Očekávané měření:** 99.9% požadavků musí být úspěšně zpracováno, i v případě, že dojde k výpadku jedné instance.
+
+**Navrhované řešení:**
+
+- **Load Balancing:**  
+  Použití balanceru pro rozdělení požadavků mezi redundantní instance komponenty **UI Templator**.
+
+- **Hot Standby:**  
+  Nasazení záložní instance, která převezme provoz při selhání hlavní instance.
+
+- **Monitoring a Alerting:**  
+  Zavedení monitorovacích nástrojů pro detekci stavu komponent a okamžitou notifikaci o selhání.
+
+## Škálovatelnost
+
+### Horizontální škálovatelnost směrovače stránek [Povolná]
+
+**Scénář:**
+
+- **Zdroj stimulu:** Uživatel systému přistupující na různé stránky v systému.
+- **Stimulus:** Systém obdrží zvýšený počet požadavků na různé stránky.
+- **Artefakt:** **Směrovač stránek**.
+- **Očekávané měření:** Systém musí být schopen zvládnout nárůst požadavků o 100% během 5 minut bez snížení výkonu.
+
+**Navrhované řešení:**
+
+- **Dynamické škálování:**  
+  Nasazení škálovacích mechanismů, které automaticky přidají nové instance směrovače při detekci vysoké zátěže.
+
+- **Load Balancing:**  
+  Použití vyvážení zátěže pro efektivní rozdělení požadavků mezi všechny instance.
+
+- **Optimalizace zdrojů:**  
+  Zavedení metrik pro sledování využití zdrojů a odstranění nečinných instancí po poklesu zátěže.
+
+
 ## Bezpečnost
 
-### Detekce nedostatečných opravnění pro zobrazení lístků
+### Detekce nedostatečných opravnění pro zobrazení lístků [Koucký]
 
-- **Aktér:** Neznámý útočník
-- **Událost:** Požadavek přistoupit k soukromým lístkům jiného uživatele
-- **Zasažená komponenta:** **Zobrazenie lístkov** v kontejneru **Zobrazení**
+- **Zdroj stimulu:** Neznámý útočník
+- **Stimulus:** Požadavek přistoupit k soukromým lístkům jiného uživatele
+- **Artefakt:** **Zobrazenie lístkov** v kontejneru **Zobrazení**
 - **Očekávané měření:** Systém požadavek odmítne a zaloguje.
 
 **Navrhovaná řešení:**
@@ -86,11 +129,11 @@
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
-### Detekce nedostatečných opravnění pro odesílání emailů
+### Detekce nedostatečných opravnění pro odesílání emailů [Bošániová]
 
-- **Aktér:** Neznámý přihlášený útočník
-- **Událost:** Požadavek přistoupit k spamování ostatních uživatelů
-- **Zasažená komponenta:** **Zobrazenie emailového okna** v kontejneru  **Zobrazení**
+- **Zdroj stimulu:** Neznámý přihlášený útočník
+- **Stimulus:** Požadavek přistoupit k spamování ostatních uživatelů
+- **Artefakt:** **Zobrazenie emailového okna** v kontejneru  **Zobrazení**
 - **Očekávané měření:** Systém verifikuje uživatele a zamezí mu velký množství dotazů
 
 **Navrhovaná řešení:**
@@ -102,11 +145,11 @@
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
-### Detekce a řešení DDOS
+### Detekce a řešení DDOS [Benda]
 
-- **Aktér:** Neznámý útočník / botnet
-- **Událost:** High volume traffic z několika IP adres
-- **Zasažená komponenta:** **Směrovací Engine** v kontejneru **Směrovač stránek**
+- **Zdroj stimulu:** Neznámý útočník / botnet
+- **Stimulus:** High volume traffic z několika IP adres
+- **Artefakt:** **Směrovací Engine** v kontejneru **Směrovač stránek**
 - **Očekávané měření:** Útok bude evidován a provoz systému jím nebude ovlivněn
 
 **Navrhovaná řešení:**
@@ -121,14 +164,15 @@
   Nastartovat nový kontejner **Směrovače stránek** s mock API na ostatní komponenty.
   Dotazy označené jako DDOS přesměrovat na něj.
 
+# Design-time požadavky
 
 ## Interopabilita
 
-### Interopabilita email service a mail routeru
+### Interopabilita email service a mail routeru [Koucký]
 
-- **Aktér:** Zobrazení
-- **Událost:** Zobrazení vyžádá odeslání mailů.
-- **Zasažené kontejnery:** **Email service**
+- **Zdroj stimulu:** Zobrazení
+- **Stimulus:** Zobrazení vyžádá odeslání mailů.
+- **Artefakt:** **Email service**
 - **Očekávané měření:** 100% je zpracováno **Mail routerem** a vzniklé maily nejsou poškozené.
 
 **Navrhovaná řešení:**
@@ -138,60 +182,16 @@
 - **Standardní formát**
   Použít standartní formát pro mail zprávy, s kterými **Mail router** bude schopný pracovat.
 
-  ## Korektnost
+# Nezařazené 
 
-  ### Odosielanie naformátovaného html namiesto raw dát
+## Korektnost
 
-- **Aktér:** Zobrazení
-- **Událost:** Zobrazení vyžádá zobrazení stránek
-- **Zasažené kontejnery:** **Zobrazení**, **Smerovač stránek**
+### Odosielanie naformátovaného html namiesto raw dát [Bošániová] (TODO: odebrat?)
+
+- **Zdroj stimulu:** Zobrazení
+- **Stimulus:** Zobrazení vyžádá zobrazení stránek
+- **Artefakt:** **Zobrazení**, **Smerovač stránek**
 - **Očekávané měření:** Pokial sa s datami pracuje tak sa z nich nerobí html. Šablona sa používa nesrpávnym spôsobom.
 
 **Navrhovaná řešení:**
 - príklad MVC
-
-
-## Dostupnost (Availability)
-
-### Zajištění vysoké dostupnosti UI Templatoru
-
-**Scénář:**
-
-- **Aktér:** Uživatel systému přistupující na stránku zápisů.
-- **Událost:** Komponenta **UI Templator** není dostupná kvůli neočekávanému výpadku.
-- **Zasažená komponenta:** **UI Templator** v kontejneru **Směrovač stránek**.
-- **Očekávané měření:** 99.9% požadavků musí být úspěšně zpracováno, i v případě, že dojde k výpadku jedné instance.
-
-**Navrhované řešení:**
-
-- **Load Balancing:**  
-  Použití balanceru pro rozdělení požadavků mezi redundantní instance komponenty **UI Templator**.
-
-- **Hot Standby:**  
-  Nasazení záložní instance, která převezme provoz při selhání hlavní instance.
-
-- **Monitoring a Alerting:**  
-  Zavedení monitorovacích nástrojů pro detekci stavu komponent a okamžitou notifikaci o selhání.
-
-
-## Škálovatelnost (Scalability)
-
-### Horizontální škálovatelnost směrovače stránek
-
-**Scénář:**
-
-- **Aktér:** Uživatel systému přistupující na různé stránky v systému.
-- **Událost:** Systém obdrží zvýšený počet požadavků na různé stránky.
-- **Zasažená komponenta:** **Směrovač stránek**.
-- **Očekávané měření:** Systém musí být schopen zvládnout nárůst požadavků o 100% během 5 minut bez snížení výkonu.
-
-**Navrhované řešení:**
-
-- **Dynamické škálování:**  
-  Nasazení škálovacích mechanismů, které automaticky přidají nové instance směrovače při detekci vysoké zátěže.
-
-- **Load Balancing:**  
-  Použití vyvážení zátěže pro efektivní rozdělení požadavků mezi všechny instance.
-
-- **Optimalizace zdrojů:**  
-  Zavedení metrik pro sledování využití zdrojů a odstranění nečinných instancí po poklesu zátěže.
