@@ -23,6 +23,11 @@
   Nasadit více instancí kontejneru **Zápisy uživatele** pro efektivní rozložení zátěže.  
   Použití load balanceru pro rovnoměrné rozdělení požadavků mezi instance.
 
+**Změny architektury:**
+Stávající architektura je více-méně dostatečná, protože do ní navrhované změny nezasahují.
+V případě kešování by bylo mozné oddělit logiku kešování do separátního komponentu.
+Podobně, při použití load balanceru by tento load balancer stál jako separátní kontejner.
+
 ## Dostupnost
 
 ### Obnova po selhání Smerovacího engine [Gutvald]
@@ -47,6 +52,9 @@
 
 - **Testování a ověření odolnosti:**  
   Pravidelně testovat mechanismy přepnutí a proces obnovy za účelem ověření spolehlivosti v různých scénářích selhání.
+
+**Změny architektury:**
+Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 ### Zotavení se z výpadku databáze [Benda]
 
@@ -89,7 +97,6 @@
 
 - **Optimalizace zdrojů:**  
   Zavedení metrik pro sledování využití zdrojů a odstranění nečinných instancí po poklesu zátěže.
-
 
 ## Bezpečnost
 
@@ -166,7 +173,7 @@
 
 TODO
 
-# Nezařazené 
+# Nezařazené
 
 ## Korektnost
 
@@ -178,4 +185,5 @@ TODO
 - **Očekávané měření:** Pokial sa s datami pracuje tak sa z nich nerobí html. Šablona sa používa nesrpávnym spôsobom.
 
 **Navrhovaná řešení:**
+
 - príklad MVC
