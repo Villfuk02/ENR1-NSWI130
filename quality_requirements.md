@@ -116,6 +116,9 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
+**Změny architektury:**
+  Žádné, aktuální architektura nepopisuje žádné chování, které by bylo s tímto požadavkem v rozporu. Na požadavek bude nutno dbát při bližší specifikikaci.
+
 ### Detekce nedostatečných opravnění pro odesílání emailů [Bošániová]
 
 - **Zdroj stimulu:** Neznámý přihlášený útočník
@@ -168,6 +171,9 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
   Otestovat, že **Email service** splňuje API **Mail router**, že **Mail router** nepřebírá malformed požadavky, že odeslané maily nejsou poškozené (správné kódování, speciální znaky).
 - **Standardní formát**
   Použít standartní formát pro mail zprávy, s kterými **Mail router** bude schopný pracovat.
+
+**Změny architektury:**
+  Žádné, aktuální architektura nespecifikuje API, které by bylo s požadavkem v rozporu. Na požadavek bude potřeba dát pozor při podrobnějším rozepsání architektury.
 
 ## Testovatelnost
 
