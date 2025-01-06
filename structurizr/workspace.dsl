@@ -205,11 +205,6 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                     enlistmentValidatorInstance -> userEnrollmentInstance "Confirms Enlistment Stored in Database"
                 }
             
-            attacker = deploymentNode "Attacker" "Attacker"{
-                attackerInstance = infrastructureNode "Out Of System Request"
-
-                attackerInstance -> dep0.database.userDatabaseInstance "Sends Out of System Enlistment"
-            }
         }
 
         dep = deploymentEnvironment "Enlistment Queue"    {
