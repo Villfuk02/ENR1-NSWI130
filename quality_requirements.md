@@ -28,6 +28,21 @@ Stávající architektura je více-méně dostatečná, protože do ní navrhova
 V případě kešování by bylo mozné oddělit logiku kešování do separátního komponentu.
 Podobně, při použití load balanceru by tento load balancer stál jako separátní kontejner.
 
+## Zpetna oprava databaze pri neopravnenem zapise [Jezowicz]
+
+- **Zdroj stimulu:** Utocnik
+- **Stimulus:** Zapsani studenta na termin zkousky v databazi utocnikem
+- **Artefakt:** Limit poctu studentu zapsanych na termin je prekroceno
+- **Očekávané měření:** Odchyceni neopravneneho zapisu a jeho odstraneni z databaze
+
+**Navrhovaná řešení:**
+
+- **Attack Recovery**
+  Zavedeni containeru, ktery udrzuje seznam validnich pozadavku pro zapis do databaze. Kdyz databaze potvrdi zapis, dojde k overeni, zda byl pozadavek systemem skutecne zadan. Pokud nebyl, eventualne dojde k oprave databaze.
+
+**Změny architektury:**
+  Pridani containeru 'Enlistment Validator', ktery je schopen odchytit neopravneny zapis do databaze.
+
 ## Dostupnost
 
 ### Obnova po selhání Smerovacího engine [Gutvald]
@@ -119,6 +134,21 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 **Změny architektury:**
   Žádné, aktuální architektura nepopisuje žádné chování, které by bylo s tímto požadavkem v rozporu. Na požadavek bude nutno dbát při bližší specifikikaci.
 
+## Studenti maji omezeny pocet pozadavku na zapis za jednotku casu [Jezowicz]
+
+- **Zdroj stimulu:** Student
+- **Stimulus:** Student pokousejici se o zapis
+- **Artefakt:** Limit poctu zapsanych studentu je prekrocen
+- **Očekávané měření:** System bude registrovat zadany pocet requestu pro kazdeho uzivatele. To zaruci vyhodnoceni vsech pozadavku v danem casovem limitu
+
+**Navrhovaná řešení:**
+
+- **Attack Recovery**
+  Nasazeni separatniho serveru, ktery bude pozadavky filtrovat a prepisovat do vysledne fronty pozadavky dale procesovanych systemem.
+
+**Změny architektury:**
+  Pridani Enlistment serveru obsahujicim Queue Manager.
+
 ### Detekce nedostatečných opravnění pro odesílání emailů [Bošániová]
 
 - **Zdroj stimulu:** Neznámý přihlášený útočník
@@ -174,42 +204,6 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 **Změny architektury:**
   Žádné, aktuální architektura nespecifikuje API, které by bylo s požadavkem v rozporu. Na požadavek bude potřeba dát pozor při podrobnějším rozepsání architektury.
-
-
-# Performance požadavky
-
-## Zpetna oprava databaze pri neopravnenem zapise [Jezowicz]
-
-- **Zdroj stimulu:** Utocnik
-- **Stimulus:** Zapsani studenta na termin zkousky v databazi utocnikem
-- **Artefakt:** Limit poctu studentu zapsanych na termin je prekroceno
-- **Očekávané měření:** Odchyceni neopravneneho zapisu a jeho odstraneni z databaze
-
-**Navrhovaná řešení:**
-
-- **Attack Recovery**
-  Zavedeni containeru, ktery udrzuje seznam validnich pozadavku pro zapis do databaze. Kdyz databaze potvrdi zapis, dojde k overeni, zda byl pozadavek systemem skutecne zadan. Pokud nebyl, eventualne dojde k oprave databaze.
-
-**Změny architektury:**
-  Pridani containeru 'Enlistment Validator', ktery je schopen odchytit neopravneny zapis do databaze.
-
-
-# Security požadavky
-
-## Studenti maji omezeny pocet pozadavku na zapis za jednotku casu [Jezowicz]
-
-- **Zdroj stimulu:** Student
-- **Stimulus:** Student pokousejici se o zapis
-- **Artefakt:** Limit poctu zapsanych studentu je prekrocen
-- **Očekávané měření:** System bude registrovat zadany pocet requestu pro kazdeho uzivatele. To zaruci vyhodnoceni vsech pozadavku v danem casovem limitu
-
-**Navrhovaná řešení:**
-
-- **Attack Recovery**
-  Nasazeni separatniho serveru, ktery bude pozadavky filtrovat a prepisovat do vysledne fronty pozadavky dale procesovanych systemem.
-
-**Změny architektury:**
-  Pridani Enlistment serveru obsahujicim Queue Manager.
 
 ## Testovatelnost
 
