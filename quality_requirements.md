@@ -113,6 +113,8 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 - **Optimalizace zdrojů:**  
   Zavedení metrik pro sledování využití zdrojů a odstranění nečinných instancí po poklesu zátěže.
 
+**Změny architektury:** Související problém je řešen již komponentou "Spolehlivost směrovače", kde jsou již spravovány instance směrovače. Mohla by případně být přidána komponenta Load balancer.
+
 ## Bezpečnost
 
 ### Detekce nedostatečných opravnění pro zobrazení lístků [Koucký]
@@ -207,7 +209,23 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 ## Testovatelnost
 
-TODO
+- **Zdroj stimulu:** System tester
+- **Stimulus:** Ověření správnosti zápisu předmětu v definovaných situacích.
+- **Artefakt:** **Zápisy uživatele** a **Data Handling**
+- **Očekávané měření:** Tester v testovacím prostředí provádí analýzu funkčnosti systému pro zápis předmětů pomocí připravených syntetických dat o uživatelích a jejich předmětech. Tester ověří 100 % předem připravených scénářů zahrnující požadavky na zápis podle předem definovaných pravidel, jako jsou kapacitní limity, časové kolize a oprávnění uživatele, a to pro všechny typy uživatelů, v průběhu 1 člověkoměsíce.
+
+**Navrhovaná řešení:**
+
+- **Testovací prostředí**
+  Systém musí být možné provozovat i v testovacím režimu, který bude umožňovat použití specializovaných nástrojů. Musí být také dostupný logging.
+- **Dokumentace architektury a řešení**
+  Zajistit kompletní a čitelnou dokumentaci všech relevantních zdrojů.
+- **Omezení komplexity systému**
+  Kód musí být čitelný a modulární, s vysokou soudržností a nízkou provázaností.
+
+**Změny architektury:**
+  Architektuře chybí dokumentace, která by zlepšila její srozumitelnost a čitelnost. Architektura však obsahuje validátor, verifikátor a databázi historie změn, které umožňují efektivně sledovat a testovat chování systému. Systém limituje svou provázanost používáním APIs a není natolik komplexní, aby zabraňoval testerovi otestovat systém do 1 měsíce. Problémem by mohlo být těsné propojení mezi komponentami Zápis uživatele a Data handling, jejichž zodpovědnosti by bylo lepší jednoznačněji oddělit. Pomoci by mohlo i centrální logování.
+
 
 # Nezařazené
 
