@@ -163,7 +163,7 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 - **Kontrolovat auth**
   Kontrolovat, zda je daný požadavek od authentifikovaného a autorizovaného uživatele.
 - **Testovaní**
-  Otestovat, využít externího auditu ve snaze odhalit exploits, které by mohly být využity k neautorizovanému čtení uživatelových lístků.
+  Otestovat, využít externího auditu ve snaze odhalit exploits, které by mohly být zneužity ke spamu nebo phishingu (telo správy je volitelné a odesílatel je důvěryhodný).
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
@@ -231,13 +231,15 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 ## Korektnost
 
-### Odosielanie naformátovaného html namiesto raw dát [Bošániová] (TODO: odebrat?)
+### Rozdelení rendrování UI a získávání dat [Bošániová]
 
 - **Zdroj stimulu:** Zobrazení
 - **Stimulus:** Zobrazení vyžádá zobrazení stránek
 - **Artefakt:** **Zobrazení**, **Smerovač stránek**
-- **Očekávané měření:** Pokial sa s datami pracuje tak sa z nich nerobí html. Šablona sa používa nesrpávnym spôsobom.
+- **Očekávané měření:** Klient dostane šablonu a data oddelene. Jejich vyrendrování (spojení) probiehne u klienta.
 
 **Navrhovaná řešení:**
 
-- príklad MVC
+- **Single page application**
+  Vytvořit Client-Side aplikaci a napojit na ní API. Client-Side aplikace spojuje šablonu s daty z API. Při změne stránky se pouze načtou nová data (statická data z cache).
+  Server přijíma API dotazy a příkazy.
