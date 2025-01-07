@@ -231,9 +231,6 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 **Změny architektury:**
   Architektuře chybí dokumentace, která by zlepšila její srozumitelnost a čitelnost. Architektura však obsahuje validátor, verifikátor a databázi historie změn, které umožňují efektivně sledovat a testovat chování systému. Systém limituje svou provázanost používáním APIs a není natolik komplexní, aby zabraňoval testerovi otestovat systém do 1 měsíce. Problémem by mohlo být těsné propojení mezi komponentami Zápis uživatele a Data handling, jejichž zodpovědnosti by bylo lepší jednoznačněji oddělit. Pomoci by mohlo i centrální logování.
 
-
-# Nezařazené
-
 ## Korektnost
 
 ### Rozdelení rendrování UI a získávání dat [Bošániová]
@@ -256,5 +253,6 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
   Momentální řešení posílá napříč aplikací už vytvorený html kód. To může spůsobit spomalení systému velikostí posílaných dat. V první řade je potřeba změnu designu tak, aby aplikace posílala jenom raw data a až v posledním kroku je spracovala do html, spolu se šablonou. Vyhneme sa "zafixovanému" kódu,který by sme v případe úprav museli parsovat.
   
   Co se týče komplexnějších navrhovaných řešení:
-  - Single page application - ideální řešení (žádá si kompletní změnu designu)
-  - Server-side rendering - lepší návrh, ale ne dokonalý
+
+- Single page application - ideální řešení (žádá si kompletní změnu designu)
+- Server-side rendering - lepší návrh, ale ne dokonalý
