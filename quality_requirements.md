@@ -210,7 +210,9 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 **Změny architektury:**
   Žádné, aktuální architektura nespecifikuje API, které by bylo s požadavkem v rozporu. Na požadavek bude potřeba dát pozor při podrobnějším rozepsání architektury.
 
-## Testovatelnost [Povolná]
+## Testovatelnost
+
+### Testovatelnost správnosti zápisu [Povolná]
 
 - **Zdroj stimulu:** System tester
 - **Stimulus:** Ověření správnosti zápisu předmětu v definovaných situacích.
