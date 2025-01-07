@@ -28,21 +28,6 @@ Stávající architektura je více-méně dostatečná, protože do ní navrhova
 V případě kešování by bylo mozné oddělit logiku kešování do separátního komponentu.
 Podobně, při použití load balanceru by tento load balancer stál jako separátní kontejner.
 
-## Zpetna oprava databaze pri neopravnenem zapise [Jezowicz]
-
-- **Zdroj stimulu:** Utocnik
-- **Stimulus:** Zapsani studenta na termin zkousky v databazi utocnikem
-- **Artefakt:** Limit poctu studentu zapsanych na termin je prekroceno
-- **Očekávané měření:** Odchyceni neopravneneho zapisu a jeho odstraneni z databaze
-
-**Navrhovaná řešení:**
-
-- **Attack Recovery**
-  Zavedeni containeru, ktery udrzuje seznam validnich pozadavku pro zapis do databaze. Kdyz databaze potvrdi zapis, dojde k overeni, zda byl pozadavek systemem skutecne zadan. Pokud nebyl, eventualne dojde k oprave databaze.
-
-**Změny architektury:**
-  Pridani containeru 'Enlistment Validator', ktery je schopen odchytit neopravneny zapis do databaze.
-
 ## Dostupnost
 
 ### Obnova po selhání Smerovacího engine [Gutvald]
@@ -136,7 +121,7 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 **Změny architektury:**
   Žádné, aktuální architektura nepopisuje žádné chování, které by bylo s tímto požadavkem v rozporu. Na požadavek bude nutno dbát při bližší specifikikaci.
 
-## Studenti maji omezeny pocet pozadavku na zapis za jednotku casu [Jezowicz]
+### Studenti maji omezeny pocet pozadavku na zapis za jednotku casu [Jezowicz]
 
 - **Zdroj stimulu:** Student
 - **Stimulus:** Student pokousejici se o zapis
@@ -150,6 +135,21 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 **Změny architektury:**
   Pridani Enlistment serveru obsahujicim Queue Manager.
+
+### Zpetna oprava databaze pri neopravnenem zapise [Jezowicz]
+
+- **Zdroj stimulu:** Utocnik
+- **Stimulus:** Zapsani studenta na termin zkousky v databazi utocnikem
+- **Artefakt:** Limit poctu studentu zapsanych na termin je prekroceno
+- **Očekávané měření:** Odchyceni neopravneneho zapisu a jeho odstraneni z databaze
+
+**Navrhovaná řešení:**
+
+- **Attack Recovery**
+  Zavedeni containeru, ktery udrzuje seznam validnich pozadavku pro zapis do databaze. Kdyz databaze potvrdi zapis, dojde k overeni, zda byl pozadavek systemem skutecne zadan. Pokud nebyl, eventualne dojde k oprave databaze.
+
+**Změny architektury:**
+  Pridani containeru 'Enlistment Validator', ktery je schopen odchytit neopravneny zapis do databaze.
 
 ### Detekce nedostatečných opravnění pro odesílání emailů [Bošániová]
 
@@ -191,9 +191,9 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 # Design-time požadavky
 
-## Interopabilita
+## Interoperabilita
 
-### Interopabilita email service a mail routeru [Koucký]
+### Interoperabilita email service a mail routeru [Koucký]
 
 - **Zdroj stimulu:** Zobrazení
 - **Stimulus:** Zobrazení vyžádá odeslání mailů.
