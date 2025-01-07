@@ -167,6 +167,9 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 - **Udržovat log**
   Udržovat záznam, ve kterém bude zdroj požadavku a jeho obsah uložen.
 
+**Změny architektury:**
+  **Mail router** nemá popis o jeho bezpečnostích funkcích. Komponenta potřebuje logickú nadstavbu nad klasickým odesíláním emailu, která sníží riziko nebezpečí. (Velkost příloh, validace linků...)
+
 ### Detekce a řešení DDOS [Benda]
 
 - **Zdroj stimulu:** Neznámý útočník / botnet
@@ -235,11 +238,21 @@ Navržené změny v architekruře jsou v modelu zakresleny oranžově.
 
 - **Zdroj stimulu:** Zobrazení
 - **Stimulus:** Zobrazení vyžádá zobrazení stránek
-- **Artefakt:** **Zobrazení**, **Smerovač stránek**
-- **Očekávané měření:** Klient dostane šablonu a data oddelene. Jejich vyrendrování (spojení) probiehne u klienta.
+- **Artefakt:** **Data Handling**, **Zobrazení**, **Smerovač stránek**
+- **Očekávané měření:** Druhá aplikace (server nebo klient aplikace) dostane šablonu a data oddelene a sama je vyrendruje (spojí).
 
 **Navrhovaná řešení:**
+
+- **Server-side rendering**
+  Druhá instance, která lze paralelizovat, a která odlehčí zátěž vykreslování.
 
 - **Single page application**
   Vytvořit Client-Side aplikaci a napojit na ní API. Client-Side aplikace spojuje šablonu s daty z API. Při změne stránky se pouze načtou nová data (statická data z cache).
   Server přijíma API dotazy a příkazy.
+
+**Změna architektury:**
+  Momentální řešení posílá napříč aplikací už vytvorený html kód. To může spůsobit spomalení systému velikostí posílaných dat. V první řade je potřeba změnu designu tak, aby aplikace posílala jenom raw data a až v posledním kroku je spracovala do html, spolu se šablonou. Vyhneme sa "zafixovanému" kódu,který by sme v případe úprav museli parsovat.
+  
+  Co se týče komplexnějších navrhovaných řešení:
+  - Single page application - ideální řešení (žádá si kompletní změnu designu)
+  - Server-side rendering - lepší návrh, ale ne dokonalý
