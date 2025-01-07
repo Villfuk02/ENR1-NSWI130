@@ -143,7 +143,9 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
         enrollments.browser.dom_reader -> enrollments.router.routing_engine "Požadavek na změnu stránky"
 
         #Vzťahy medzi containerami Data Handling a Zobrazenie
-        enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie dát v HTML pre zobrazenie"
+        enrollments.data_handling.data_preparation -> enrollments.displayer.event_displayer "Odosielanie raw dat [nie HTML] pre zobrazenie"{
+            tags = "quality"
+        }
         enrollments.data_handling.data_preparation -> enrollments.displayer.manager_displayer "Odosielanie dát na zobrazenie pre manažéra"
         enrollments.data_handling.data_preparation -> enrollments.displayer.event_details "Odesílání dat o lístku v HTML"
 
@@ -186,7 +188,7 @@ workspace "Zápisy Workspace" "Tento Workspace dokumentuje architekturu softwaro
                 }
         enrollments.routing_reliability.routing_failover -> enrollments.router "Spravuje instance"{
                     tags "quality"
-                }
+                }       
 
         dep0 = deploymentEnvironment "Invlid Database Write"{
 
